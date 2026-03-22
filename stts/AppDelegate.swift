@@ -5,6 +5,7 @@
 
 import Cocoa
 import MBPopup
+import PreferencesWindow
 import Reachability
 
 @NSApplicationMain
@@ -27,6 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     private let serviceLoader: ServiceLoader
     private let preferences: Preferences
+    private let preferencesWindow: PreferencesWindow
 
     override init() {
         var serviceDefinitionProviders: [ServiceDefinitionProvider] = []
@@ -44,10 +46,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             .compactMap { $0.build() as? SendbirdService }
 
         preferences = Preferences(serviceLoader: serviceLoader)
+        preferencesWindow = PreferencesWindow(serviceLoader: serviceLoader, preferences: preferences)
 
         serviceTableViewController = ServiceTableViewController(
             serviceLoader: serviceLoader,
-            preferences: preferences
+            preferences: preferences,
+            preferencesWindow: preferencesWindow
         )
 
         popupController = MBPopupController(contentView: serviceTableViewController.contentView)
