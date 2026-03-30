@@ -7,6 +7,8 @@ import Cocoa
 import PreferencesWindow
 
 class PreferencesGeneralView: VenturaPreferencesView {
+    private let quitButton = NSButton(title: "Quit stts", target: NSApp, action: #selector(NSApplication.terminate(_:)))
+
     init() {
         super.init(
             items: [
@@ -24,9 +26,16 @@ class PreferencesGeneralView: VenturaPreferencesView {
             ]
         )
 
+        quitButton.bezelStyle = .rounded
+        quitButton.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(quitButton)
+
         NSLayoutConstraint.activate([
             heightAnchor.constraint(equalToConstant: 400),
-            widthAnchor.constraint(equalToConstant: 400)
+            widthAnchor.constraint(equalToConstant: 400),
+
+            quitButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            quitButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
         ])
     }
 
@@ -142,20 +151,9 @@ class VenturaPreferencesView: NSView, PreferencesView {
     }
 
     private let items: [Section: [Item]]
-//    private let stackView = NSStackView()
+    private var flatItems: [Item] = []
     private let box = NSBox()
     private let tableView = NSTableView()
-
-    private lazy var dataSource = NSTableViewDiffableDataSource<Section, Item>(
-        tableView: tableView
-    ) { tableView, _, _, item in
-        let cell = tableView.makeView(withIdentifier: Cell.identifier, owner: self) as? Cell ?? Cell()
-
-        cell.text = item.title
-        cell.actions = item.actions
-
-        return cell
-    }
 
     init(items: [Section: [Item]]) {
         self.items = items
@@ -168,6 +166,8 @@ class VenturaPreferencesView: NSView, PreferencesView {
     }
 
     private func commonInit() {
+        flatItems = items.values.flatMap { $0 }
+
         box.translatesAutoresizingMaskIntoConstraints = false
         box.titlePosition = .noTitle
         box.contentView = tableView
@@ -180,7 +180,9 @@ class VenturaPreferencesView: NSView, PreferencesView {
         tableView.autoresizesSubviews = true
         tableView.headerView = nil
         tableView.gridStyleMask = .solidHorizontalGridLineMask
-        tableView.dataSource = dataSource
+        tableView.focusRingType = .none
+        tableView.selectionHighlightStyle = .none
+        tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = NSColor.clear
         tableView.style = .fullWidth
@@ -197,24 +199,38 @@ class VenturaPreferencesView: NSView, PreferencesView {
             tableView.trailingAnchor.constraint(equalTo: box.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: box.bottomAnchor)
         ])
-
-        reloadData()
-    }
-
-    private func reloadData() {
-        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
-
-        for (section, sectionItems) in items {
-            snapshot.appendSections([section])
-            snapshot.appendItems(sectionItems)
-        }
-
-        dataSource.apply(snapshot, animatingDifferences: false)
     }
 
     func willShow() {}
 }
 
-extension VenturaPreferencesView: NSTableViewDelegate {
+extension VenturaPreferencesView: NSTableViewDataSource {
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        flatItems.count
+    }
+}
 
+extension VenturaPreferencesView: NSTableViewDelegate {
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let cell = tableView.makeView(withIdentifier: Cell.identifier, owner: self) as? Cell ?? Cell()
+        cell.text = flatItems[row].title
+        cell.actions = flatItems[row].actions
+        return cell
+    }
+
+    func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
+        let rowView = SettingsTableRowView()
+        rowView.showSeparator = row != 0
+        return rowView
+    }
+}
+
+private class SettingsTableRowView: NSTableRowView {
+    var showSeparator = true
+
+    override func drawSeparator(in dirtyRect: NSRect) {
+        guard showSeparator else { return }
+        NSColor.separatorColor.setFill()
+        NSRect(x: 0, y: 0, width: bounds.width, height: 1).fill()
+    }
 }

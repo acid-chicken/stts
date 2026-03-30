@@ -24,7 +24,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     let popupController: MBPopupController
     private let serviceTableViewController: ServiceTableViewController
-    private let editorTableViewController: EditorTableViewController
 
     private let serviceLoader: ServiceLoader
     private let preferences: Preferences
@@ -55,7 +54,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         )
 
         popupController = MBPopupController(contentView: serviceTableViewController.contentView)
-        editorTableViewController = serviceTableViewController.editorTableViewController
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -87,22 +85,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
         serviceTableViewController.setup()
 
-        popupController.willOpenPopup = { [weak self] _ in
-            guard let self else { return }
-
-            if editorTableViewController.hidden {
-                serviceTableViewController.willOpenPopup()
-            } else {
-                editorTableViewController.willOpenPopup()
-            }
+        preferencesWindow.saveCallback = { [weak self] in
+            self?.serviceTableViewController.reloadServicesList()
+            self?.updateServices()
         }
 
-        popupController.didOpenPopup = { [weak self] in
-            guard let self else { return }
-
-            if !editorTableViewController.hidden {
-                editorTableViewController.didOpenPopup()
-            }
+        popupController.willOpenPopup = { [weak self] _ in
+            self?.serviceTableViewController.willOpenPopup()
         }
 
         if shouldAutomaticallyCheckServices {

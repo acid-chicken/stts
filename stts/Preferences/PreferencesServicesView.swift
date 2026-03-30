@@ -31,10 +31,18 @@ final class PreferencesServicesView: NSView {
     private var filteredServices: [ServiceDefinition]
     private var selectedServices: [ServiceDefinition]
 
+    var saveCallback: (() -> Void)?
+
     private var selectionChanged = false
 
     private var savedScrollPosition: CGPoint = .zero
 
+    private let saveButton: NSButton = {
+        let button = NSButton(title: "Save", target: nil, action: nil)
+        button.bezelStyle = .rounded
+        button.isEnabled = false
+        return button
+    }()
     private let searchField = NSSearchField()
     private lazy var filterSegmentedControl: NSSegmentedControl = {
         NSSegmentedControl(
@@ -138,6 +146,11 @@ final class PreferencesServicesView: NSView {
     }
 
     private func commonInit() {
+        saveButton.translatesAutoresizingMaskIntoConstraints = false
+        saveButton.target = self
+        saveButton.action = #selector(save)
+        addSubview(saveButton)
+
         searchField.translatesAutoresizingMaskIntoConstraints = false
         searchField.sendsSearchStringImmediately = true
         searchField.sendsWholeSearchString = false
@@ -194,12 +207,21 @@ final class PreferencesServicesView: NSView {
             box.topAnchor.constraint(equalTo: filterSegmentedControl.bottomAnchor, constant: 12),
             box.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
             box.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
-            box.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -12)
+            box.bottomAnchor.constraint(equalTo: saveButton.topAnchor, constant: -12),
+
+            saveButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            saveButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)
         ])
     }
 
     func deselectCategory() {
         selectedCategory = nil
+    }
+
+    @objc private func save() {
+        selectionChanged = false
+        saveButton.isEnabled = false
+        saveCallback?()
     }
 
     @objc private func updatedSearchString() {
@@ -252,7 +274,9 @@ final class PreferencesServicesView: NSView {
 
 extension PreferencesServicesView: PreferencesView {
     func willShow() {
+        selectedServices = preferences.selectedServices
         selectedCategory = nil
+        saveButton.isEnabled = false
     }
 }
 
@@ -318,6 +342,7 @@ extension PreferencesServicesView: NSTableViewDelegate {
                 guard let self else { return }
 
                 selectionChanged = true
+                saveButton.isEnabled = true
 
                 if view.selected {
                     selectedServices.append(serviceDefinition)

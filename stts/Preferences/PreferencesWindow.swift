@@ -7,34 +7,22 @@ import Cocoa
 import PreferencesWindow
 import SFSafeSymbols
 
-class PreferencesAboutView: NSView, PreferencesView {
-    init() {
-        super.init(frame: .zero)
-        wantsLayer = true
-        layer?.backgroundColor = NSColor.green.cgColor
-
-        NSLayoutConstraint.activate([
-            heightAnchor.constraint(equalToConstant: 400),
-            widthAnchor.constraint(equalToConstant: 400)
-        ])
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    func willShow() {}
-}
-
 final class PreferencesWindow {
     let controller: PreferencesWindowController
+    private let servicesView: PreferencesServicesView
+
+    var saveCallback: (() -> Void)? {
+        get { servicesView.saveCallback }
+        set { servicesView.saveCallback = newValue }
+    }
 
     init(serviceLoader: ServiceLoader, preferences: Preferences) {
-         controller = PreferencesWindowController(menuItems: [
+        servicesView = PreferencesServicesView(serviceLoader: serviceLoader, preferences: preferences)
+        controller = PreferencesWindowController(menuItems: [
             Self.generalMenuItem(),
-            Self.servicesMenuItem(serviceLoader: serviceLoader, preferences: preferences),
+            PreferencesWindow.servicesMenuItem(servicesView: servicesView),
             Self.aboutMenuItem()
-         ])
+        ])
     }
 
     func show() {
@@ -49,22 +37,32 @@ final class PreferencesWindow {
         )
     }
 
-    private static func servicesMenuItem(
-        serviceLoader: ServiceLoader,
-        preferences: Preferences
-    ) -> PreferencesSidebarMenuItem {
+    private static func servicesMenuItem(servicesView: PreferencesServicesView) -> PreferencesSidebarMenuItem {
         PreferencesSidebarMenuItem(
             title: "Services",
             symbol: .boltCircleFill,
-            view: PreferencesServicesView(serviceLoader: serviceLoader, preferences: preferences)
+            view: servicesView
         )
     }
 
     private static func aboutMenuItem() -> PreferencesSidebarMenuItem {
-        PreferencesSidebarMenuItem(
+        let content = AboutContent(
+            links: [
+                AboutContent.Link(
+                    title: "GitHub",
+                    url: URL(string: "https://github.com/inket/stts")!
+                ),
+                AboutContent.Link(
+                    title: "Contributors",
+                    url: URL(string: "https://github.com/inket/stts/graphs/contributors")!
+                )
+            ],
+            credit: "Activity glyph (app icon) by Gregor Črešnar from the Noun Project"
+        )
+        return PreferencesSidebarMenuItem(
             title: "About",
             symbol: .infoCircleFill,
-            view: PreferencesAboutView()
+            view: PreferencesAboutView(content: content)
         )
     }
 }

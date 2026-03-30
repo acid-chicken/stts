@@ -14,8 +14,6 @@ class ServiceTableViewController: NSObject, SwitchableTableViewController {
     let bottomBar = BottomBar()
     let addServicesNoticeField = NSTextField()
 
-    var editorTableViewController: EditorTableViewController
-
     private let serviceLoader: ServiceLoader
     var services: [BaseService] = []
 
@@ -39,14 +37,6 @@ class ServiceTableViewController: NSObject, SwitchableTableViewController {
         self.preferences = preferences
         self.preferencesWindow = preferencesWindow
 
-        self.editorTableViewController = EditorTableViewController(
-            contentView: contentView,
-            scrollView: scrollView,
-            bottomBar: bottomBar,
-            serviceLoader: serviceLoader,
-            preferences: preferences
-        )
-
         super.init()
 
         reloadServicesList()
@@ -57,12 +47,6 @@ class ServiceTableViewController: NSObject, SwitchableTableViewController {
 
         bottomBar.openSettingsCallback = { [weak self] in
             self?.preferencesWindow.show()
-        }
-
-        bottomBar.closeSettingsCallback = { [weak self] in
-            self?.reloadData()
-            self?.editorTableViewController.hide()
-            self?.show()
         }
 
         guard let superview = contentView.superview else {
@@ -165,15 +149,7 @@ class ServiceTableViewController: NSObject, SwitchableTableViewController {
     func willShow() {
         scrollView.topConstraint?.constant = 0
         scrollView.documentView = tableView
-
-        if editorTableViewController.selectionChanged {
-            reloadServicesList()
-
-            (NSApp.delegate as? AppDelegate)?.updateServices()
-        } else {
-            addServicesNoticeField.isHidden = services.count > 0
-        }
-
+        addServicesNoticeField.isHidden = services.count > 0
         resizeViews()
     }
 

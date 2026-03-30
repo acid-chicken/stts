@@ -6,10 +6,6 @@
 import Cocoa
 import SFSafeSymbols
 
-enum PreferencesSidebarMenuSection: Hashable {
-    case menu
-}
-
 public protocol PreferencesView: NSView {
     func willShow()
 }
