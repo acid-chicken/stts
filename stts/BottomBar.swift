@@ -14,10 +14,6 @@ enum BottomBarStatus {
 class BottomBar: NSView {
     let settingsButton = NSButton()
     let reloadButton = NSButton()
-    let doneButton = NSButton()
-    let aboutButton = NSButton()
-    let quitButton = NSButton()
-    let backButton = NSButton()
     let statusField = NSTextField()
     let separator = ServiceTableRowView()
 
@@ -29,8 +25,6 @@ class BottomBar: NSView {
 
     var reloadServicesCallback: () -> Void = {}
     var openSettingsCallback: () -> Void = {}
-    var closeSettingsCallback: () -> Void = {}
-    var backCallback: () -> Void = {}
 
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -43,12 +37,7 @@ class BottomBar: NSView {
     }
 
     private func commonInit() {
-        [
-            separator,
-            settingsButton, reloadButton, statusField, // Main view buttons
-            doneButton, aboutButton, quitButton, // Editor view buttons
-            backButton // Category view buttons
-        ].forEach {
+        [separator, settingsButton, reloadButton, statusField].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             addSubview($0)
         }
@@ -89,37 +78,21 @@ class BottomBar: NSView {
 
             statusField.leadingAnchor.constraint(equalTo: settingsButton.trailingAnchor),
             statusField.trailingAnchor.constraint(equalTo: reloadButton.leadingAnchor),
-            statusField.centerYAnchor.constraint(equalTo: centerYAnchor),
-
-            doneButton.widthAnchor.constraint(equalToConstant: 60),
-            doneButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-            doneButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -4),
-
-            aboutButton.widthAnchor.constraint(equalToConstant: 56),
-            aboutButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-            aboutButton.leadingAnchor.constraint(equalTo: quitButton.trailingAnchor, constant: 6),
-
-            quitButton.widthAnchor.constraint(equalToConstant: 46),
-            quitButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-            quitButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4),
-
-            backButton.widthAnchor.constraint(equalToConstant: 46),
-            backButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-            backButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4)
+            statusField.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
 
         settingsButton.isBordered = false
         settingsButton.bezelStyle = .regularSquare
         settingsButton.title = ""
         settingsButton.target = self
-        settingsButton.action = #selector(BottomBar.openSettings)
+        settingsButton.action = #selector(openSettings)
         gearIcon.scaleUnitSquare(to: NSSize(width: 0.46, height: 0.46))
 
         reloadButton.isBordered = false
         reloadButton.bezelStyle = .regularSquare
         reloadButton.title = ""
         reloadButton.target = self
-        reloadButton.action = #selector(BottomBar.reloadServices)
+        reloadButton.action = #selector(reloadServices)
         refreshIcon.scaleUnitSquare(to: NSSize(width: 0.38, height: 0.38))
 
         statusField.isEditable = false
@@ -141,34 +114,6 @@ class BottomBar: NSView {
         statusField.backgroundColor = NSColor.clear
         statusField.alignment = .center
         statusField.cell?.truncatesLastVisibleLine = true
-
-        doneButton.title = "Done"
-        doneButton.bezelStyle = .regularSquare
-        doneButton.controlSize = .regular
-        doneButton.isHidden = true
-        doneButton.target = self
-        doneButton.action = #selector(BottomBar.closeSettings)
-
-        aboutButton.title = "About"
-        aboutButton.bezelStyle = .regularSquare
-        aboutButton.controlSize = .regular
-        aboutButton.isHidden = true
-        aboutButton.target = self
-        aboutButton.action = #selector(BottomBar.openAbout)
-
-        quitButton.title = "Quit"
-        quitButton.bezelStyle = .regularSquare
-        quitButton.controlSize = .regular
-        quitButton.isHidden = true
-        quitButton.target = NSApp
-        quitButton.action = #selector(NSApplication.terminate(_:))
-
-        backButton.title = "Back"
-        backButton.bezelStyle = .regularSquare
-        backButton.controlSize = .regular
-        backButton.isHidden = true
-        backButton.target = self
-        backButton.action = #selector(BottomBar.back)
     }
 
     func updateStatusText() {
@@ -190,89 +135,11 @@ class BottomBar: NSView {
         }
     }
 
-    func openedCategory(_ category: ServiceDefinition?, backCallback: @escaping () -> Void) {
-        doneButton.isHidden = false
-        aboutButton.isHidden = category != nil
-        quitButton.isHidden = category != nil
-
-        backButton.isHidden = category == nil
-
-        self.backCallback = backCallback
-    }
-
-    @objc func reloadServices() {
+    @objc private func reloadServices() {
         reloadServicesCallback()
     }
 
-    @objc func openSettings() {
-        settingsButton.isHidden = true
-        statusField.isHidden = true
-        reloadButton.isHidden = true
-
-        doneButton.isHidden = false
-        aboutButton.isHidden = false
-        quitButton.isHidden = false
-
+    @objc private func openSettings() {
         openSettingsCallback()
-    }
-
-    @objc func closeSettings() {
-        backCallback()
-
-        settingsButton.isHidden = false
-        statusField.isHidden = false
-        reloadButton.isHidden = false
-
-        doneButton.isHidden = true
-        aboutButton.isHidden = true
-        quitButton.isHidden = true
-
-        backButton.isHidden = true
-
-        closeSettingsCallback()
-    }
-
-    @objc func openAbout() {
-        let githubLink = "github.com/inket/stts"
-        let contributorsLink = "github.com/inket/stts/graphs/contributors"
-
-        let openSourceNotice = "stts is an open-source project\n\(githubLink)"
-        let iconGlyphCredit = "Activity glyph (app icon)\nCreated by Gregor Črešnar from the Noun Project"
-        let contributors = "Contributors\n\(contributorsLink)"
-        let credits = NSMutableAttributedString(
-            string: "\n\(openSourceNotice)\n\n\(iconGlyphCredit)\n\n\(contributors)\n\n"
-        )
-
-        let normalFont = NSFont.systemFont(ofSize: 11)
-        let boldFont = NSFont.boldSystemFont(ofSize: 11)
-
-        credits.addAttribute(.font, value: normalFont, range: NSRange(location: 0, length: credits.length))
-        for word in ["stts", "Activity", "Contributors"] {
-            credits.addAttribute(.font, value: boldFont, range: (credits.string as NSString).range(of: word))
-        }
-
-        credits.addAttribute(
-            .link,
-            value: "https://\(githubLink)",
-            range: (credits.string as NSString).range(of: githubLink)
-        )
-        credits.addAttribute(
-            .link,
-            value: "https://\(contributorsLink)",
-            range: (credits.string as NSString).range(of: contributorsLink)
-        )
-
-        NSApp.orderFrontStandardAboutPanel(options: [NSApplication.AboutPanelOptionKey(rawValue: "Credits"): credits])
-        NSApp.activate(ignoringOtherApps: true)
-    }
-
-    @objc func back() {
-        backButton.isHidden = true
-
-        doneButton.isHidden = false
-        aboutButton.isHidden = false
-        quitButton.isHidden = false
-
-        backCallback()
     }
 }

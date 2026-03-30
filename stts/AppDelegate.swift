@@ -5,6 +5,7 @@
 
 import Cocoa
 import MBPopup
+import PreferencesWindow
 import Reachability
 
 @NSApplicationMain
@@ -23,10 +24,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
     let popupController: MBPopupController
     private let serviceTableViewController: ServiceTableViewController
-    private let editorTableViewController: EditorTableViewController
 
     private let serviceLoader: ServiceLoader
     private let preferences: Preferences
+    private let preferencesWindow: PreferencesWindow
 
     override init() {
         var serviceDefinitionProviders: [ServiceDefinitionProvider] = []
@@ -44,14 +45,15 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             .compactMap { $0.build() as? SendbirdService }
 
         preferences = Preferences(serviceLoader: serviceLoader)
+        preferencesWindow = PreferencesWindow(serviceLoader: serviceLoader, preferences: preferences)
 
         serviceTableViewController = ServiceTableViewController(
             serviceLoader: serviceLoader,
-            preferences: preferences
+            preferences: preferences,
+            preferencesWindow: preferencesWindow
         )
 
         popupController = MBPopupController(contentView: serviceTableViewController.contentView)
-        editorTableViewController = serviceTableViewController.editorTableViewController
     }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -83,22 +85,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
         serviceTableViewController.setup()
 
-        popupController.willOpenPopup = { [weak self] _ in
-            guard let self else { return }
-
-            if editorTableViewController.hidden {
-                serviceTableViewController.willOpenPopup()
-            } else {
-                editorTableViewController.willOpenPopup()
-            }
+        preferencesWindow.saveCallback = { [weak self] in
+            self?.serviceTableViewController.reloadServicesList()
+            self?.updateServices()
         }
 
-        popupController.didOpenPopup = { [weak self] in
-            guard let self else { return }
-
-            if !editorTableViewController.hidden {
-                editorTableViewController.didOpenPopup()
-            }
+        popupController.willOpenPopup = { [weak self] _ in
+            self?.serviceTableViewController.willOpenPopup()
         }
 
         if shouldAutomaticallyCheckServices {

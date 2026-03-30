@@ -5,6 +5,7 @@
 
 import Cocoa
 import MBPopup
+import PreferencesWindow
 
 class ServiceTableViewController: NSObject, SwitchableTableViewController {
     let contentView = NSStackView(frame: CGRect(x: 0, y: 0, width: 280, height: 400))
@@ -13,12 +14,11 @@ class ServiceTableViewController: NSObject, SwitchableTableViewController {
     let bottomBar = BottomBar()
     let addServicesNoticeField = NSTextField()
 
-    var editorTableViewController: EditorTableViewController
-
     private let serviceLoader: ServiceLoader
     var services: [BaseService] = []
 
     private let preferences: Preferences
+    private let preferencesWindow: PreferencesWindow
 
     @Atomic var servicesBeingUpdated = Set<BaseService>()
 
@@ -32,17 +32,10 @@ class ServiceTableViewController: NSObject, SwitchableTableViewController {
 
     var updateCallback: (() -> Void)?
 
-    init(serviceLoader: ServiceLoader, preferences: Preferences) {
+    init(serviceLoader: ServiceLoader, preferences: Preferences, preferencesWindow: PreferencesWindow) {
         self.serviceLoader = serviceLoader
         self.preferences = preferences
-
-        self.editorTableViewController = EditorTableViewController(
-            contentView: contentView,
-            scrollView: scrollView,
-            bottomBar: bottomBar,
-            serviceLoader: serviceLoader,
-            preferences: preferences
-        )
+        self.preferencesWindow = preferencesWindow
 
         super.init()
 
@@ -53,14 +46,7 @@ class ServiceTableViewController: NSObject, SwitchableTableViewController {
         bottomBar.reloadServicesCallback = (NSApp.delegate as? AppDelegate)!.updateServices
 
         bottomBar.openSettingsCallback = { [weak self] in
-            self?.hide()
-            self?.editorTableViewController.show()
-        }
-
-        bottomBar.closeSettingsCallback = { [weak self] in
-            self?.reloadData()
-            self?.editorTableViewController.hide()
-            self?.show()
+            self?.preferencesWindow.show()
         }
 
         guard let superview = contentView.superview else {
@@ -163,15 +149,7 @@ class ServiceTableViewController: NSObject, SwitchableTableViewController {
     func willShow() {
         scrollView.topConstraint?.constant = 0
         scrollView.documentView = tableView
-
-        if editorTableViewController.selectionChanged {
-            reloadServicesList()
-
-            (NSApp.delegate as? AppDelegate)?.updateServices()
-        } else {
-            addServicesNoticeField.isHidden = services.count > 0
-        }
-
+        addServicesNoticeField.isHidden = services.count > 0
         resizeViews()
     }
 
