@@ -23,9 +23,12 @@ extension String {
     func height(forWidth width: CGFloat, font: NSFont) -> CGFloat {
         guard count > 0 else { return 0 }
 
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.hyphenationFactor = 0
+
         let attributedString = NSAttributedString(
             string: self,
-            attributes: [.font: font]
+            attributes: [.font: font, .paragraphStyle: paragraphStyle]
         )
 
         let size = NSSize(width: width, height: .infinity)
@@ -35,7 +38,6 @@ extension String {
 
         layoutManager.addTextContainer(textContainer)
         textStorage.addLayoutManager(layoutManager)
-        layoutManager.hyphenationFactor = 0
         layoutManager.typesetterBehavior = .latestBehavior
 
         // NSLayoutManager is lazy, so force it to calculate with this

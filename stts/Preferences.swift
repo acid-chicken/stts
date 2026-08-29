@@ -23,6 +23,11 @@ class Preferences {
         set { UserDefaults.standard.set(newValue, forKey: "allowPopupToStretchAsNeeded") }
     }
 
+    var groupAvailableServices: Bool {
+        get { UserDefaults.standard.bool(forKey: "groupAvailableServices") }
+        set { UserDefaults.standard.set(newValue, forKey: "groupAvailableServices") }
+    }
+
     var selectedServices: [ServiceDefinition] {
         get {
             let identifiers = UserDefaults.standard.array(forKey: "selectedServices") as? [String] ?? []
@@ -47,6 +52,7 @@ class Preferences {
             "notifyOnStatusChange": true,
             "hideServiceDetailsIfAvailable": false,
             "allowPopupToStretchAsNeeded": false,
+            "groupAvailableServices": true,
             "selectedServices": ["CircleCI", "Cloudflare", "GitHub", "NPM", "TravisCI"]
         ])
 

@@ -19,7 +19,7 @@ final class PreferencesWindow {
     init(serviceLoader: ServiceLoader, preferences: Preferences) {
         servicesView = PreferencesServicesView(serviceLoader: serviceLoader, preferences: preferences)
         controller = PreferencesWindowController(menuItems: [
-            Self.generalMenuItem(),
+            Self.generalMenuItem(preferences: preferences),
             PreferencesWindow.servicesMenuItem(servicesView: servicesView),
             Self.aboutMenuItem()
         ])
@@ -29,11 +29,11 @@ final class PreferencesWindow {
         controller.show()
     }
 
-    private static func generalMenuItem() -> PreferencesSidebarMenuItem {
+    private static func generalMenuItem(preferences: Preferences) -> PreferencesSidebarMenuItem {
         PreferencesSidebarMenuItem(
             title: "General",
             symbol: .gearshapeFill,
-            view: PreferencesGeneralView()
+            view: PreferencesGeneralView(preferences: preferences)
         )
     }
 

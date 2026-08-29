@@ -14,6 +14,29 @@ class ServiceTableViewController: NSObject, SwitchableTableViewController {
     let bottomBar = BottomBar()
     let addServicesNoticeField = NSTextField()
 
+    private enum DisplayRow {
+        case service(BaseService)
+        case availableServicesGroup([BaseService])
+    }
+
+    private var displayedRows: [DisplayRow] = []
+
+    private func buildDisplayedRows() {
+        guard preferences.groupAvailableServices else {
+            displayedRows = services.map { .service($0) }
+            return
+        }
+
+        let nonAvailable = services.filter { $0.status != .good }
+        let available = services.filter { $0.status == .good }
+
+        var rows = nonAvailable.map { DisplayRow.service($0) }
+        if !available.isEmpty {
+            rows.append(.availableServicesGroup(available))
+        }
+        displayedRows = rows
+    }
+
     private let serviceLoader: ServiceLoader
     var services: [BaseService] = []
 
@@ -180,6 +203,7 @@ class ServiceTableViewController: NSObject, SwitchableTableViewController {
 
     func reloadData(at index: Int? = nil) {
         services.sort()
+        buildDisplayedRows()
 
         bottomBar.updateStatusText()
 
@@ -244,7 +268,7 @@ class ServiceTableViewController: NSObject, SwitchableTableViewController {
 
 extension ServiceTableViewController: NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return services.count
+        return displayedRows.count
     }
 
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
@@ -258,9 +282,15 @@ extension ServiceTableViewController: NSTableViewDelegate {
         let cell = tableView.makeView(withIdentifier: identifier, owner: self) ?? StatusTableCell()
 
         guard let view = cell as? StatusTableCell else { return nil }
-        guard let service = services[row] as? Service else { return nil }
 
-        view.setup(with: service, preferences: preferences)
+        switch displayedRows[row] {
+        case .service(let baseService):
+            guard let service = baseService as? Service else { return nil }
+            view.setup(with: service, preferences: preferences)
+        case .availableServicesGroup(let available):
+            let names = available.compactMap { ($0 as? Service)?.name }
+            view.setupAsAvailableServicesGroup(count: available.count, names: names)
+        }
 
         return view
     }
@@ -271,25 +301,64 @@ extension ServiceTableViewController: NSTableViewDelegate {
 
         guard let view = cell as? ServiceTableRowView else { return nil }
 
-        view.showSeparator = row + 1 < services.count
+        view.showSeparator = row + 1 < displayedRows.count
 
         return view
     }
 
     func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
-        guard let service = services[row] as? Service else { return false }
-
-        NSWorkspace.shared.open(service.url)
+        switch displayedRows[row] {
+        case .service(let baseService):
+            guard let service = baseService as? Service else { return false }
+            NSWorkspace.shared.open(service.url)
+        case .availableServicesGroup(let available):
+            showAvailableServicesMenu(for: available, atRow: row)
+        }
         return false
     }
 
-    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        guard let service = services[row] as? Service else { return 40 }
+    private func showAvailableServicesMenu(for availableServices: [BaseService], atRow row: Int) {
+        let menu = NSMenu()
 
-        return StatusTableCell.Layout.heightOfRow(
-            for: service,
-            preferences: preferences,
-            width: tableView.frame.size.width - 3 // tableview padding is 3
-        )
+        let header = NSMenuItem(title: "Open status page for", action: nil, keyEquivalent: "")
+        header.isEnabled = false
+        menu.addItem(header)
+
+        for baseService in availableServices {
+            guard let service = baseService as? Service else { continue }
+            let item = NSMenuItem(title: service.name, action: #selector(openServiceURL(_:)), keyEquivalent: "")
+            item.target = self
+            item.representedObject = service.url
+            item.indentationLevel = 1
+            menu.addItem(item)
+        }
+
+        guard let rowView = tableView.view(atColumn: 0, row: row, makeIfNecessary: false) else { return }
+        let event = NSApp.currentEvent ?? NSEvent()
+        NSMenu.popUpContextMenu(menu, with: event, for: rowView)
+    }
+
+    @objc private func openServiceURL(_ sender: NSMenuItem) {
+        guard let url = sender.representedObject as? URL else { return }
+        NSWorkspace.shared.open(url)
+    }
+
+    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        switch displayedRows[row] {
+        case .service(let baseService):
+            guard let service = baseService as? Service else { return 40 }
+            return StatusTableCell.Layout.heightOfRow(
+                for: service,
+                preferences: preferences,
+                width: tableView.frame.size.width - 3 // tableview padding is 3
+            )
+        case .availableServicesGroup(let available):
+            let names = available.compactMap { ($0 as? Service)?.name }
+            return StatusTableCell.Layout.heightOfAvailableServicesGroupRow(
+                count: available.count,
+                names: names,
+                width: tableView.frame.size.width - 3 // tableview padding is 3
+            )
+        }
     }
 }

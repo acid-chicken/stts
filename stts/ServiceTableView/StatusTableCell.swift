@@ -31,10 +31,21 @@ class StatusTableCell: NSTableCellView {
         private static let dummyCell = StatusTableCell(frame: .zero)
         static func heightOfRow(for service: Service, preferences: Preferences, width: CGFloat) -> CGFloat {
             let nsScrollerWidth: CGFloat = 16
-            let realRowWidth = width - (nsScrollerWidth - 4) // 4 by trial & error
+            let realRowWidth = width - (nsScrollerWidth - 1) // 1 by trial & error
 
             dummyCell.frame.size = CGSize(width: realRowWidth, height: 400)
             dummyCell.setup(with: service, preferences: preferences)
+            dummyCell.layoutSubtreeIfNeeded()
+
+            return dummyCell.stackView.frame.size.height + (verticalPadding * 2)
+        }
+
+        static func heightOfAvailableServicesGroupRow(count: Int, names: [String], width: CGFloat) -> CGFloat {
+            let nsScrollerWidth: CGFloat = 16
+            let realRowWidth = width - (nsScrollerWidth - 1) // 1 by trial & error
+
+            dummyCell.frame.size = CGSize(width: realRowWidth, height: 400)
+            dummyCell.setupAsAvailableServicesGroup(count: count, names: names)
             dummyCell.layoutSubtreeIfNeeded()
 
             return dummyCell.stackView.frame.size.height + (verticalPadding * 2)
@@ -115,5 +126,13 @@ class StatusTableCell: NSTableCellView {
         statusIndicator.status = service.status
         statusField.stringValue = service.message
         statusField.isHidden = service.status == .good && preferences.hideServiceDetailsIfAvailable
+    }
+
+    func setupAsAvailableServicesGroup(count: Int, names: [String]) {
+        let label = count == 1 ? "1 available service" : "\(count) available services"
+        titleField.stringValue = label
+        statusIndicator.status = .good
+        statusField.stringValue = names.joined(separator: ", ")
+        statusField.isHidden = names.isEmpty
     }
 }

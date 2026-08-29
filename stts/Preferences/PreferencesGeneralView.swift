@@ -9,7 +9,7 @@ import PreferencesWindow
 class PreferencesGeneralView: VenturaPreferencesView {
     private let quitButton = NSButton(title: "Quit stts", target: NSApp, action: #selector(NSApplication.terminate(_:)))
 
-    init() {
+    init(preferences: Preferences) {
         super.init(
             items: [
                 .init(title: "First section"): [
@@ -21,6 +21,13 @@ class PreferencesGeneralView: VenturaPreferencesView {
                     .init(
                         title: "Hide details of available services",
                         actions: [.switch(initialValue: false, changeCallback: { _ in })]
+                    ),
+                    .init(
+                        title: "Group available services",
+                        actions: [.switch(
+                            initialValue: preferences.groupAvailableServices,
+                            changeCallback: { preferences.groupAvailableServices = $0 }
+                        )]
                     )
                 ]
             ]
