@@ -165,9 +165,12 @@ public class PreferencesWindowController: NSWindowController {
         if !alreadyVisible {
             window?.center()
         }
+
+        // Deferred to the next run loop turn: ordering the window front in the same turn as activate()
+        // can resolve before activation actually completes, leaving the window behind other apps.
         DispatchQueue.main.async { [weak self] in
-            NSApplication.shared.activate(ignoringOtherApps: true)
             self?.window?.makeKeyAndOrderFront(nil)
+            self?.window?.orderFrontRegardless()
         }
     }
 }
