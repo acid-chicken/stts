@@ -77,7 +77,10 @@ final class IncidentIOTests: XCTestCase {
 
         try await aiven.updateStatus()
         XCTAssertEqual(aiven.status, .minor)
-        XCTAssertEqual(aiven.message, "We\u{2019}re currently experiencing issues\n* Amazon Web Services (AWS) ME-CENTRAL-1 region status")
+        XCTAssertEqual(
+            aiven.message,
+            "We\u{2019}re currently experiencing issues\n* Amazon Web Services (AWS) ME-CENTRAL-1 region status"
+        )
     }
 
     func testGoodStatus() async throws {
