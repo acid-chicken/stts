@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 public enum ServiceStatus: Int, Comparable {
     case undetermined
@@ -109,12 +110,13 @@ public class BaseService {
             && lastNotifiedStatus != status
 
         if notifyBecauseDifferent {
-            let notification = NSUserNotification()
+            let content = UNMutableNotificationContent()
             let possessiveS = realSelf.name.hasSuffix("s") ? "'" : "'s"
-            notification.title = "\(realSelf.name)\(possessiveS) status has changed"
-            notification.informativeText = message
+            content.title = "\(realSelf.name)\(possessiveS) status has changed"
+            content.body = message
 
-            NSUserNotificationCenter.default.deliver(notification)
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
+            UNUserNotificationCenter.current().add(request)
         }
 
         lastNotifiedStatus = status

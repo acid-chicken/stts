@@ -7,6 +7,7 @@ import Cocoa
 import MBPopup
 import PreferencesWindow
 import Reachability
+import UserNotifications
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
@@ -73,7 +74,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
         Appearance.addObserver(self)
 
-        NSUserNotificationCenter.default.delegate = self
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { _, _ in }
 
         popupController.statusItem.button?.title = "stts"
         popupController.statusItem.button?.font =
@@ -140,9 +142,22 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
 }
 
-extension AppDelegate: NSUserNotificationCenterDelegate {
-    func userNotificationCenter(_ center: NSUserNotificationCenter, didActivate notification: NSUserNotification) {
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification,
+        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+    ) {
+        completionHandler([.banner, .sound])
+    }
+
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        didReceive response: UNNotificationResponse,
+        withCompletionHandler completionHandler: @escaping () -> Void
+    ) {
         popupController.openPopup()
+        completionHandler()
     }
 }
 
