@@ -124,6 +124,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         }
     }
 
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        popupController.openPopup()
+        return true
+    }
+
     private func reachabilityChanged() {
         if initialReachabilityChange {
             // Reachability notifies us of a change on app launch (after calling startNotifier()),
