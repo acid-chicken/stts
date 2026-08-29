@@ -36,14 +36,9 @@ final class AppleBooks: Apple, SubService {
     let serviceName = "Apple Books"
 }
 
-final class AppleBusinessEssentials: Apple, SubService {
-    let name = "Apple Business Essentials"
-    let serviceName = "Apple Business Essentials"
-}
-
-final class AppleBusinessManager: Apple, SubService {
-    let name = "Apple Business Manager"
-    let serviceName = "Apple Business Manager"
+final class AppleBusiness: Apple, SubService {
+    let name = "Apple Business"
+    let serviceName = "Apple Business"
 }
 
 final class AppleCard: Apple, SubService {
@@ -54,6 +49,11 @@ final class AppleCard: Apple, SubService {
 final class AppleCash: Apple, SubService {
     let name = "Apple Cash"
     let serviceName = "Apple Cash"
+}
+
+final class AppleCreatorStudioContentHub: Apple, SubService {
+    let name = "Apple Creator Studio Content Hub"
+    let serviceName = "Apple Creator Studio Content Hub"
 }
 
 final class AppleFitness: Apple, SubService {
@@ -129,11 +129,6 @@ final class AppleCareOnDevice: Apple, SubService {
 final class AppleAudiobooks: Apple, SubService {
     let name = "Apple Audiobooks"
     let serviceName = "Audiobooks"
-}
-
-final class AppleBusinessConnect: Apple, SubService {
-    let name = "Apple BusinessConnect"
-    let serviceName = "BusinessConnect"
 }
 
 final class AppleDictation: Apple, SubService {
@@ -589,6 +584,11 @@ final class AppleDeveloperIDNotaryService: AppleDeveloper, SubService {
     let serviceName = "Developer ID Notary Service"
 }
 
+final class AppleDeviceCheck: AppleDeveloper, SubService {
+    let name = "Apple Device Check"
+    let serviceName = "Device Check"
+}
+
 final class AppleDeviceEnrollmentProgram: AppleDeveloper, SubService {
     let name = "Apple Device Enrollment Program"
     let serviceName = "Device Enrollment Program"
@@ -622,6 +622,11 @@ final class AppleNFCAndSEPlatform: AppleDeveloper, SubService {
 final class AppleProgramEnrollmentAndRenewals: AppleDeveloper, SubService {
     let name = "Apple Program Enrollment and Renewals"
     let serviceName = "Program Enrollment and Renewals"
+}
+
+final class AppleProvisioningProfileService: AppleDeveloper, SubService {
+    let name = "Apple Provisioning Profile Service"
+    let serviceName = "Provisioning Profile Service"
 }
 
 final class AppleSKAdNetwork: AppleDeveloper, SubService {

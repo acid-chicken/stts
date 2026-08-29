@@ -3,8 +3,12 @@
 
 import Foundation
 
-final class FirebaseABTestingBETA: FirebaseService, SubService {
-    let name = "Firebase AB Testing (BETA)"
+final class FirebaseABTestingBeta: FirebaseService, SubService {
+    let name = "Firebase A/B Testing (Beta)"
+}
+
+final class FirebaseAILogic: FirebaseService, SubService {
+    let name = "Firebase AI Logic"
 }
 
 final class FirebaseAppCheck: FirebaseService, SubService {
@@ -31,6 +35,10 @@ final class FirebaseCloudMessaging: FirebaseService, SubService {
     let name = "Firebase Cloud Messaging"
 }
 
+final class FirebaseCloudStorage: FirebaseService, SubService {
+    let name = "Firebase Cloud Storage"
+}
+
 final class FirebaseConsole: FirebaseService, SubService {
     let name = "Firebase Console"
 }
@@ -39,24 +47,12 @@ final class FirebaseCrashlytics: FirebaseService, SubService {
     let name = "Firebase Crashlytics"
 }
 
-final class FirebaseDataConnect: FirebaseService, SubService {
-    let name = "Firebase Data Connect"
-}
-
 final class FirebaseDynamicLinks: FirebaseService, SubService {
     let name = "Firebase Dynamic Links"
 }
 
 final class FirebaseExtensions: FirebaseService, SubService {
     let name = "Firebase Extensions"
-}
-
-final class FirebaseAILogic: FirebaseService, SubService {
-    let name = "Firebase AI Logic"
-}
-
-final class FirebaseStudio: FirebaseService, SubService {
-    let name = "Firebase Studio"
 }
 
 final class FirebaseGeminiInFirebase: FirebaseService, SubService {
@@ -71,12 +67,20 @@ final class FirebaseHosting: FirebaseService, SubService {
     let name = "Firebase Hosting"
 }
 
-final class FirebaseMachineLearningBETA: FirebaseService, SubService {
-    let name = "Firebase Machine Learning (BETA)"
+final class FirebaseInAppMessagingBeta: FirebaseService, SubService {
+    let name = "Firebase In-App Messaging (Beta)"
+}
+
+final class FirebaseMachineLearningBeta: FirebaseService, SubService {
+    let name = "Firebase Machine Learning (Beta)"
 }
 
 final class FirebasePerformanceMonitoring: FirebaseService, SubService {
     let name = "Firebase Performance Monitoring"
+}
+
+final class FirebasePhoneNumberVerification: FirebaseService, SubService {
+    let name = "Firebase Phone Number Verification"
 }
 
 final class FirebaseRealtimeDatabase: FirebaseService, SubService {
@@ -85,6 +89,14 @@ final class FirebaseRealtimeDatabase: FirebaseService, SubService {
 
 final class FirebaseRemoteConfig: FirebaseService, SubService {
     let name = "Firebase Remote Config"
+}
+
+final class FirebaseSQLConnect: FirebaseService, SubService {
+    let name = "Firebase SQL Connect"
+}
+
+final class FirebaseStudioPreview: FirebaseService, SubService {
+    let name = "Firebase Studio (Preview)"
 }
 
 final class FirebaseTestLab: FirebaseService, SubService {

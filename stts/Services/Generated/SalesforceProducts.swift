@@ -201,6 +201,33 @@ final class MulesoftNA: Mulesoft, SubService {
     let location = "NA"
 }
 
+final class Point_of_SaleAll: Point_of_Sale, ServiceCategory {
+    let categoryName = "Point_of_Sale"
+    let subServiceSuperclass: AnyObject.Type = BasePoint_of_Sale.self
+
+    let name = "Point_of_Sale (All Regions)"
+    let key = "Point_of_Sale"
+    let location = "*"
+}
+
+final class Point_of_SaleAPAC: Point_of_Sale, SubService {
+    let name = "Point_of_Sale (APAC)"
+    let key = "Point_of_Sale"
+    let location = "APAC"
+}
+
+final class Point_of_SaleEMEA: Point_of_Sale, SubService {
+    let name = "Point_of_Sale (EMEA)"
+    let key = "Point_of_Sale"
+    let location = "EMEA"
+}
+
+final class Point_of_SaleNA: Point_of_Sale, SubService {
+    let name = "Point_of_Sale (NA)"
+    let key = "Point_of_Sale"
+    let location = "NA"
+}
+
 final class SalesforceServicesAll: SalesforceServices, ServiceCategory {
     let categoryName = "Salesforce Services"
     let subServiceSuperclass: AnyObject.Type = BaseSalesforceServices.self

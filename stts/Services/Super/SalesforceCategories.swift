@@ -67,6 +67,14 @@ class BaseMulesoft: BaseSalesforceCategory {
     let url = URL(string: "https://status.salesforce.com/products/Mulesoft")!
 }
 
+typealias Point_of_Sale =
+    BasePoint_of_Sale & RequiredServiceProperties & SalesforceStoreService
+
+class BasePoint_of_Sale: BaseSalesforceCategory {
+    static var store = SalesforceStore(key: "Point_of_Sale")
+    let url = URL(string: "https://status.salesforce.com/products/Point_of_Sale")!
+}
+
 typealias SalesforceServices =
     BaseSalesforceServices & RequiredServiceProperties & SalesforceStoreService
 

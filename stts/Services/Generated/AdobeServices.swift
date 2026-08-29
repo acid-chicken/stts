@@ -58,6 +58,11 @@ final class AdobeBrandConcierge: AdobeExperienceCloud, SubService {
     let id = "594942"
 }
 
+final class AdobeBrandVisibility: AdobeExperienceCloud, SubService {
+    let name = "Adobe Brand Visibility"
+    let id = "595270"
+}
+
 final class AdobeBridge: AdobeCreativeCloud, SubService {
     let name = "Adobe Bridge"
     let id = "546687"
@@ -86,6 +91,11 @@ final class AdobeColor: AdobeCreativeCloud, SubService {
 final class AdobeCommerce: AdobeExperienceCloud, SubService {
     let name = "Adobe Commerce"
     let id = "503473"
+}
+
+final class AdobeCommercePartnerAPI: AdobeServices, SubService {
+    let name = "Adobe Commerce Partner API"
+    let id = "614000"
 }
 
 final class AdobeConnect: AdobeServices, SubService {
@@ -156,6 +166,11 @@ final class AdobeCustomerSupport: AdobeServices, SubService {
     let id = "558202"
 }
 
+final class AdobeCXEnterpriseHome: AdobeExperienceCloud, SubService {
+    let name = "Adobe CX Enterprise Home"
+    let id = "503464"
+}
+
 final class AdobeDataFoundation: AdobeExperiencePlatform, SubService {
     let name = "Adobe Data Foundation"
     let id = "503462"
@@ -195,11 +210,6 @@ final class AdobeExperienceCloudAll: AdobeExperienceCloud, ServiceCategory {
 
     let name = "Adobe Experience Cloud (All)"
     let id = "503461"
-}
-
-final class AdobeExperienceCloudHome: AdobeExperienceCloud, SubService {
-    let name = "Adobe Experience Cloud Home"
-    let id = "503464"
 }
 
 final class AdobeExperienceLeague: AdobeServices, SubService {
@@ -290,6 +300,11 @@ final class AdobeJourneyOptimizerB2B: AdobeExperienceCloud, SubService {
     let id = "552633"
 }
 
+final class AdobeKnowledgeBaseInAdobeAcrobat: AdobeDocumentCloud, SubService {
+    let name = "Adobe Knowledge Base in Adobe Acrobat"
+    let id = "616706"
+}
+
 final class AdobeLearningManager: AdobeServices, SubService {
     let name = "Adobe Learning Manager"
     let id = "503520"
@@ -303,11 +318,6 @@ final class AdobeLightroom: AdobeCreativeCloud, SubService {
 final class AdobeLive: AdobeCreativeCloud, SubService {
     let name = "Adobe Live"
     let id = "503514"
-}
-
-final class AdobeLLMOptimizer: AdobeExperienceCloud, SubService {
-    let name = "Adobe LLM Optimizer"
-    let id = "595270"
 }
 
 final class AdobeMarketoEngage: AdobeExperienceCloud, SubService {
@@ -351,18 +361,13 @@ final class AdobeQueryService: AdobeExperiencePlatform, SubService {
 }
 
 final class AdobeRealTimeCDP: AdobeExperienceCloud, SubService {
-    let name = "Adobe Real Time CDP"
+    let name = "Adobe Real-Time CDP"
     let id = "533248"
 }
 
 final class AdobeResellerConsole: AdobeServices, SubService {
     let name = "Adobe Reseller Console"
     let id = "503497"
-}
-
-final class AdobeSearch: AdobeServices, SubService {
-    let name = "Adobe Search"
-    let id = "503507"
 }
 
 final class AdobeServicesAll: AdobeServices, ServiceCategory {
@@ -376,6 +381,11 @@ final class AdobeServicesAll: AdobeServices, ServiceCategory {
 final class AdobeSignIn: AdobeServices, SubService {
     let name = "Adobe Sign In"
     let id = "503525"
+}
+
+final class AdobeSitesOptimizer: AdobeExperienceCloud, SubService {
+    let name = "Adobe Sites Optimizer"
+    let id = "582032"
 }
 
 final class AdobeStatusServiceProbe: AdobeServices, SubService {
