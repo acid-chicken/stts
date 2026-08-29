@@ -145,7 +145,7 @@ func discoverServices(for platform: GooglePlatform) -> [Service] {
     case .cloudPlatform:
         // swiftlint:disable:next force_try
         regex = try! NSRegularExpression(
-            pattern: "__product\">[\\s\\n]*(.+?)[\\s\\n]*<.*?\\/th>",
+            pattern: "__product\" scope=\"row\">[\\s\\n]*(.+?)[\\s\\n]*<.*?\\/th>",
             options: [.caseInsensitive, .dotMatchesLineSeparators]
         )
     case .firebase:
