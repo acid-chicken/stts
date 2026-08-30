@@ -10,8 +10,10 @@
 		6479249F27A82900A7850DA2 /* Fivetran.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C700195D9E66693E54BF408 /* Fivetran.swift */; };
 		7C82768C2C8E3CA800C0E37B /* NSScreenExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C82768B2C8E3BE300C0E37B /* NSScreenExtensions.swift */; };
 		77C05B3DC96F1BC6D65BB2F8 /* Upsun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACC0E3A2FF5D60BDF1301D5 /* Upsun.swift */; };
+		3E019A40FEF6B07CFA2929C6 /* Railway.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4B3BC5C75184E6FA0774C /* Railway.swift */; };
 		91B0A21428197857007D8E8F /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B0A21328197857007D8E8F /* StringExtensionsTests.swift */; };
 		11CDDE8D2DB2562F9BD7FC6A /* UpsunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEFAD4B419169D95440CFC6 /* UpsunTests.swift */; };
+		A9A2A80AC6A56F7BFBF43600 /* RailwayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43ABB7454B89C4734CC867 /* RailwayTests.swift */; };
 		B200CA74247FC5AE00DB0868 /* AdobeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B200CA73247FC5AE00DB0868 /* AdobeServices.swift */; };
 		B200CA76247FC88700DB0868 /* Adobe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B200CA75247FC88700DB0868 /* Adobe.swift */; };
 		B200CA78247FC8B700DB0868 /* AdobeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B200CA77247FC8B700DB0868 /* AdobeStore.swift */; };
@@ -188,7 +190,9 @@
 /* Begin PBXFileReference section */
 		5C700195D9E66693E54BF408 /* Fivetran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fivetran.swift; sourceTree = "<group>"; };
 		4ACC0E3A2FF5D60BDF1301D5 /* Upsun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upsun.swift; sourceTree = "<group>"; };
+		BBD4B3BC5C75184E6FA0774C /* Railway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Railway.swift; sourceTree = "<group>"; };
 		BAEFAD4B419169D95440CFC6 /* UpsunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpsunTests.swift; sourceTree = "<group>"; };
+		AC43ABB7454B89C4734CC867 /* RailwayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailwayTests.swift; sourceTree = "<group>"; };
 		7C82768B2C8E3BE300C0E37B /* NSScreenExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSScreenExtensions.swift; sourceTree = "<group>"; };
 		91B0A21328197857007D8E8F /* StringExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsTests.swift; sourceTree = "<group>"; };
 		B200CA71247FBC0A00DB0868 /* generate_adobe_services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generate_adobe_services.swift; sourceTree = "<group>"; };
@@ -391,6 +395,7 @@
 				B2D655E629B802ED00DBE417 /* InstatusTests.swift */,
 				B2C670432F69BDA20043DC7A /* MiroTests.swift */,
 				B22651282B2EEA52002F1CE2 /* PagerDutyTests.swift */,
+				AC43ABB7454B89C4734CC867 /* RailwayTests.swift */,
 				91B0A21328197857007D8E8F /* StringExtensionsTests.swift */,
 				B2163AF720BA4E7500B14A85 /* sttsTests.swift */,
 				BAEFAD4B419169D95440CFC6 /* UpsunTests.swift */,
@@ -624,6 +629,7 @@
 				B2C6703F2F69B9160043DC7A /* MiroAll.swift */,
 				B276D7692C41F93300974DB6 /* Okta.swift */,
 				B22602B027D881AF001190F1 /* OracleNetSuite.swift */,
+				BBD4B3BC5C75184E6FA0774C /* Railway.swift */,
 				B2228B6126C9623C002F01F0 /* SendbirdAll.swift */,
 				B2DEE0BD1E696D64006B198E /* Slack.swift */,
 				B230CE7E21B95C5500E2005D /* Stripe.swift */,
@@ -945,6 +951,7 @@
 				B2552F082995516B003FF9EC /* TestBundle.swift in Sources */,
 				B2C670442F69BDA20043DC7A /* MiroTests.swift in Sources */,
 				B22651292B2EEA52002F1CE2 /* PagerDutyTests.swift in Sources */,
+				A9A2A80AC6A56F7BFBF43600 /* RailwayTests.swift in Sources */,
 				11CDDE8D2DB2562F9BD7FC6A /* UpsunTests.swift in Sources */,
 				B26EC1132F69101D00DDD0B9 /* IncidentIOTests.swift in Sources */,
 				B228DC162A7F872800D8DC5E /* BetterStackTests.swift in Sources */,
@@ -1048,6 +1055,7 @@
 				B277BC9422B4BB6D000B55C3 /* AzureDevOpsStore.swift in Sources */,
 				6479249F27A82900A7850DA2 /* Fivetran.swift in Sources */,
 				77C05B3DC96F1BC6D65BB2F8 /* Upsun.swift in Sources */,
+				3E019A40FEF6B07CFA2929C6 /* Railway.swift in Sources */,
 				B2A4A8161DC82CE300037E99 /* BottomBar.swift in Sources */,
 				B213A1791DC9EA25008E8E58 /* ServiceTableRowView.swift in Sources */,
 				B2A9BFB41DC6E30F001BD4B7 /* Icons.swift in Sources */,
