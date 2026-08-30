@@ -42,7 +42,8 @@ class IndependentServiceDefinition: CodableServiceDefinition, ServiceDefinition 
             name: service.name,
             url: service.url,
             isCategory: service is ServiceCategory,
-            isSubService: service is SubService
+            isSubService: service is SubService,
+            oldNames: klass?.oldNames
         )
     }
 
@@ -76,4 +77,8 @@ typealias IndependentService = BaseIndependentService & RequiredServicePropertie
 
 class BaseIndependentService: BaseService {
     public required override init() {}
+
+    /// Names this service was previously known by (e.g. before a rebrand or a provider change),
+    /// used to carry over the user's enabled/disabled preference. Analogous to `old_names` in JSON definitions.
+    class var oldNames: Set<String>? { nil }
 }

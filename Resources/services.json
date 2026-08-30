@@ -1043,14 +1043,6 @@
       ]
     },
     {
-      "name": "Platform.sh",
-      "url": "https://status.platform.sh",
-      "id": "l2x5n4czt1ph",
-      "old_names": [
-        "PlatformSH"
-      ]
-    },
-    {
       "name": "PlayFab",
       "url": "https://status.playfab.com",
       "id": "hndmlgmdcpdk"
