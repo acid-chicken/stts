@@ -57,6 +57,32 @@ class Preferences {
         ])
 
         Preferences.migrate()
+        removeDeletedServices()
+    }
+
+    /// Prunes stored identifiers for services services.json's `_removed` key declares gone for good
+    /// (not just currently broken/unreachable — see `ServicesStructure.removedServices`), instead of
+    /// leaving them silently unmatched forever. Only prunes an identifier if it doesn't *also* still
+    /// resolve to a real service, as a safety net against a mistaken/overly broad `_removed` entry.
+    private func removeDeletedServices() {
+        let removedIdentifiers = serviceLoader.removedIdentifiers
+        guard !removedIdentifiers.isEmpty else { return }
+
+        guard let services = UserDefaults.standard.array(forKey: "selectedServices") as? [String] else { return }
+
+        let remainingServices = services.filter { identifier in
+            guard removedIdentifiers.contains(identifier) else { return true }
+
+            let stillResolves = serviceLoader.serviceDefinition(forIdentifier: identifier) != nil
+            if !stillResolves {
+                debugPrint("Removed deleted service \(identifier)")
+            }
+            return stillResolves
+        }
+
+        if remainingServices != services {
+            UserDefaults.standard.setValue(remainingServices, forKey: "selectedServices")
+        }
     }
 
     private static func migrate() {
@@ -71,7 +97,18 @@ class Preferences {
             // There were many others but they were migrated to the services.json file
             // Generated services
             "FirebaseMLKit": "FirebaseMachineLearning",
-            "AdobeAdobePhotoshopAPI": "AdobePhotoshopAPI"
+            "AdobeAdobePhotoshopAPI": "AdobePhotoshopAPI",
+
+            // 2026-08: these services' status pages moved to a different underlying provider,
+            // which changes their globalIdentifier's provider prefix even though it's the same service.
+            "statuspage.Fivetran": "independent.Fivetran",
+            "statuspage.Notion": "incidentio.Notion",
+            "independent.Recurly": "incidentio.Recurly",
+            "statusiov1.SumoLogic": "statuspage.SumoLogic",
+            "independent.PagerDuty": "pagerduty.PagerDuty",
+            "independent.SignalWire": "pagerduty.SignalWire",
+            "statuspage.Platformsh": "independent.Upsun", // Also rebranded from "Platform.sh" to "Upsun"
+            "instatus.Railway": "independent.Railway"
         ]
 
         if var services = UserDefaults.standard.array(forKey: "selectedServices") as? [String] {

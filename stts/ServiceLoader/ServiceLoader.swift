@@ -39,6 +39,10 @@ final class ServiceLoader {
         allServices.filter { !($0.isSubService == true) }
     }()
 
+    private(set) lazy var removedIdentifiers: Set<String> = {
+        providers.reduce(into: Set<String>()) { $0.formUnion($1.removedIdentifiers) }
+    }()
+
     func services(for definitions: [ServiceDefinition]) -> [BaseService] {
         definitions.compactMap { $0.build() }
     }

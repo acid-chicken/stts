@@ -26,6 +26,7 @@ struct ServicesStructure: Codable {
         case sendbirdServices = "sendbird"
         case miroServices = "miro"
         case pagerDutyServices = "pagerduty"
+        case removedServices = "_removed"
     }
 
     let independentServices: [IndependentServiceDefinition]?
@@ -47,6 +48,14 @@ struct ServicesStructure: Codable {
     let sendbirdServices: [SendbirdServiceDefinition]?
     let miroServices: [MiroServiceDefinition]?
     let pagerDutyServices: [PagerDutyServiceDefinition]?
+
+    /// Identifiers of services confirmed gone for good (company shut down/bankrupt, product
+    /// discontinued) — not services that are merely renamed (see `old_names`) or just currently
+    /// unreachable/broken (e.g. a dead domain for a company that's still very much operating; it
+    /// might get a working integration again later, so it must NOT be listed here). Used to prune a
+    /// user's stale preference for a service that will never come back, rather than leaving it
+    /// silently unmatched forever.
+    let removedServices: [String]?
 
     var allServices: [ServiceDefinition] {
         let sections: [[ServiceDefinition]?] = [
