@@ -1467,5 +1467,65 @@
       ]
     }
   ],
+  "azure": [
+    {
+      "name": "Azure Americas",
+      "id": "americas"
+    },
+    {
+      "name": "Azure Asia Pacific",
+      "id": "asia"
+    },
+    {
+      "name": "Azure China",
+      "id": "azure-china"
+    },
+    {
+      "name": "Azure Europe",
+      "id": "europe"
+    },
+    {
+      "name": "Azure Government",
+      "id": "azure-government"
+    },
+    {
+      "name": "Azure Jio",
+      "id": "jio"
+    },
+    {
+      "name": "Azure Middle East and Africa",
+      "id": "middle-east-africa"
+    }
+  ],
+  "azuredevops": [
+    {
+      "name": "Azure DevOps Artifacts",
+      "id": "Artifacts"
+    },
+    {
+      "name": "Azure DevOps Boards",
+      "id": "Boards"
+    },
+    {
+      "name": "Azure DevOps Core Services",
+      "id": "Core services"
+    },
+    {
+      "name": "Azure DevOps Other Services",
+      "id": "Other services"
+    },
+    {
+      "name": "Azure DevOps Pipelines",
+      "id": "Pipelines"
+    },
+    {
+      "name": "Azure DevOps Repos",
+      "id": "Repos"
+    },
+    {
+      "name": "Azure DevOps Test Plans",
+      "id": "Test Plans"
+    }
+  ],
   "_removed": []
 }

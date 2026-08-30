@@ -26,6 +26,8 @@ struct ServicesStructure: Codable {
         case sendbirdServices = "sendbird"
         case miroServices = "miro"
         case pagerDutyServices = "pagerduty"
+        case azureServices = "azure"
+        case azureDevOpsServices = "azuredevops"
         case removedServices = "_removed"
     }
 
@@ -48,6 +50,8 @@ struct ServicesStructure: Codable {
     let sendbirdServices: [SendbirdServiceDefinition]?
     let miroServices: [MiroServiceDefinition]?
     let pagerDutyServices: [PagerDutyServiceDefinition]?
+    let azureServices: [AzureServiceDefinition]?
+    let azureDevOpsServices: [AzureDevOpsServiceDefinition]?
 
     /// Identifiers of services confirmed gone for good (company shut down/bankrupt, product
     /// discontinued) — not services that are merely renamed (see `old_names`) or just currently
@@ -77,7 +81,9 @@ struct ServicesStructure: Codable {
             betterStackServices,
             sendbirdServices,
             miroServices,
-            pagerDutyServices
+            pagerDutyServices,
+            azureServices,
+            azureDevOpsServices
         ]
 
         return sections.compactMap { $0 }.flatMap { $0 }

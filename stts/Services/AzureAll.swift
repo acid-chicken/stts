@@ -10,5 +10,6 @@ class AzureAll: Azure, ServiceCategory {
     let subServiceSuperclass: AnyObject.Type = BaseAzure.self
 
     let name = "Azure (All Regions)"
+    let url = AzureServiceDefinition.commonURL
     let zoneIdentifier = "*"
 }

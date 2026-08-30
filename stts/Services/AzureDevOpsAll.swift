@@ -10,5 +10,6 @@ class AzureDevOpsAll: AzureDevOps, ServiceCategory {
     let subServiceSuperclass: AnyObject.Type = BaseAzureDevOps.self
 
     let name = "Azure DevOps (All)"
+    let url = AzureDevOpsServiceDefinition.commonURL
     let serviceName = "*"
 }

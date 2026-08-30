@@ -92,7 +92,6 @@
 		B276D76C2C42036A00974DB6 /* HeadlessHTMLRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B276D76B2C42036A00974DB6 /* HeadlessHTMLRenderer.swift */; };
 		B277BC9222B4BB5C000B55C3 /* AzureDevOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277BC9122B4BB5C000B55C3 /* AzureDevOps.swift */; };
 		B277BC9422B4BB6D000B55C3 /* AzureDevOpsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277BC9322B4BB6D000B55C3 /* AzureDevOpsStore.swift */; };
-		B277BC9822B4C16A000B55C3 /* AzureDevOpsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277BC9722B4C16A000B55C3 /* AzureDevOpsServices.swift */; };
 		B27F66A62A3609E8008DAF33 /* AWSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F66A52A3609E8008DAF33 /* AWSService.swift */; };
 		B27F66A82A360DFF008DAF33 /* AWSStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F66A72A360DFF008DAF33 /* AWSStore.swift */; };
 		B27F66AA2A3621F7008DAF33 /* AWSServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F66A92A3621F7008DAF33 /* AWSServices.swift */; };
@@ -126,7 +125,6 @@
 		B2CEB9A21DFD8987005FB901 /* StartAtLogin.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2CEB9A01DFD8984005FB901 /* StartAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2CEE5D722B49CB50073C743 /* Azure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CEE5D622B49CB50073C743 /* Azure.swift */; };
 		B2CEE5D922B49CC80073C743 /* AzureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CEE5D822B49CC80073C743 /* AzureStore.swift */; };
-		B2CEE5DB22B4A97B0073C743 /* AzureServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CEE5DA22B4A97B0073C743 /* AzureServices.swift */; };
 		B2D006692A875AB5008B3A13 /* PreferencesWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D006632A875AB5008B3A13 /* PreferencesWindow.framework */; };
 		B2D0066A2A875AB5008B3A13 /* PreferencesWindow.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B2D006632A875AB5008B3A13 /* PreferencesWindow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2D0066F2A875AC1008B3A13 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D0066E2A875AC1008B3A13 /* PreferencesWindowController.swift */; };
@@ -274,8 +272,6 @@
 		B276D76B2C42036A00974DB6 /* HeadlessHTMLRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlessHTMLRenderer.swift; sourceTree = "<group>"; };
 		B277BC9122B4BB5C000B55C3 /* AzureDevOps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzureDevOps.swift; sourceTree = "<group>"; };
 		B277BC9322B4BB6D000B55C3 /* AzureDevOpsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzureDevOpsStore.swift; sourceTree = "<group>"; };
-		B277BC9522B4BC6C000B55C3 /* generate_azure_devops_services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generate_azure_devops_services.swift; sourceTree = "<group>"; };
-		B277BC9722B4C16A000B55C3 /* AzureDevOpsServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzureDevOpsServices.swift; sourceTree = "<group>"; };
 		B27F66A42A35EBAA008DAF33 /* generate_aws_services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generate_aws_services.swift; sourceTree = "<group>"; };
 		B27F66A52A3609E8008DAF33 /* AWSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSService.swift; sourceTree = "<group>"; };
 		B27F66A72A360DFF008DAF33 /* AWSStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSStore.swift; sourceTree = "<group>"; };
@@ -312,8 +308,6 @@
 		B2CEB9A01DFD8984005FB901 /* StartAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StartAtLogin.framework; path = Carthage/Build/Mac/StartAtLogin.framework; sourceTree = SOURCE_ROOT; };
 		B2CEE5D622B49CB50073C743 /* Azure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Azure.swift; sourceTree = "<group>"; };
 		B2CEE5D822B49CC80073C743 /* AzureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzureStore.swift; sourceTree = "<group>"; };
-		B2CEE5DA22B4A97B0073C743 /* AzureServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzureServices.swift; sourceTree = "<group>"; };
-		B2CEE5DC22B4A9900073C743 /* generate_azure_services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generate_azure_services.swift; sourceTree = "<group>"; };
 		B2CF3FBF1DF7DD2100B66491 /* stts.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = stts.entitlements; sourceTree = "<group>"; };
 		B2D006632A875AB5008B3A13 /* PreferencesWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PreferencesWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D0066E2A875AC1008B3A13 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
@@ -568,8 +562,6 @@
 				B200CA71247FBC0A00DB0868 /* generate_adobe_services.swift */,
 				B28E912524824C3A0026BAAA /* generate_apple_services.swift */,
 				B27F66A42A35EBAA008DAF33 /* generate_aws_services.swift */,
-				B277BC9522B4BC6C000B55C3 /* generate_azure_devops_services.swift */,
-				B2CEE5DC22B4A9900073C743 /* generate_azure_services.swift */,
 				B2E70FD622B066EC000BCAD2 /* generate_google_services.swift */,
 				B23E408B26A559350038DDF1 /* generate_salesforce_services.swift */,
 				B2E70FD322B0657F000BCAD2 /* generate_services_plist.sh */,
@@ -583,8 +575,6 @@
 				B27F66A92A3621F7008DAF33 /* AWSServices.swift */,
 				B200CA73247FC5AE00DB0868 /* AdobeServices.swift */,
 				B28E9127248250220026BAAA /* AppleServices.swift */,
-				B277BC9722B4C16A000B55C3 /* AzureDevOpsServices.swift */,
-				B2CEE5DA22B4A97B0073C743 /* AzureServices.swift */,
 				B2E70FDC22B07FB0000BCAD2 /* FirebaseServices.swift */,
 				B2E70FD722B069BA000BCAD2 /* GoogleCloudPlatformServices.swift */,
 				B24EE0FF26C8BF9500F7CE8B /* SalesforceProducts.swift */,
@@ -886,8 +876,6 @@
 				"$SRCROOT/Scripts/generate_adobe_services.swift &",
 				"$SRCROOT/Scripts/generate_apple_services.swift &",
 				"$SRCROOT/Scripts/generate_aws_services.swift &",
-				"$SRCROOT/Scripts/generate_azure_services.swift &",
-				"$SRCROOT/Scripts/generate_azure_devops_services.swift &",
 				"$SRCROOT/Scripts/generate_google_services.swift &",
 				"$SRCROOT/Scripts/generate_salesforce_services.swift",
 				"wait",
@@ -998,7 +986,6 @@
 				B2B015C21DBDE69B00699211 /* StatusTableCell.swift in Sources */,
 				B276D76A2C41F93300974DB6 /* Okta.swift in Sources */,
 				B2C670402F69B9160043DC7A /* MiroAll.swift in Sources */,
-				B2CEE5DB22B4A97B0073C743 /* AzureServices.swift in Sources */,
 				B2163B0020BA56EF00B14A85 /* StatusCakeService.swift in Sources */,
 				B2CEE5D922B49CC80073C743 /* AzureStore.swift in Sources */,
 				B213D200269AFD45005EBDDA /* InstatusService.swift in Sources */,
@@ -1019,7 +1006,6 @@
 				B27F66A62A3609E8008DAF33 /* AWSService.swift in Sources */,
 				B2A0635E1E1341C900EEA762 /* StatusioV1Service.swift in Sources */,
 				B200CA78247FC8B700DB0868 /* AdobeStore.swift in Sources */,
-				B277BC9822B4C16A000B55C3 /* AzureDevOpsServices.swift in Sources */,
 				B2DCE6902215992E001447D8 /* Apple.swift in Sources */,
 				B28E912C248255A40026BAAA /* AppleDeveloper.swift in Sources */,
 				B24EE10426C8C07100F7CE8B /* SalesforceCategories.swift in Sources */,

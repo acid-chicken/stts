@@ -6,7 +6,8 @@ import Foundation
 let knownProviders: Set<String> = [
     "independent", "cachet", "lamb", "sorry", "statuscake", "statuspage", "instatus",
     "statuscast", "incidentio", "statusiov1", "statuspal", "site24x7", "cstate",
-    "statushub", "betteruptime", "betterstack", "sendbird", "miro", "pagerduty"
+    "statushub", "betteruptime", "betterstack", "sendbird", "miro", "pagerduty",
+    "azure", "azuredevops"
 ]
 
 // Not a provider: a flat array of identifier strings for services confirmed gone for good (company
@@ -14,6 +15,9 @@ let knownProviders: Set<String> = [
 // for a company that's still operating (those might get a working integration again later, so they
 // must not be listed here).
 let removedServicesKey = "_removed"
+
+// Providers with a fixed commonURL (see their *ServiceDefinition) — "url" may be omitted per-entry.
+let providersWithOptionalURL: Set<String> = ["azure", "azuredevops"]
 
 func envVariable(forKey key: String) -> String {
     guard let variable = ProcessInfo.processInfo.environment[key] else {
@@ -41,9 +45,14 @@ func lintEntry(provider: String, entry: Any, index: Int, seenIdentifiers: inout 
         return
     }
 
-    guard let urlString = entry["url"] as? String,
-          let url = URL(string: urlString),
-          let scheme = url.scheme, scheme == "http" || scheme == "https" else {
+    if let urlValue = entry["url"] {
+        guard let urlString = urlValue as? String,
+              let url = URL(string: urlString),
+              let scheme = url.scheme, scheme == "http" || scheme == "https" else {
+            fail("\(provider).\(name) has an invalid \"url\"")
+            return
+        }
+    } else if !providersWithOptionalURL.contains(provider) {
         fail("\(provider).\(name) has a missing or invalid \"url\"")
         return
     }
