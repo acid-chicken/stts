@@ -168,6 +168,16 @@
       ]
     }
   ],
+  "pagerduty": [
+    {
+      "name": "PagerDuty",
+      "url": "https://status.pagerduty.com"
+    },
+    {
+      "name": "SignalWire",
+      "url": "https://signalwire.trust.pagerduty.com"
+    }
+  ],
   "lamb": [
     {
       "name": "Codacy",

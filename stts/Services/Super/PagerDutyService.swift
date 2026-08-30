@@ -6,11 +6,23 @@
 import Foundation
 import Kanna
 
-typealias PagerDutyService = BasePagerDutyService & RequiredServiceProperties & RequiredPagerDutyProperties
+class PagerDutyServiceDefinition: CodableServiceDefinition, ServiceDefinition {
+    let providerIdentifier = "pagerduty"
 
-protocol RequiredPagerDutyProperties {}
+    func build() -> BaseService? {
+        PagerDutyService(self)
+    }
+}
 
-class BasePagerDutyService: BaseIndependentService {
+class PagerDutyService: Service {
+    let name: String
+    let url: URL
+
+    init(_ definition: PagerDutyServiceDefinition) {
+        name = definition.name
+        url = definition.url
+    }
+
     private struct PagerDutyDataV1: Codable {
         struct Summary: Codable {
             enum CodingKeys: String, CodingKey {
@@ -80,11 +92,7 @@ class BasePagerDutyService: BaseIndependentService {
     }
 
     override func updateStatus() async throws {
-        guard let realSelf = self as? PagerDutyService else {
-            fatalError("BasePagerDutyService should not be used directly.")
-        }
-
-        let doc = try await html(from: realSelf.url)
+        let doc = try await html(from: url)
 
         guard
             let json = doc.css("script#data").first?.innerHTML,

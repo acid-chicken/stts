@@ -7,8 +7,22 @@ import XCTest
 @testable import stts
 
 final class PagerDutyTests: XCTestCase {
+    private func createPagerDutyService() throws -> PagerDutyService {
+        let definition = try JSONDecoder().decode(
+            PagerDutyServiceDefinition.self,
+            from: Data("""
+            {
+                "name": "PagerDuty",
+                "url": "https://status.pagerduty.com"
+            }
+            """.utf8)
+        )
+
+        return try XCTUnwrap(definition.build() as? PagerDutyService)
+    }
+
     func testNormalStatus() async throws {
-        let pagerDuty = PagerDuty()
+        let pagerDuty = try createPagerDutyService()
 
         DataLoader.shared = DataLoader(session: ResponseOverridingURLSession(overrides: [
             .init(
@@ -23,7 +37,7 @@ final class PagerDutyTests: XCTestCase {
     }
 
     func testMinorStatus() async throws {
-        let pagerDuty = PagerDuty()
+        let pagerDuty = try createPagerDutyService()
 
         DataLoader.shared = DataLoader(session: ResponseOverridingURLSession(overrides: [
             .init(

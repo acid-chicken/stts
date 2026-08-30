@@ -25,6 +25,7 @@ struct ServicesStructure: Codable {
         case betterStackServices = "betterstack"
         case sendbirdServices = "sendbird"
         case miroServices = "miro"
+        case pagerDutyServices = "pagerduty"
     }
 
     let independentServices: [IndependentServiceDefinition]?
@@ -45,6 +46,7 @@ struct ServicesStructure: Codable {
     let betterStackServices: [BetterStackServiceDefinition]?
     let sendbirdServices: [SendbirdServiceDefinition]?
     let miroServices: [MiroServiceDefinition]?
+    let pagerDutyServices: [PagerDutyServiceDefinition]?
 
     var allServices: [ServiceDefinition] {
         let sections: [[ServiceDefinition]?] = [
@@ -65,7 +67,8 @@ struct ServicesStructure: Codable {
             betterUptimeServices,
             betterStackServices,
             sendbirdServices,
-            miroServices
+            miroServices,
+            pagerDutyServices
         ]
 
         return sections.compactMap { $0 }.flatMap { $0 }
