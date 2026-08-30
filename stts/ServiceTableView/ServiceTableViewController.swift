@@ -159,8 +159,8 @@ class ServiceTableViewController: NSObject, SwitchableTableViewController {
     }
 
     func willOpenPopup() {
-        resizeViews()
         reloadData()
+        resizeViews()
 
         if case let .updated(date) = bottomBar.status {
             if Date().timeIntervalSince1970 - date.timeIntervalSince1970 > 60 {
