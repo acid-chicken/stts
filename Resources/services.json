@@ -38,7 +38,7 @@
     {
       "name": "Runway",
       "url": "https://status.runway.team"
-    },
+    }
   ],
   "cstate": [
     {
@@ -96,12 +96,20 @@
       "url": "https://linearstatus.com"
     },
     {
+      "name": "Notion",
+      "url": "https://www.notion-status.com"
+    },
+    {
       "name": "OneSignal",
       "url": "https://status.onesignal.com"
     },
     {
       "name": "OpenAI",
       "url": "https://status.openai.com"
+    },
+    {
+      "name": "Recurly",
+      "url": "https://status.recurly.com"
     },
     {
       "name": "Rollbar",
@@ -266,11 +274,6 @@
       "name": "Roblox",
       "url": "https://status.roblox.com",
       "id": "59db90dbcdeb2f04dadcf16d"
-    },
-    {
-      "name": "SumoLogic",
-      "url": "https://status.sumologic.com",
-      "id": "5ea1c7ba3f2f1604b93ca38e"
     }
   ],
   "statuscake": [
@@ -738,11 +741,6 @@
       "id": "z8cjgbr8sqmh"
     },
     {
-      "name": "Fivetran",
-      "url": "https://status.fivetran.com",
-      "id": "2lfd8mfks09w"
-    },
-    {
       "name": "Fleek",
       "url": "https://status.fleek.xyz",
       "id": "0flwwyd0s5n2"
@@ -1002,11 +1000,6 @@
       ]
     },
     {
-      "name": "Notion",
-      "url": "https://status.notion.so",
-      "id": "kgl53swp0yg1"
-    },
-    {
       "name": "Opsgenie",
       "url": "https://opsgenie.status.atlassian.com",
       "id": "t05vdsszxwtq"
@@ -1203,6 +1196,11 @@
       "name": "Stream",
       "url": "https://status.getstream.io",
       "id": "gsms7w17y9wc"
+    },
+    {
+      "name": "SumoLogic",
+      "url": "https://status.sumologic.com",
+      "id": "mch6db66pqjz"
     },
     {
       "name": "Teleport Cloud",
