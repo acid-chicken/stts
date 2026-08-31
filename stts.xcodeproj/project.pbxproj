@@ -71,7 +71,6 @@
 		B2430807210810D0003F8D07 /* Algolia.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2430806210810D0003F8D07 /* Algolia.swift */; };
 		B2493F061E2603F300556A83 /* GoogleCloudPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2493F051E2603F300556A83 /* GoogleCloudPlatform.swift */; };
 		B24D19F61DD072840052E539 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D19F51DD072840052E539 /* Preferences.swift */; };
-		B24EE10026C8BF9500F7CE8B /* SalesforceProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24EE0FF26C8BF9500F7CE8B /* SalesforceProducts.swift */; };
 		B24EE10226C8BFD500F7CE8B /* Salesforce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24EE10126C8BFD500F7CE8B /* Salesforce.swift */; };
 		B24EE10426C8C07100F7CE8B /* SalesforceCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24EE10326C8C07100F7CE8B /* SalesforceCategories.swift */; };
 		B24EE10626C8C08A00F7CE8B /* SalesforceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24EE10526C8C08A00F7CE8B /* SalesforceStore.swift */; };
@@ -246,11 +245,9 @@
 		B22FDE522108A5CC00359EC9 /* PayPalAPISandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPalAPISandbox.swift; sourceTree = "<group>"; };
 		B23038F01E0DF3CC00B29095 /* Beanstalk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beanstalk.swift; sourceTree = "<group>"; };
 		B230CE7E21B95C5500E2005D /* Stripe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stripe.swift; sourceTree = "<group>"; };
-		B23E408B26A559350038DDF1 /* generate_salesforce_services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generate_salesforce_services.swift; sourceTree = "<group>"; };
 		B2430806210810D0003F8D07 /* Algolia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Algolia.swift; sourceTree = "<group>"; };
 		B2493F051E2603F300556A83 /* GoogleCloudPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleCloudPlatform.swift; sourceTree = "<group>"; };
 		B24D19F51DD072840052E539 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
-		B24EE0FF26C8BF9500F7CE8B /* SalesforceProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesforceProducts.swift; sourceTree = "<group>"; };
 		B24EE10126C8BFD500F7CE8B /* Salesforce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesforce.swift; sourceTree = "<group>"; };
 		B24EE10326C8C07100F7CE8B /* SalesforceCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesforceCategories.swift; sourceTree = "<group>"; };
 		B24EE10526C8C08A00F7CE8B /* SalesforceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesforceStore.swift; sourceTree = "<group>"; };
@@ -561,7 +558,6 @@
 				B28E912524824C3A0026BAAA /* generate_apple_services.swift */,
 				B27F66A42A35EBAA008DAF33 /* generate_aws_services.swift */,
 				B2E70FD622B066EC000BCAD2 /* generate_google_services.swift */,
-				B23E408B26A559350038DDF1 /* generate_salesforce_services.swift */,
 				B2E70FD322B0657F000BCAD2 /* generate_services_plist.sh */,
 			);
 			path = Scripts;
@@ -574,7 +570,6 @@
 				B200CA73247FC5AE00DB0868 /* AdobeServices.swift */,
 				B28E9127248250220026BAAA /* AppleServices.swift */,
 				B2E70FD722B069BA000BCAD2 /* GoogleCloudPlatformServices.swift */,
-				B24EE0FF26C8BF9500F7CE8B /* SalesforceProducts.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -873,8 +868,7 @@
 				"$SRCROOT/Scripts/generate_adobe_services.swift &",
 				"$SRCROOT/Scripts/generate_apple_services.swift &",
 				"$SRCROOT/Scripts/generate_aws_services.swift &",
-				"$SRCROOT/Scripts/generate_google_services.swift &",
-				"$SRCROOT/Scripts/generate_salesforce_services.swift",
+				"$SRCROOT/Scripts/generate_google_services.swift",
 				"wait",
 				"",
 			);
@@ -1048,7 +1042,6 @@
 				B22B6B382F6738A1006528EB /* TaskExtensions.swift in Sources */,
 				B22FDE532108A5CC00359EC9 /* PayPalAPISandbox.swift in Sources */,
 				B2EB51CE1E7004A3001D6F78 /* ExanaService.swift in Sources */,
-				B24EE10026C8BF9500F7CE8B /* SalesforceProducts.swift in Sources */,
 				B2DCE6952215ACDE001447D8 /* StringExtensions.swift in Sources */,
 				B277BC9422B4BB6D000B55C3 /* AzureDevOpsStore.swift in Sources */,
 				6479249F27A82900A7850DA2 /* Fivetran.swift in Sources */,

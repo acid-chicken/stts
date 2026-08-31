@@ -1629,5 +1629,167 @@
       "id": "Test Lab"
     }
   ],
+  "salesforce": [
+    {
+      "name": "Datorama (EMEA)",
+      "id": "EMEA",
+      "product": "Datorama"
+    },
+    {
+      "name": "Datorama (NA)",
+      "id": "NA",
+      "product": "Datorama"
+    },
+    {
+      "name": "Heroku (APAC)",
+      "id": "APAC",
+      "product": "Heroku"
+    },
+    {
+      "name": "Heroku (EMEA)",
+      "id": "EMEA",
+      "product": "Heroku"
+    },
+    {
+      "name": "Heroku (NA)",
+      "id": "NA",
+      "product": "Heroku"
+    },
+    {
+      "name": "MCAccountEngagement (NA)",
+      "id": "NA",
+      "product": "MCAccountEngagement"
+    },
+    {
+      "name": "MCPersonalization (APAC)",
+      "id": "APAC",
+      "product": "MCPersonalization"
+    },
+    {
+      "name": "MCPersonalization (EMEA)",
+      "id": "EMEA",
+      "product": "MCPersonalization"
+    },
+    {
+      "name": "MCPersonalization (NA)",
+      "id": "NA",
+      "product": "MCPersonalization"
+    },
+    {
+      "name": "Mulesoft (APAC)",
+      "id": "APAC",
+      "product": "Mulesoft"
+    },
+    {
+      "name": "Mulesoft (EMEA)",
+      "id": "EMEA",
+      "product": "Mulesoft"
+    },
+    {
+      "name": "Mulesoft (NA)",
+      "id": "NA",
+      "product": "Mulesoft"
+    },
+    {
+      "name": "Point_of_Sale (APAC)",
+      "id": "APAC",
+      "product": "Point_of_Sale"
+    },
+    {
+      "name": "Point_of_Sale (EMEA)",
+      "id": "EMEA",
+      "product": "Point_of_Sale"
+    },
+    {
+      "name": "Point_of_Sale (NA)",
+      "id": "NA",
+      "product": "Point_of_Sale"
+    },
+    {
+      "name": "Salesforce B2C Commerce Cloud (APAC)",
+      "id": "APAC",
+      "product": "B2C_Commerce_Cloud"
+    },
+    {
+      "name": "Salesforce B2C Commerce Cloud (EMEA)",
+      "id": "EMEA",
+      "product": "B2C_Commerce_Cloud"
+    },
+    {
+      "name": "Salesforce B2C Commerce Cloud (NA)",
+      "id": "NA",
+      "product": "B2C_Commerce_Cloud"
+    },
+    {
+      "name": "Salesforce Experience Cloud (APAC)",
+      "id": "APAC",
+      "product": "Community_Cloud"
+    },
+    {
+      "name": "Salesforce Experience Cloud (EMEA)",
+      "id": "EMEA",
+      "product": "Community_Cloud"
+    },
+    {
+      "name": "Salesforce Experience Cloud (NA)",
+      "id": "NA",
+      "product": "Community_Cloud"
+    },
+    {
+      "name": "Salesforce Marketing Cloud (APAC)",
+      "id": "APAC",
+      "product": "Marketing_Cloud"
+    },
+    {
+      "name": "Salesforce Marketing Cloud (EMEA)",
+      "id": "EMEA",
+      "product": "Marketing_Cloud"
+    },
+    {
+      "name": "Salesforce Marketing Cloud (NA)",
+      "id": "NA",
+      "product": "Marketing_Cloud"
+    },
+    {
+      "name": "Salesforce Services (APAC)",
+      "id": "APAC",
+      "product": "Salesforce_Services"
+    },
+    {
+      "name": "Salesforce Services (EMEA)",
+      "id": "EMEA",
+      "product": "Salesforce_Services"
+    },
+    {
+      "name": "Salesforce Services (NA)",
+      "id": "NA",
+      "product": "Salesforce_Services"
+    },
+    {
+      "name": "Spiff (EMEA)",
+      "id": "EMEA",
+      "product": "Spiff"
+    },
+    {
+      "name": "Spiff (NA)",
+      "id": "NA",
+      "product": "Spiff"
+    },
+    {
+      "name": "Tableau (APAC)",
+      "id": "APAC",
+      "product": "Tableau"
+    },
+    {
+      "name": "Tableau (EMEA)",
+      "id": "EMEA",
+      "product": "Tableau"
+    },
+    {
+      "name": "Tableau (NA)",
+      "id": "NA",
+      "product": "Tableau"
+    }
+  ],
   "_removed": []
 }

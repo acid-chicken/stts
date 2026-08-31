@@ -6,6 +6,11 @@ import Foundation
 // generator can't rediscover them.
 final class ServicesJSONUpdater {
     private let handEditedKeys: Set<String> = ["url", "old_names"]
+    // Everything else is either a fixed schema field or provider-specific "extra" data (e.g.
+    // Salesforce's "product") that's part of what makes an entry unique — "id" alone isn't
+    // globally unique within a provider whose entries are grouped (e.g. "NA" repeats across
+    // every Salesforce product), so the match key folds in whatever extra fields are present.
+    private let nonMatchKeys: Set<String> = ["name", "url", "id", "subservice", "category", "old_names"]
 
     private let servicesPath: String
 
@@ -74,8 +79,16 @@ final class ServicesJSONUpdater {
         }
     }
 
+    private func matchKey(id: String, otherFields: [(String, JSONValue)]) -> String {
+        let extras = otherFields
+            .filter { !nonMatchKeys.contains($0.0) }
+            .sorted { $0.0 < $1.0 }
+            .compactMap { $0.1.stringValue }
+        return ([id] + extras).joined(separator: "\u{1}")
+    }
+
     private func buildArray(discovered: [DiscoveredEntry], existing: [JSONValue]) -> [JSONValue] {
-        var preservedFieldsByID: [String: [(String, JSONValue)]] = [:]
+        var preservedFieldsByKey: [String: [(String, JSONValue)]] = [:]
         for entry in existing {
             guard
                 let pairs = entry.objectPairs,
@@ -84,20 +97,22 @@ final class ServicesJSONUpdater {
 
             let preserved = pairs.filter { handEditedKeys.contains($0.0) }
             if !preserved.isEmpty {
-                preservedFieldsByID[id] = preserved
+                preservedFieldsByKey[matchKey(id: id, otherFields: pairs)] = preserved
             }
         }
 
         return discovered
             .sorted { $0.name.localizedCaseInsensitiveCompare($1.name) == .orderedAscending }
             .map { entry in
+                let key = matchKey(id: entry.id, otherFields: entry.extraFields)
                 var pairs: [(String, JSONValue)] = [("name", .string(entry.name))]
-                // Field order matches the rest of the file: name, url, id, ..., old_names.
-                if let url = preservedFieldsByID[entry.id]?.first(where: { $0.0 == "url" }) {
+                // Field order matches the rest of the file: name, url, id, extras, old_names.
+                if let url = preservedFieldsByKey[key]?.first(where: { $0.0 == "url" }) {
                     pairs.append(url)
                 }
                 pairs.append(("id", .string(entry.id)))
-                if let oldNames = preservedFieldsByID[entry.id]?.first(where: { $0.0 == "old_names" }) {
+                pairs.append(contentsOf: entry.extraFields)
+                if let oldNames = preservedFieldsByKey[key]?.first(where: { $0.0 == "old_names" }) {
                     pairs.append(oldNames)
                 }
                 return .object(pairs)

@@ -20,7 +20,8 @@ func repoRoot() -> String {
 let generators: [ServiceGenerator] = [
     AzureGenerator(),
     AzureDevOpsGenerator(),
-    FirebaseGenerator()
+    FirebaseGenerator(),
+    SalesforceGenerator()
 ]
 
 let servicesPath = "\(repoRoot())/Resources/services.json"

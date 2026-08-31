@@ -3,6 +3,14 @@ import Foundation
 struct DiscoveredEntry {
     let id: String
     let name: String
+    // Provider-specific extra JSON fields (e.g. Salesforce's "product"), written after "id".
+    let extraFields: [(String, JSONValue)]
+
+    init(id: String, name: String, extraFields: [(String, JSONValue)] = []) {
+        self.id = id
+        self.name = name
+        self.extraFields = extraFields
+    }
 }
 
 protocol ServiceGenerator: Sendable {

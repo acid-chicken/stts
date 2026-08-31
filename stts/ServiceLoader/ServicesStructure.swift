@@ -29,6 +29,7 @@ struct ServicesStructure: Codable {
         case azureServices = "azure"
         case azureDevOpsServices = "azuredevops"
         case firebaseServices = "firebase"
+        case salesforceServices = "salesforce"
         case removedServices = "_removed"
     }
 
@@ -54,6 +55,7 @@ struct ServicesStructure: Codable {
     let azureServices: [AzureServiceDefinition]?
     let azureDevOpsServices: [AzureDevOpsServiceDefinition]?
     let firebaseServices: [FirebaseServiceDefinition]?
+    let salesforceServices: [SalesforceServiceDefinition]?
 
     /// Identifiers of services confirmed gone for good (company shut down/bankrupt, product
     /// discontinued) — not services that are merely renamed (see `old_names`) or just currently
@@ -86,7 +88,8 @@ struct ServicesStructure: Codable {
             pagerDutyServices,
             azureServices,
             azureDevOpsServices,
-            firebaseServices
+            firebaseServices,
+            salesforceServices
         ]
 
         return sections.compactMap { $0 }.flatMap { $0 }
