@@ -25,7 +25,9 @@ let generators: [ServiceGenerator] = [
     AdobeGenerator(),
     AppleGenerator(),
     AppleDeveloperGenerator(),
-    GoogleCloudPlatformGenerator()
+    GoogleCloudPlatformGenerator(),
+    AWSRegionsGenerator(),
+    AWSServicesGenerator()
 ]
 
 let servicesPath = "\(repoRoot())/Resources/services.json"

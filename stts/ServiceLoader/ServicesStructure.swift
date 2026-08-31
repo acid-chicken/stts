@@ -34,6 +34,8 @@ struct ServicesStructure: Codable {
         case appleServices = "apple"
         case appleDeveloperServices = "appledeveloper"
         case googleCloudPlatformServices = "googlecloudplatform"
+        case awsRegionServices = "awsregions"
+        case awsNamedServices = "awsservices"
         case removedServices = "_removed"
     }
 
@@ -64,6 +66,8 @@ struct ServicesStructure: Codable {
     let appleServices: [AppleServiceDefinition]?
     let appleDeveloperServices: [AppleDeveloperServiceDefinition]?
     let googleCloudPlatformServices: [GoogleCloudPlatformServiceDefinition]?
+    let awsRegionServices: [AWSRegionServiceDefinition]?
+    let awsNamedServices: [AWSServicesServiceDefinition]?
 
     /// Identifiers of services confirmed gone for good (company shut down/bankrupt, product
     /// discontinued) — not services that are merely renamed (see `old_names`) or just currently
@@ -101,7 +105,9 @@ struct ServicesStructure: Codable {
             adobeServices,
             appleServices,
             appleDeveloperServices,
-            googleCloudPlatformServices
+            googleCloudPlatformServices,
+            awsRegionServices,
+            awsNamedServices
         ]
 
         return sections.compactMap { $0 }.flatMap { $0 }

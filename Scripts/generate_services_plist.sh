@@ -3,10 +3,10 @@
 RESOURCES_PATH="$BUILT_PRODUCTS_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH"
 SERVICES_PLIST="$RESOURCES_PATH/services.plist"
 
-# Retrieve the list of services
-REGULAR_SERVICES=$(find "$SRCROOT/stts/Services" -name "*.swift" -not -path "*Super*" -not -path "*Generated*" | awk -F/ '{ print $NF }' | sed s/.swift//g | sort | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g')
-GENERATED_SERVICES=$(find "$SRCROOT/stts/Services/Generated" -name "*.swift" -print0 | xargs -0 cat | grep "class " | sed s/'final class '//g | sed s/'class '//g | sed 's/:.*//' | tr '\n' ' ')
-SERVICES="$REGULAR_SERVICES $GENERATED_SERVICES"
+# Retrieve the list of services. Every service is now either JSON-driven (Resources/services.json)
+# or a plain hand-written class here; nothing under stts/Services/ is machine-generated anymore
+# (see Scripts/services_json_migration.md), so this only ever needs to scan real class names.
+SERVICES=$(find "$SRCROOT/stts/Services" -name "*.swift" -not -path "*Super*" | awk -F/ '{ print $NF }' | sed s/.swift//g | sort | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g')
 
 # Create the services plist file
 echo "{}" > "$SERVICES_PLIST"
