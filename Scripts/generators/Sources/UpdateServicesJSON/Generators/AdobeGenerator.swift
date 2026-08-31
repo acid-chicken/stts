@@ -91,7 +91,7 @@ struct AdobeGenerator: ServiceGenerator {
                 print("warning: unknown Adobe cloud \"\(cloud.name)\" (\(cloud.id)) — add it to Adobe.swift")
             }
 
-            var categoryName = prefixedName(cloud.name)
+            var categoryName = "\(prefixedName(cloud.name)) (All)"
             if seenNames.contains(categoryName) {
                 categoryName = "\(categoryName) (\(cloud.id))"
             }

@@ -93,7 +93,7 @@ final class SalesforceCategoryRow: Salesforce, ServiceCategory {
 
     init(_ definition: SalesforceServiceDefinition) {
         categoryName = definition.name
-        name = "\(definition.name) (All Regions)"
+        name = definition.name
         url = definition.url
         key = definition.product
         super.init()

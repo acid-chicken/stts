@@ -61,7 +61,7 @@ struct SalesforceGenerator: ServiceGenerator {
 
             entries.append(DiscoveredEntry(
                 id: product,
-                name: displayName,
+                name: "\(displayName) (All Regions)",
                 extraFields: [("product", .string(product)), ("category", .bool(true))]
             ))
 

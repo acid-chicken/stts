@@ -89,7 +89,7 @@ final class AdobeCategoryRow: Adobe, ServiceCategory {
 
     init(_ definition: AdobeServiceDefinition) {
         categoryName = definition.name
-        name = "\(definition.name) (All)"
+        name = definition.name
         id = definition.id
         super.init()
     }

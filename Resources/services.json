@@ -1631,7 +1631,7 @@
   ],
   "salesforce": [
     {
-      "name": "Datorama",
+      "name": "Datorama (All Regions)",
       "id": "Datorama",
       "product": "Datorama",
       "category": true
@@ -1649,7 +1649,7 @@
       "subservice": true
     },
     {
-      "name": "Heroku",
+      "name": "Heroku (All Regions)",
       "id": "Heroku",
       "product": "Heroku",
       "category": true
@@ -1673,7 +1673,7 @@
       "subservice": true
     },
     {
-      "name": "MC Account Engagement",
+      "name": "MC Account Engagement (All Regions)",
       "id": "MCAccountEngagement",
       "product": "MCAccountEngagement",
       "category": true
@@ -1685,7 +1685,7 @@
       "subservice": true
     },
     {
-      "name": "MC Personalization",
+      "name": "MC Personalization (All Regions)",
       "id": "MCPersonalization",
       "product": "MCPersonalization",
       "category": true
@@ -1709,7 +1709,7 @@
       "subservice": true
     },
     {
-      "name": "Mulesoft",
+      "name": "Mulesoft (All Regions)",
       "id": "Mulesoft",
       "product": "Mulesoft",
       "category": true
@@ -1733,7 +1733,7 @@
       "subservice": true
     },
     {
-      "name": "Point of Sale",
+      "name": "Point of Sale (All Regions)",
       "id": "Point_of_Sale",
       "product": "Point_of_Sale",
       "category": true
@@ -1757,7 +1757,7 @@
       "subservice": true
     },
     {
-      "name": "Salesforce B2C Commerce Cloud",
+      "name": "Salesforce B2C Commerce Cloud (All Regions)",
       "id": "B2C_Commerce_Cloud",
       "product": "B2C_Commerce_Cloud",
       "category": true
@@ -1781,7 +1781,7 @@
       "subservice": true
     },
     {
-      "name": "Salesforce Experience Cloud",
+      "name": "Salesforce Experience Cloud (All Regions)",
       "id": "Community_Cloud",
       "product": "Community_Cloud",
       "category": true
@@ -1805,7 +1805,7 @@
       "subservice": true
     },
     {
-      "name": "Salesforce Marketing Cloud",
+      "name": "Salesforce Marketing Cloud (All Regions)",
       "id": "Marketing_Cloud",
       "product": "Marketing_Cloud",
       "category": true
@@ -1829,7 +1829,7 @@
       "subservice": true
     },
     {
-      "name": "Salesforce Services",
+      "name": "Salesforce Services (All Regions)",
       "id": "Salesforce_Services",
       "product": "Salesforce_Services",
       "category": true
@@ -1853,7 +1853,7 @@
       "subservice": true
     },
     {
-      "name": "Spiff",
+      "name": "Spiff (All Regions)",
       "id": "Spiff",
       "product": "Spiff",
       "category": true
@@ -1871,7 +1871,7 @@
       "subservice": true
     },
     {
-      "name": "Tableau",
+      "name": "Tableau (All Regions)",
       "id": "Tableau",
       "product": "Tableau",
       "category": true
@@ -2023,7 +2023,7 @@
       "subservice": true
     },
     {
-      "name": "Adobe Creative Cloud",
+      "name": "Adobe Creative Cloud (All)",
       "id": "503459",
       "cloud": "CreativeCloud",
       "category": true
@@ -2125,13 +2125,13 @@
       "subservice": true
     },
     {
-      "name": "Adobe Document Cloud",
+      "name": "Adobe Document Cloud (All)",
       "id": "503457",
       "cloud": "DocumentCloud",
       "category": true
     },
     {
-      "name": "Adobe Experience Cloud",
+      "name": "Adobe Experience Cloud (All)",
       "id": "503461",
       "cloud": "ExperienceCloud",
       "category": true
@@ -2155,7 +2155,7 @@
       "subservice": true
     },
     {
-      "name": "Adobe Experience Platform",
+      "name": "Adobe Experience Platform (All)",
       "id": "503460",
       "cloud": "ExperiencePlatform",
       "category": true
@@ -2323,7 +2323,7 @@
       "subservice": true
     },
     {
-      "name": "Adobe Services",
+      "name": "Adobe Services (All)",
       "id": "503458",
       "cloud": "Services",
       "category": true
