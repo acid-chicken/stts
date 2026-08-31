@@ -1791,5 +1791,487 @@
       "product": "Tableau"
     }
   ],
+  "adobe": [
+    {
+      "name": "Adobe Account Management",
+      "id": "503498",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Acrobat",
+      "id": "512699",
+      "cloud": "DocumentCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Acrobat Services",
+      "id": "503500",
+      "cloud": "DocumentCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Acrobat Sign",
+      "id": "503494",
+      "cloud": "DocumentCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Administrative Consoles",
+      "id": "503466",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Advertising",
+      "id": "503468",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Aero",
+      "id": "503511",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe AI Assistant",
+      "id": "568624",
+      "cloud": "ExperiencePlatform",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Analytics",
+      "id": "503467",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Audience Manager",
+      "id": "503486",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Brand Concierge",
+      "id": "594942",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Brand Visibility",
+      "id": "595270",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Bridge",
+      "id": "546687",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Campaign",
+      "id": "503475",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Capture",
+      "id": "503519",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe CC Community",
+      "id": "503508",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Color",
+      "id": "503471",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Commerce",
+      "id": "503473",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Commerce Partner API",
+      "id": "614000",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Connect",
+      "id": "503474",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Content Authenticity",
+      "id": "559133",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Creative Cloud",
+      "id": "503459",
+      "cloud": "CreativeCloud",
+      "category": true
+    },
+    {
+      "name": "Adobe Creative Cloud Applications",
+      "id": "503492",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Creative Cloud Libraries",
+      "id": "503513",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Creative Cloud Notifications",
+      "id": "503517",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Creative Cloud Sharing and Commenting",
+      "id": "503505",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Creative Cloud Storage",
+      "id": "503521",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Creative Cloud Sync",
+      "id": "503523",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Creative Cloud Website",
+      "id": "503522",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Cross-Cloud Capabilities",
+      "id": "503484",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Customer Journey Analytics",
+      "id": "503485",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Customer Support",
+      "id": "558202",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe CX Enterprise Home",
+      "id": "503464",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Data Foundation",
+      "id": "503462",
+      "cloud": "ExperiencePlatform",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Data Science Workspace",
+      "id": "503463",
+      "cloud": "ExperiencePlatform",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Developer Platform",
+      "id": "503495",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Digital Video & Audio",
+      "id": "582550",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Dimension",
+      "id": "503503",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Document Cloud",
+      "id": "503457",
+      "cloud": "DocumentCloud",
+      "category": true
+    },
+    {
+      "name": "Adobe Experience Cloud",
+      "id": "503461",
+      "cloud": "ExperienceCloud",
+      "category": true
+    },
+    {
+      "name": "Adobe Experience League",
+      "id": "503479",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Experience Manager",
+      "id": "503470",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Experience Manager as a Cloud Service",
+      "id": "503489",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Experience Platform",
+      "id": "503460",
+      "cloud": "ExperiencePlatform",
+      "category": true
+    },
+    {
+      "name": "Adobe Express",
+      "id": "503465",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Firefly",
+      "id": "536716",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Fonts",
+      "id": "503501",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Fresco",
+      "id": "503469",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe GenStudio for Performance Marketing",
+      "id": "554521",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Illustrator",
+      "id": "503524",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Image Service",
+      "id": "503512",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe InDesign",
+      "id": "503502",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe InDesign API",
+      "id": "572928",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Intelligent Services",
+      "id": "503480",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Invite Accept",
+      "id": "503499",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Journey Optimizer",
+      "id": "503488",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Journey Optimizer B2B",
+      "id": "552633",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Knowledge Base in Adobe Acrobat",
+      "id": "616706",
+      "cloud": "DocumentCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Learning Manager",
+      "id": "503520",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Lightroom",
+      "id": "503487",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Live",
+      "id": "503514",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Marketo Engage",
+      "id": "503491",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Mixamo",
+      "id": "503585",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Photoshop",
+      "id": "503493",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Platform Core Services",
+      "id": "503481",
+      "cloud": "ExperiencePlatform",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Premiere Pro",
+      "id": "503509",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Premiere Rush",
+      "id": "503506",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Primetime",
+      "id": "503478",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Query Service",
+      "id": "503482",
+      "cloud": "ExperiencePlatform",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Real-Time CDP",
+      "id": "533248",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Reseller Console",
+      "id": "503497",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Services",
+      "id": "503458",
+      "cloud": "Services",
+      "category": true
+    },
+    {
+      "name": "Adobe Sign In",
+      "id": "503525",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Sites Optimizer",
+      "id": "582032",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Status Service Probe",
+      "id": "554089",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Substance",
+      "id": "503518",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Support",
+      "id": "503510",
+      "cloud": "Services",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Target",
+      "id": "503476",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe Workfront",
+      "id": "503490",
+      "cloud": "ExperienceCloud",
+      "subservice": true
+    },
+    {
+      "name": "Adobe XD",
+      "id": "503477",
+      "cloud": "CreativeCloud",
+      "subservice": true
+    }
+  ],
   "_removed": []
 }

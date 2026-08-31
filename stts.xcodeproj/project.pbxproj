@@ -15,7 +15,6 @@
 		11CDDE8D2DB2562F9BD7FC6A /* UpsunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEFAD4B419169D95440CFC6 /* UpsunTests.swift */; };
 		A9A2A80AC6A56F7BFBF43600 /* RailwayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43ABB7454B89C4734CC867 /* RailwayTests.swift */; };
 		C484F9E392DAC76636925271 /* PreferencesMigrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1CF805602EC260C778E9D5 /* PreferencesMigrationTests.swift */; };
-		B200CA74247FC5AE00DB0868 /* AdobeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B200CA73247FC5AE00DB0868 /* AdobeServices.swift */; };
 		B200CA76247FC88700DB0868 /* Adobe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B200CA75247FC88700DB0868 /* Adobe.swift */; };
 		B200CA78247FC8B700DB0868 /* AdobeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B200CA77247FC8B700DB0868 /* AdobeStore.swift */; };
 		B205A9181D49D67700EA178D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B205A9171D49D67700EA178D /* Service.swift */; };
@@ -193,8 +192,6 @@
 		4E1CF805602EC260C778E9D5 /* PreferencesMigrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesMigrationTests.swift; sourceTree = "<group>"; };
 		7C82768B2C8E3BE300C0E37B /* NSScreenExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSScreenExtensions.swift; sourceTree = "<group>"; };
 		91B0A21328197857007D8E8F /* StringExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsTests.swift; sourceTree = "<group>"; };
-		B200CA71247FBC0A00DB0868 /* generate_adobe_services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generate_adobe_services.swift; sourceTree = "<group>"; };
-		B200CA73247FC5AE00DB0868 /* AdobeServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdobeServices.swift; sourceTree = "<group>"; };
 		B200CA75247FC88700DB0868 /* Adobe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adobe.swift; sourceTree = "<group>"; };
 		B200CA77247FC8B700DB0868 /* AdobeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdobeStore.swift; sourceTree = "<group>"; };
 		B205A9171D49D67700EA178D /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -554,7 +551,6 @@
 		B2E70FD222B0650A000BCAD2 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
-				B200CA71247FBC0A00DB0868 /* generate_adobe_services.swift */,
 				B28E912524824C3A0026BAAA /* generate_apple_services.swift */,
 				B27F66A42A35EBAA008DAF33 /* generate_aws_services.swift */,
 				B2E70FD622B066EC000BCAD2 /* generate_google_services.swift */,
@@ -567,7 +563,6 @@
 			isa = PBXGroup;
 			children = (
 				B27F66A92A3621F7008DAF33 /* AWSServices.swift */,
-				B200CA73247FC5AE00DB0868 /* AdobeServices.swift */,
 				B28E9127248250220026BAAA /* AppleServices.swift */,
 				B2E70FD722B069BA000BCAD2 /* GoogleCloudPlatformServices.swift */,
 			);
@@ -865,7 +860,6 @@
 			shellScript = (
 				"chmod +x $SRCROOT/Scripts/*.swift",
 				"",
-				"$SRCROOT/Scripts/generate_adobe_services.swift &",
 				"$SRCROOT/Scripts/generate_apple_services.swift &",
 				"$SRCROOT/Scripts/generate_aws_services.swift &",
 				"$SRCROOT/Scripts/generate_google_services.swift",
@@ -1031,7 +1025,6 @@
 				B228DC0C2A7F520700D8DC5E /* BetterStackService.swift in Sources */,
 				B2A4D7E9247E73BC0089EA77 /* AzureDevOpsAll.swift in Sources */,
 				B2DCE68D221591F2001447D8 /* LambStatusService.swift in Sources */,
-				B200CA74247FC5AE00DB0868 /* AdobeServices.swift in Sources */,
 				B22602AF27D87D96001190F1 /* UptimeDotCom.swift in Sources */,
 				B22B6B422F6738CD006528EB /* SendbirdService.swift in Sources */,
 				B22B6B432F6738CD006528EB /* IndependentService.swift in Sources */,

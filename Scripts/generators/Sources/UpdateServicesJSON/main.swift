@@ -21,7 +21,8 @@ let generators: [ServiceGenerator] = [
     AzureGenerator(),
     AzureDevOpsGenerator(),
     FirebaseGenerator(),
-    SalesforceGenerator()
+    SalesforceGenerator(),
+    AdobeGenerator()
 ]
 
 let servicesPath = "\(repoRoot())/Resources/services.json"
