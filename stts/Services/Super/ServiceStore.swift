@@ -16,20 +16,35 @@ class ServiceStore<State: InitializableState>: Loading {
     private var state: State
     private(set) var loadErrorMessage: String?
 
-    @Atomic private var loadingTask: Task<Void, Error>?
+    private let lock = NSLock()
+    private var loadingTask: Task<Void, Error>?
 
     init() {
         state = State()
     }
 
     func updatedState() async throws -> State {
-        if loadingTask == nil {
-            loadErrorMessage = nil
-            loadingTask = createLoadingTask()
+        try await currentLoadingTask().value
+        return state
+    }
+
+    // updateStatus() is called concurrently across a provider's services that share one store (e.g.
+    // a category row and its subservices), so checking-then-creating the task needs to be one atomic
+    // operation, not two separate locked accesses — otherwise multiple callers can all see a nil
+    // task and each start their own redundant fetch. The lock must not span the await in
+    // updatedState(), so this stays synchronous.
+    private func currentLoadingTask() -> Task<Void, Error> {
+        lock.lock()
+        defer { lock.unlock() }
+
+        if let loadingTask {
+            return loadingTask
         }
 
-        try await loadingTask?.value
-        return state
+        loadErrorMessage = nil
+        let task = createLoadingTask()
+        loadingTask = task
+        return task
     }
 
     func retrieveUpdatedState() async throws -> State {
@@ -58,6 +73,9 @@ class ServiceStore<State: InitializableState>: Loading {
     }
 
     private func resetTask() {
+        lock.lock()
+        defer { lock.unlock() }
+
         loadingTask = nil
     }
 }
