@@ -184,17 +184,26 @@
     {
       "name": "Miro (AU)",
       "url": "https://status.miro.com/au",
-      "subservice": true
+      "subservice": true,
+      "old_names": [
+        "incidentio.MiroAU"
+      ]
     },
     {
       "name": "Miro (EU)",
       "url": "https://status.miro.com/eu",
-      "subservice": true
+      "subservice": true,
+      "old_names": [
+        "incidentio.MiroEU"
+      ]
     },
     {
       "name": "Miro (US)",
       "url": "https://status.miro.com/us",
-      "subservice": true
+      "subservice": true,
+      "old_names": [
+        "incidentio.MiroUS"
+      ]
     }
   ],
   "site24x7": [
@@ -1373,7 +1382,8 @@
       "id": "xnlfmklffhwg",
       "subservice": true,
       "old_names": [
-        "SendbirdCanada"
+        "SendbirdCanada",
+        "statuspage.SendbirdCanada"
       ]
     },
     {
@@ -1382,7 +1392,8 @@
       "id": "qt3xhnxvn2sw",
       "subservice": true,
       "old_names": [
-        "SendbirdFrankfurt"
+        "SendbirdFrankfurt",
+        "statuspage.SendbirdFrankfurt"
       ]
     },
     {
@@ -1391,7 +1402,8 @@
       "id": "sng1ltdy77pf",
       "subservice": true,
       "old_names": [
-        "SendbirdMumbai"
+        "SendbirdMumbai",
+        "statuspage.SendbirdMumbai"
       ]
     },
     {
@@ -1400,7 +1412,8 @@
       "id": "nwc3tc3ghc55",
       "subservice": true,
       "old_names": [
-        "SendbirdNorthVirginia2"
+        "SendbirdNorthVirginia2",
+        "statuspage.SendbirdNorthVirginia2"
       ]
     },
     {
@@ -1409,7 +1422,8 @@
       "id": "xlrzypr8w8p5",
       "subservice": true,
       "old_names": [
-        "SendbirdNorthVirginia"
+        "SendbirdNorthVirginia",
+        "statuspage.SendbirdNorthVirginia"
       ]
     },
     {
@@ -1418,7 +1432,8 @@
       "id": "phbv0js99n45",
       "subservice": true,
       "old_names": [
-        "SendbirdOregon"
+        "SendbirdOregon",
+        "statuspage.SendbirdOregon"
       ]
     },
     {
@@ -1427,7 +1442,8 @@
       "id": "6r983tc47nw4",
       "subservice": true,
       "old_names": [
-        "SendbirdSeoul"
+        "SendbirdSeoul",
+        "statuspage.SendbirdSeoul"
       ]
     },
     {
@@ -1436,7 +1452,8 @@
       "id": "2knm7ggfmh3s",
       "subservice": true,
       "old_names": [
-        "SendbirdSingapore2"
+        "SendbirdSingapore2",
+        "statuspage.SendbirdSingapore2"
       ]
     },
     {
@@ -1445,7 +1462,8 @@
       "id": "phbv0js99n45",
       "subservice": true,
       "old_names": [
-        "SendbirdSingapore"
+        "SendbirdSingapore",
+        "statuspage.SendbirdSingapore"
       ]
     },
     {
@@ -1454,7 +1472,8 @@
       "id": "dy9hbf5scsg1",
       "subservice": true,
       "old_names": [
-        "SendbirdSydney"
+        "SendbirdSydney",
+        "statuspage.SendbirdSydney"
       ]
     },
     {
@@ -1463,7 +1482,8 @@
       "id": "rfx6f11vcjtc",
       "subservice": true,
       "old_names": [
-        "SendbirdTokyo"
+        "SendbirdTokyo",
+        "statuspage.SendbirdTokyo"
       ]
     }
   ],

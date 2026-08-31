@@ -13,7 +13,7 @@ class StatusPageServiceDefinition: CodableServiceDefinition, ServiceDefinition {
 
     let id: String
     let host: String?
-    let providerIdentifier = "statuspage"
+    var providerIdentifier: String { "statuspage" }
 
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: ExtraKeys.self)

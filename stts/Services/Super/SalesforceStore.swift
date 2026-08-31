@@ -17,11 +17,18 @@ extension SalesforceStoreService {
 }
 
 private enum SalesforceStoreCache {
-    // updateStatus() is called concurrently across services (see sttsTests.testServices()), so
-    // this needs real synchronization, not a plain static var.
-    @Atomic private static var stores: [String: SalesforceStore] = [:]
+    // updateStatus() is called concurrently across services (see sttsTests.testServices()), so this
+    // needs a real critical section around the whole check-then-set — @Atomic only makes each
+    // individual dictionary access safe, not the compound read-check-write as a unit, which crashed
+    // under concurrent access (confirmed via crash report: Dictionary.subscript.setter under
+    // SalesforceStoreCache.store(forProduct:)).
+    private static let lock = NSLock()
+    private static var stores: [String: SalesforceStore] = [:]
 
     static func store(forProduct product: String) -> SalesforceStore {
+        lock.lock()
+        defer { lock.unlock() }
+
         if let existing = stores[product] { return existing }
 
         let store = SalesforceStore(key: product)

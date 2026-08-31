@@ -138,6 +138,7 @@
 		B2E5DB362F6FBE7800D71269 /* NSAppearance+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5DB352F6FBE7800D71269 /* NSAppearance+Extensions.swift */; };
 		B2E70FDB22B07DBC000BCAD2 /* GoogleCloudPlatformAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E70FDA22B07DBC000BCAD2 /* GoogleCloudPlatformAll.swift */; };
 		B2E832EC29DE4F5E000FA1BE /* AdobeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E832EB29DE4F5E000FA1BE /* AdobeTests.swift */; };
+		D8149B20742AF98583F20157 /* ServiceCountValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB5DDC22A5BA509AC1AFBC /* ServiceCountValidationTests.swift */; };
 		B2E832EE29DE5104000FA1BE /* adobe-analytics-minor.json in Resources */ = {isa = PBXBuildFile; fileRef = B2E832ED29DE5104000FA1BE /* adobe-analytics-minor.json */; };
 		B2E8C0232A7A9203000239F0 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8C0222A7A9203000239F0 /* Atomic.swift */; };
 		B2EB51CE1E7004A3001D6F78 /* ExanaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EB51CD1E7004A3001D6F78 /* ExanaService.swift */; };
@@ -312,6 +313,7 @@
 		B2E70FD322B0657F000BCAD2 /* generate_services_plist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_services_plist.sh; sourceTree = "<group>"; };
 		B2E70FDA22B07DBC000BCAD2 /* GoogleCloudPlatformAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleCloudPlatformAll.swift; sourceTree = "<group>"; };
 		B2E832EB29DE4F5E000FA1BE /* AdobeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdobeTests.swift; sourceTree = "<group>"; };
+		6CCB5DDC22A5BA509AC1AFBC /* ServiceCountValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCountValidationTests.swift; sourceTree = "<group>"; };
 		B2E832ED29DE5104000FA1BE /* adobe-analytics-minor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "adobe-analytics-minor.json"; sourceTree = "<group>"; };
 		B2E8C0222A7A9203000239F0 /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		B2EB51CD1E7004A3001D6F78 /* ExanaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExanaService.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 				B2563BC122CBC92400532C39 /* Mocks */,
 				B2552EFC29954AE0003FF9EC /* Resources */,
 				B2E832EB29DE4F5E000FA1BE /* AdobeTests.swift */,
+				6CCB5DDC22A5BA509AC1AFBC /* ServiceCountValidationTests.swift */,
 				B228DC152A7F872800D8DC5E /* BetterStackTests.swift */,
 				B26EC1122F69101D00DDD0B9 /* IncidentIOTests.swift */,
 				B2163AF920BA4E7500B14A85 /* Info.plist */,
@@ -899,6 +902,7 @@
 			files = (
 				91B0A21428197857007D8E8F /* StringExtensionsTests.swift in Sources */,
 				B2E832EC29DE4F5E000FA1BE /* AdobeTests.swift in Sources */,
+				D8149B20742AF98583F20157 /* ServiceCountValidationTests.swift in Sources */,
 				B2563BBE22CBC65A00532C39 /* ResponseSizeTrackingURLSession.swift in Sources */,
 				B2552F082995516B003FF9EC /* TestBundle.swift in Sources */,
 				B2C670442F69BDA20043DC7A /* MiroTests.swift in Sources */,

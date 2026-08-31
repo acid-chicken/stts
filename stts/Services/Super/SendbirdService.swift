@@ -6,6 +6,8 @@
 import Foundation
 
 class SendbirdServiceDefinition: StatusPageServiceDefinition {
+    override var providerIdentifier: String { "sendbird" }
+
     override func build() -> BaseService? {
         SendbirdService(self)
     }
