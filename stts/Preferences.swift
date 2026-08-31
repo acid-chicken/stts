@@ -92,7 +92,6 @@ class Preferences {
             "Apple": "AppleAll", // Apple changed from one service to multiple sub services
             "AppleDeveloper": "AppleDeveloperAll", // Apple Developer changed from one service to multiple sub services
             "VMwareCarbonBlack": "Broadcom", // v2.23
-            "Tableau": "TableauAll", // v2.23
             "Spoke": "Okta", // v2.23
             // There were many others but they were migrated to the services.json file
             // Generated services

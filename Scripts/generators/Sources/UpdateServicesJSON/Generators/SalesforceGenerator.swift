@@ -1,23 +1,24 @@
 import Foundation
 
-// Only region-level entries ("NA"/"EMEA"/"APAC") are discovered here — the "(All Regions)"
-// category per product is a fixed hand-written class in SalesforceCategories.swift, same as
-// every other provider's category. Keep `knownProducts` in sync with the `switch` in
-// SalesforceServiceDefinition.build() (stts/Services/Super/Salesforce.swift): an unknown product
-// still gets written to services.json (so the diff surfaces it) but the app can't build a
-// service for it until a human adds its hand-written category classes there.
-private let knownProducts: Set<String> = [
-    "B2C_Commerce_Cloud", "Community_Cloud", "Datorama", "Heroku", "MCAccountEngagement",
-    "MCPersonalization", "Marketing_Cloud", "Mulesoft", "Point_of_Sale", "Salesforce_Services",
-    "Spiff", "Tableau"
-]
-
+// Category rows (one "(All Regions)" entry per product, "category": true) are synthesized here
+// alongside the region-level entries — both are fully data-driven via SalesforceServiceDefinition.categoryKey,
+// no hand-written Swift classes needed per product anymore. Keep `productDisplayNames` covering every
+// product Salesforce reports; an unfamiliar product still gets written to services.json (so the diff
+// surfaces it) using its raw API key as a fallback display name.
 private let productDisplayNames: [String: String] = [
-    "Salesforce_Services": "Salesforce Services",
-    "Marketing_Cloud": "Salesforce Marketing Cloud",
     "B2C_Commerce_Cloud": "Salesforce B2C Commerce Cloud",
+    "Community_Cloud": "Salesforce Experience Cloud",
+    "Datorama": "Datorama",
+    "Heroku": "Heroku",
+    "Marketing_Cloud": "Salesforce Marketing Cloud",
+    "MCAccountEngagement": "MC Account Engagement",
+    "MCPersonalization": "MC Personalization",
+    "Mulesoft": "Mulesoft",
+    "Point_of_Sale": "Point of Sale",
+    "Salesforce_Services": "Salesforce Services",
     "Social_Studio": "Salesforce Social Studio",
-    "Community_Cloud": "Salesforce Experience Cloud"
+    "Spiff": "Spiff",
+    "Tableau": "Tableau"
 ]
 
 private struct SalesforceInstance: Codable {
@@ -56,16 +57,19 @@ struct SalesforceGenerator: ServiceGenerator {
 
         var entries: [DiscoveredEntry] = []
         for (product, regions) in regionsByProduct.sorted(by: { $0.key < $1.key }) {
-            if !knownProducts.contains(product) {
-                print("warning: unknown Salesforce product \"\(product)\" — add it to SalesforceCategories.swift")
-            }
-
             let displayName = productDisplayNames[product] ?? product
+
+            entries.append(DiscoveredEntry(
+                id: product,
+                name: displayName,
+                extraFields: [("product", .string(product)), ("category", .bool(true))]
+            ))
+
             for region in regions.sorted() {
                 entries.append(DiscoveredEntry(
                     id: region,
                     name: "\(displayName) (\(region))",
-                    extraFields: [("product", .string(product))]
+                    extraFields: [("product", .string(product)), ("subservice", .bool(true))]
                 ))
             }
         }

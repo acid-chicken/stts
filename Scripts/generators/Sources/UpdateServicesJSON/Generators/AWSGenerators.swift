@@ -50,6 +50,22 @@ private func awsPrefixed(_ name: String) -> String {
     return "AWS \(name)"
 }
 
+// AWS only ever has one category per provider array (there's no per-region/per-service grouping),
+// so each generator adds a single fixed "category": true header entry alongside its real entries —
+// same data-driven mechanism as Salesforce/Adobe (AWS*ServiceDefinition.categoryKey), just with a
+// constant key instead of a discovered one.
+private let regionsCategoryEntry = DiscoveredEntry(
+    id: "_all",
+    name: "AWS Regions (All)",
+    extraFields: [("category", .bool(true))]
+)
+
+private let servicesCategoryEntry = DiscoveredEntry(
+    id: "_all",
+    name: "AWS (All)",
+    extraFields: [("category", .bool(true))]
+)
+
 struct AWSRegionsGenerator: ServiceGenerator {
     let providerKey = "awsregions"
 
@@ -59,9 +75,11 @@ struct AWSRegionsGenerator: ServiceGenerator {
             return []
         }
 
-        return discovery.regions.map { region in
-            DiscoveredEntry(id: region.id, name: "AWS (\(region.name))")
+        let regions = discovery.regions.map { region in
+            DiscoveredEntry(id: region.id, name: "AWS (\(region.name))", extraFields: [("subservice", .bool(true))])
         }
+
+        return [regionsCategoryEntry] + regions
     }
 }
 
@@ -74,13 +92,15 @@ struct AWSServicesGenerator: ServiceGenerator {
             return []
         }
 
-        return discovery.namedServices.map { service in
+        let services = discovery.namedServices.map { service -> DiscoveredEntry in
             let sortedIDs = service.ids.sorted()
             return DiscoveredEntry(
                 id: sortedIDs.first ?? service.name,
                 name: awsPrefixed(service.name),
-                extraFields: [("ids", .array(sortedIDs.map { .string($0) }))]
+                extraFields: [("ids", .array(sortedIDs.map { .string($0) })), ("subservice", .bool(true))]
             )
         }
+
+        return [servicesCategoryEntry] + services
     }
 }

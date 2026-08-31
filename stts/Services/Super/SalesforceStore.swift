@@ -10,6 +10,26 @@ protocol SalesforceStoreService {
     var location: String { get }
 }
 
+extension SalesforceStoreService {
+    // Shared per-product, so a category row and its region subservices reuse one fetch instead of
+    // each triggering their own (SalesforceStore/ServiceStore cache/throttle is per-instance).
+    var store: SalesforceStore { SalesforceStoreCache.store(forProduct: key) }
+}
+
+private enum SalesforceStoreCache {
+    // updateStatus() is called concurrently across services (see sttsTests.testServices()), so
+    // this needs real synchronization, not a plain static var.
+    @Atomic private static var stores: [String: SalesforceStore] = [:]
+
+    static func store(forProduct product: String) -> SalesforceStore {
+        if let existing = stores[product] { return existing }
+
+        let store = SalesforceStore(key: product)
+        stores[product] = store
+        return store
+    }
+}
+
 class SalesforceStore: ServiceStore<[String: ServiceStatus]> {
     let key: String
 

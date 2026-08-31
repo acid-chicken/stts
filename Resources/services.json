@@ -1631,164 +1631,268 @@
   ],
   "salesforce": [
     {
+      "name": "Datorama",
+      "id": "Datorama",
+      "product": "Datorama",
+      "category": true
+    },
+    {
       "name": "Datorama (EMEA)",
       "id": "EMEA",
-      "product": "Datorama"
+      "product": "Datorama",
+      "subservice": true
     },
     {
       "name": "Datorama (NA)",
       "id": "NA",
-      "product": "Datorama"
+      "product": "Datorama",
+      "subservice": true
+    },
+    {
+      "name": "Heroku",
+      "id": "Heroku",
+      "product": "Heroku",
+      "category": true
     },
     {
       "name": "Heroku (APAC)",
       "id": "APAC",
-      "product": "Heroku"
+      "product": "Heroku",
+      "subservice": true
     },
     {
       "name": "Heroku (EMEA)",
       "id": "EMEA",
-      "product": "Heroku"
+      "product": "Heroku",
+      "subservice": true
     },
     {
       "name": "Heroku (NA)",
       "id": "NA",
-      "product": "Heroku"
+      "product": "Heroku",
+      "subservice": true
     },
     {
-      "name": "MCAccountEngagement (NA)",
+      "name": "MC Account Engagement",
+      "id": "MCAccountEngagement",
+      "product": "MCAccountEngagement",
+      "category": true
+    },
+    {
+      "name": "MC Account Engagement (NA)",
       "id": "NA",
-      "product": "MCAccountEngagement"
+      "product": "MCAccountEngagement",
+      "subservice": true
     },
     {
-      "name": "MCPersonalization (APAC)",
+      "name": "MC Personalization",
+      "id": "MCPersonalization",
+      "product": "MCPersonalization",
+      "category": true
+    },
+    {
+      "name": "MC Personalization (APAC)",
       "id": "APAC",
-      "product": "MCPersonalization"
+      "product": "MCPersonalization",
+      "subservice": true
     },
     {
-      "name": "MCPersonalization (EMEA)",
+      "name": "MC Personalization (EMEA)",
       "id": "EMEA",
-      "product": "MCPersonalization"
+      "product": "MCPersonalization",
+      "subservice": true
     },
     {
-      "name": "MCPersonalization (NA)",
+      "name": "MC Personalization (NA)",
       "id": "NA",
-      "product": "MCPersonalization"
+      "product": "MCPersonalization",
+      "subservice": true
+    },
+    {
+      "name": "Mulesoft",
+      "id": "Mulesoft",
+      "product": "Mulesoft",
+      "category": true
     },
     {
       "name": "Mulesoft (APAC)",
       "id": "APAC",
-      "product": "Mulesoft"
+      "product": "Mulesoft",
+      "subservice": true
     },
     {
       "name": "Mulesoft (EMEA)",
       "id": "EMEA",
-      "product": "Mulesoft"
+      "product": "Mulesoft",
+      "subservice": true
     },
     {
       "name": "Mulesoft (NA)",
       "id": "NA",
-      "product": "Mulesoft"
+      "product": "Mulesoft",
+      "subservice": true
     },
     {
-      "name": "Point_of_Sale (APAC)",
+      "name": "Point of Sale",
+      "id": "Point_of_Sale",
+      "product": "Point_of_Sale",
+      "category": true
+    },
+    {
+      "name": "Point of Sale (APAC)",
       "id": "APAC",
-      "product": "Point_of_Sale"
+      "product": "Point_of_Sale",
+      "subservice": true
     },
     {
-      "name": "Point_of_Sale (EMEA)",
+      "name": "Point of Sale (EMEA)",
       "id": "EMEA",
-      "product": "Point_of_Sale"
+      "product": "Point_of_Sale",
+      "subservice": true
     },
     {
-      "name": "Point_of_Sale (NA)",
+      "name": "Point of Sale (NA)",
       "id": "NA",
-      "product": "Point_of_Sale"
+      "product": "Point_of_Sale",
+      "subservice": true
+    },
+    {
+      "name": "Salesforce B2C Commerce Cloud",
+      "id": "B2C_Commerce_Cloud",
+      "product": "B2C_Commerce_Cloud",
+      "category": true
     },
     {
       "name": "Salesforce B2C Commerce Cloud (APAC)",
       "id": "APAC",
-      "product": "B2C_Commerce_Cloud"
+      "product": "B2C_Commerce_Cloud",
+      "subservice": true
     },
     {
       "name": "Salesforce B2C Commerce Cloud (EMEA)",
       "id": "EMEA",
-      "product": "B2C_Commerce_Cloud"
+      "product": "B2C_Commerce_Cloud",
+      "subservice": true
     },
     {
       "name": "Salesforce B2C Commerce Cloud (NA)",
       "id": "NA",
-      "product": "B2C_Commerce_Cloud"
+      "product": "B2C_Commerce_Cloud",
+      "subservice": true
+    },
+    {
+      "name": "Salesforce Experience Cloud",
+      "id": "Community_Cloud",
+      "product": "Community_Cloud",
+      "category": true
     },
     {
       "name": "Salesforce Experience Cloud (APAC)",
       "id": "APAC",
-      "product": "Community_Cloud"
+      "product": "Community_Cloud",
+      "subservice": true
     },
     {
       "name": "Salesforce Experience Cloud (EMEA)",
       "id": "EMEA",
-      "product": "Community_Cloud"
+      "product": "Community_Cloud",
+      "subservice": true
     },
     {
       "name": "Salesforce Experience Cloud (NA)",
       "id": "NA",
-      "product": "Community_Cloud"
+      "product": "Community_Cloud",
+      "subservice": true
+    },
+    {
+      "name": "Salesforce Marketing Cloud",
+      "id": "Marketing_Cloud",
+      "product": "Marketing_Cloud",
+      "category": true
     },
     {
       "name": "Salesforce Marketing Cloud (APAC)",
       "id": "APAC",
-      "product": "Marketing_Cloud"
+      "product": "Marketing_Cloud",
+      "subservice": true
     },
     {
       "name": "Salesforce Marketing Cloud (EMEA)",
       "id": "EMEA",
-      "product": "Marketing_Cloud"
+      "product": "Marketing_Cloud",
+      "subservice": true
     },
     {
       "name": "Salesforce Marketing Cloud (NA)",
       "id": "NA",
-      "product": "Marketing_Cloud"
+      "product": "Marketing_Cloud",
+      "subservice": true
+    },
+    {
+      "name": "Salesforce Services",
+      "id": "Salesforce_Services",
+      "product": "Salesforce_Services",
+      "category": true
     },
     {
       "name": "Salesforce Services (APAC)",
       "id": "APAC",
-      "product": "Salesforce_Services"
+      "product": "Salesforce_Services",
+      "subservice": true
     },
     {
       "name": "Salesforce Services (EMEA)",
       "id": "EMEA",
-      "product": "Salesforce_Services"
+      "product": "Salesforce_Services",
+      "subservice": true
     },
     {
       "name": "Salesforce Services (NA)",
       "id": "NA",
-      "product": "Salesforce_Services"
+      "product": "Salesforce_Services",
+      "subservice": true
+    },
+    {
+      "name": "Spiff",
+      "id": "Spiff",
+      "product": "Spiff",
+      "category": true
     },
     {
       "name": "Spiff (EMEA)",
       "id": "EMEA",
-      "product": "Spiff"
+      "product": "Spiff",
+      "subservice": true
     },
     {
       "name": "Spiff (NA)",
       "id": "NA",
-      "product": "Spiff"
+      "product": "Spiff",
+      "subservice": true
+    },
+    {
+      "name": "Tableau",
+      "id": "Tableau",
+      "product": "Tableau",
+      "category": true
     },
     {
       "name": "Tableau (APAC)",
       "id": "APAC",
-      "product": "Tableau"
+      "product": "Tableau",
+      "subservice": true
     },
     {
       "name": "Tableau (EMEA)",
       "id": "EMEA",
-      "product": "Tableau"
+      "product": "Tableau",
+      "subservice": true
     },
     {
       "name": "Tableau (NA)",
       "id": "NA",
-      "product": "Tableau"
+      "product": "Tableau",
+      "subservice": true
     }
   ],
   "adobe": [
@@ -3494,147 +3598,188 @@
   "awsregions": [
     {
       "name": "AWS (Bahrain)",
-      "id": "me-south-1"
+      "id": "me-south-1",
+      "subservice": true
     },
     {
       "name": "AWS (Calgary)",
-      "id": "ca-west-1"
+      "id": "ca-west-1",
+      "subservice": true
     },
     {
       "name": "AWS (Canada-Central)",
-      "id": "ca-central-1"
+      "id": "ca-central-1",
+      "subservice": true
     },
     {
       "name": "AWS (Cape Town)",
-      "id": "af-south-1"
+      "id": "af-south-1",
+      "subservice": true
     },
     {
       "name": "AWS (Frankfurt)",
-      "id": "eu-central-1"
+      "id": "eu-central-1",
+      "subservice": true
     },
     {
       "name": "AWS (Hong Kong)",
-      "id": "ap-east-1"
+      "id": "ap-east-1",
+      "subservice": true
     },
     {
       "name": "AWS (Hyderabad)",
-      "id": "ap-south-2"
+      "id": "ap-south-2",
+      "subservice": true
     },
     {
       "name": "AWS (Ireland)",
-      "id": "eu-west-1"
+      "id": "eu-west-1",
+      "subservice": true
     },
     {
       "name": "AWS (Jakarta)",
-      "id": "ap-southeast-3"
+      "id": "ap-southeast-3",
+      "subservice": true
     },
     {
       "name": "AWS (London)",
-      "id": "eu-west-2"
+      "id": "eu-west-2",
+      "subservice": true
     },
     {
       "name": "AWS (Malaysia)",
-      "id": "ap-southeast-5"
+      "id": "ap-southeast-5",
+      "subservice": true
     },
     {
       "name": "AWS (Melbourne)",
-      "id": "ap-southeast-4"
+      "id": "ap-southeast-4",
+      "subservice": true
     },
     {
       "name": "AWS (Mexico-Central)",
-      "id": "mx-central-1"
+      "id": "mx-central-1",
+      "subservice": true
     },
     {
       "name": "AWS (Milan)",
-      "id": "eu-south-1"
+      "id": "eu-south-1",
+      "subservice": true
     },
     {
       "name": "AWS (Mumbai)",
-      "id": "ap-south-1"
+      "id": "ap-south-1",
+      "subservice": true
     },
     {
       "name": "AWS (N. California)",
-      "id": "us-west-1"
+      "id": "us-west-1",
+      "subservice": true
     },
     {
       "name": "AWS (N. Virginia)",
-      "id": "us-east-1"
+      "id": "us-east-1",
+      "subservice": true
     },
     {
       "name": "AWS (New Zealand)",
-      "id": "ap-southeast-6"
+      "id": "ap-southeast-6",
+      "subservice": true
     },
     {
       "name": "AWS (Ohio)",
-      "id": "us-east-2"
+      "id": "us-east-2",
+      "subservice": true
     },
     {
       "name": "AWS (Oregon)",
-      "id": "us-west-2"
+      "id": "us-west-2",
+      "subservice": true
     },
     {
       "name": "AWS (Osaka)",
-      "id": "ap-northeast-3"
+      "id": "ap-northeast-3",
+      "subservice": true
     },
     {
       "name": "AWS (Paris)",
-      "id": "eu-west-3"
+      "id": "eu-west-3",
+      "subservice": true
     },
     {
       "name": "AWS (Sao Paulo)",
-      "id": "sa-east-1"
+      "id": "sa-east-1",
+      "subservice": true
     },
     {
       "name": "AWS (Seoul)",
-      "id": "ap-northeast-2"
+      "id": "ap-northeast-2",
+      "subservice": true
     },
     {
       "name": "AWS (Singapore)",
-      "id": "ap-southeast-1"
+      "id": "ap-southeast-1",
+      "subservice": true
     },
     {
       "name": "AWS (Spain)",
-      "id": "eu-south-2"
+      "id": "eu-south-2",
+      "subservice": true
     },
     {
       "name": "AWS (Stockholm)",
-      "id": "eu-north-1"
+      "id": "eu-north-1",
+      "subservice": true
     },
     {
       "name": "AWS (Sydney)",
-      "id": "ap-southeast-2"
+      "id": "ap-southeast-2",
+      "subservice": true
     },
     {
       "name": "AWS (Taipei)",
-      "id": "ap-east-2"
+      "id": "ap-east-2",
+      "subservice": true
     },
     {
       "name": "AWS (Tel Aviv)",
-      "id": "il-central-1"
+      "id": "il-central-1",
+      "subservice": true
     },
     {
       "name": "AWS (Thailand)",
-      "id": "ap-southeast-7"
+      "id": "ap-southeast-7",
+      "subservice": true
     },
     {
       "name": "AWS (Tokyo)",
-      "id": "ap-northeast-1"
+      "id": "ap-northeast-1",
+      "subservice": true
     },
     {
       "name": "AWS (UAE)",
-      "id": "me-central-1"
+      "id": "me-central-1",
+      "subservice": true
     },
     {
       "name": "AWS (US-East)",
-      "id": "us-gov-east-1"
+      "id": "us-gov-east-1",
+      "subservice": true
     },
     {
       "name": "AWS (US-West)",
-      "id": "us-gov-west-1"
+      "id": "us-gov-west-1",
+      "subservice": true
     },
     {
       "name": "AWS (Zurich)",
-      "id": "eu-central-2"
+      "id": "eu-central-2",
+      "subservice": true
+    },
+    {
+      "name": "AWS Regions (All)",
+      "id": "_all",
+      "category": true
     }
   ],
   "awsservices": [
@@ -3678,7 +3823,8 @@
         "apigateway-us-gov-west-1",
         "apigateway-us-west-1",
         "apigateway-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon AppFlow",
@@ -3700,7 +3846,8 @@
         "appflow-us-east-2",
         "appflow-us-west-1",
         "appflow-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Athena",
@@ -3742,7 +3889,8 @@
         "athena-us-gov-west-1",
         "athena-us-west-1",
         "athena-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Augmented AI",
@@ -3760,7 +3908,8 @@
         "augmentedai-us-east-1",
         "augmentedai-us-east-2",
         "augmentedai-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Aurora DSQL Service",
@@ -3786,7 +3935,8 @@
         "dsql-us-east-1",
         "dsql-us-east-2",
         "dsql-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Bedrock",
@@ -3827,7 +3977,8 @@
         "bedrock-us-gov-west-1",
         "bedrock-us-west-1",
         "bedrock-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Braket",
@@ -3838,7 +3989,8 @@
         "braket-us-east-1",
         "braket-us-west-1",
         "braket-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Chime",
@@ -3847,7 +3999,8 @@
         "chime",
         "chime-us-gov-east-1",
         "chime-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Cloud Directory",
@@ -3863,14 +4016,16 @@
         "clouddirectory-us-east-2",
         "clouddirectory-us-gov-west-1",
         "clouddirectory-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon CloudFront",
       "id": "cloudfront",
       "ids": [
         "cloudfront"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon CloudSearch",
@@ -3886,7 +4041,8 @@
         "cloudsearch-us-east-1",
         "cloudsearch-us-west-1",
         "cloudsearch-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon CloudWatch",
@@ -3928,7 +4084,8 @@
         "cloudwatch-us-gov-west-1",
         "cloudwatch-us-west-1",
         "cloudwatch-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon CloudWatch Application Insights",
@@ -3965,7 +4122,8 @@
         "applicationinsights-us-gov-west-1",
         "applicationinsights-us-west-1",
         "applicationinsights-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon CloudWatch Evidently",
@@ -3980,7 +4138,8 @@
         "evidently-us-east-1",
         "evidently-us-east-2",
         "evidently-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon CloudWatch Internet Monitor",
@@ -4013,7 +4172,8 @@
         "internetmonitor-us-east-2",
         "internetmonitor-us-west-1",
         "internetmonitor-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon CloudWatch RUM",
@@ -4053,7 +4213,8 @@
         "rum-us-gov-west-1",
         "rum-us-west-1",
         "rum-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon CloudWatch Synthetics",
@@ -4095,7 +4256,8 @@
         "cloudwatchsynthetics-us-gov-west-1",
         "cloudwatchsynthetics-us-west-1",
         "cloudwatchsynthetics-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon CodeCatalyst",
@@ -4103,7 +4265,8 @@
       "ids": [
         "codecatalyst-eu-west-1",
         "codecatalyst-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon CodeGuru Profiler",
@@ -4119,7 +4282,8 @@
         "codeguru-profiler-us-east-1",
         "codeguru-profiler-us-east-2",
         "codeguru-profiler-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon CodeGuru Reviewer",
@@ -4135,7 +4299,8 @@
         "codeguru-reviewer-us-east-1",
         "codeguru-reviewer-us-east-2",
         "codeguru-reviewer-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Cognito",
@@ -4177,7 +4342,8 @@
         "cognito-us-gov-west-1",
         "cognito-us-west-1",
         "cognito-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Comprehend",
@@ -4196,7 +4362,8 @@
         "comprehend-us-east-2",
         "comprehend-us-gov-west-1",
         "comprehend-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Comprehend Medical",
@@ -4210,7 +4377,8 @@
         "comprehendmedical-us-east-2",
         "comprehendmedical-us-gov-west-1",
         "comprehendmedical-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Connect",
@@ -4227,7 +4395,8 @@
         "connect-us-east-1",
         "connect-us-gov-west-1",
         "connect-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Connect Health",
@@ -4235,7 +4404,8 @@
       "ids": [
         "health-agent-us-east-1",
         "health-agent-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Data Firehose",
@@ -4277,7 +4447,8 @@
         "firehose-us-gov-west-1",
         "firehose-us-west-1",
         "firehose-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Data Lifecycle Manager",
@@ -4319,7 +4490,8 @@
         "dlm-us-gov-west-1",
         "dlm-us-west-1",
         "dlm-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon DataZone",
@@ -4346,7 +4518,8 @@
         "datazone-us-east-1",
         "datazone-us-east-2",
         "datazone-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Detective",
@@ -4375,7 +4548,8 @@
         "detective-us-gov-west-1",
         "detective-us-west-1",
         "detective-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon DevOps Guru",
@@ -4397,7 +4571,8 @@
         "devops-guru-us-east-2",
         "devops-guru-us-west-1",
         "devops-guru-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon DocumentDB",
@@ -4435,7 +4610,8 @@
         "docdb-us-gov-east-1",
         "docdb-us-gov-west-1",
         "docdb-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon DynamoDB",
@@ -4477,7 +4653,8 @@
         "dynamodb-us-gov-west-1",
         "dynamodb-us-west-1",
         "dynamodb-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon EC2 Instance Connect",
@@ -4519,7 +4696,8 @@
         "managedssh-us-gov-west-1",
         "managedssh-us-west-1",
         "managedssh-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Elastic Compute Cloud",
@@ -4561,7 +4739,8 @@
         "ec2-us-gov-west-1",
         "ec2-us-west-1",
         "ec2-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Elastic Container Registry",
@@ -4603,14 +4782,16 @@
         "ecr-us-gov-west-1",
         "ecr-us-west-1",
         "ecr-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Elastic Container Registry Public",
       "id": "spencer",
       "ids": [
         "spencer"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Elastic Container Service",
@@ -4652,7 +4833,8 @@
         "ecs-us-gov-west-1",
         "ecs-us-west-1",
         "ecs-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Elastic File System",
@@ -4694,7 +4876,8 @@
         "elasticfilesystem-us-gov-west-1",
         "elasticfilesystem-us-west-1",
         "elasticfilesystem-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Elastic Kubernetes Service",
@@ -4736,7 +4919,8 @@
         "eks-us-gov-west-1",
         "eks-us-west-1",
         "eks-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Elastic Load Balancing",
@@ -4778,7 +4962,8 @@
         "elb-us-gov-west-1",
         "elb-us-west-1",
         "elb-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Elastic MapReduce",
@@ -4820,7 +5005,8 @@
         "emr-us-gov-west-1",
         "emr-us-west-1",
         "emr-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon ElastiCache",
@@ -4862,7 +5048,8 @@
         "elasticache-us-gov-west-1",
         "elasticache-us-west-1",
         "elasticache-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon EMR Serverless",
@@ -4904,7 +5091,8 @@
         "emrserverless-us-gov-west-1",
         "emrserverless-us-west-1",
         "emrserverless-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon EventBridge",
@@ -4946,7 +5134,8 @@
         "events-us-gov-west-1",
         "events-us-west-1",
         "events-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon EventBridge Scheduler",
@@ -4988,7 +5177,8 @@
         "scheduler-us-gov-west-1",
         "scheduler-us-west-1",
         "scheduler-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon FinSpace",
@@ -5004,7 +5194,8 @@
         "finspace-us-east-1",
         "finspace-us-east-2",
         "finspace-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Forecast",
@@ -5020,7 +5211,8 @@
         "amazonforecast-us-east-1",
         "amazonforecast-us-east-2",
         "amazonforecast-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Fraud Detector",
@@ -5032,7 +5224,8 @@
         "frauddetector-us-east-1",
         "frauddetector-us-east-2",
         "frauddetector-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon FreeRTOS",
@@ -5056,7 +5249,8 @@
         "freertos-us-east-2",
         "freertos-us-west-1",
         "freertos-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon FSx",
@@ -5098,7 +5292,8 @@
         "fsx-us-gov-west-1",
         "fsx-us-west-1",
         "fsx-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon GameLift Servers",
@@ -5127,7 +5322,8 @@
         "gamelift-us-east-2",
         "gamelift-us-west-1",
         "gamelift-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon GameLift Streams",
@@ -5137,7 +5333,8 @@
         "gameliftstreams-eu-central-1",
         "gameliftstreams-us-east-2",
         "gameliftstreams-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Glacier",
@@ -5176,7 +5373,8 @@
         "glacier-us-gov-west-1",
         "glacier-us-west-1",
         "glacier-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon GuardDuty",
@@ -5218,7 +5416,8 @@
         "guardduty-us-gov-west-1",
         "guardduty-us-west-1",
         "guardduty-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Inspector",
@@ -5259,7 +5458,8 @@
         "inspector-us-gov-west-1",
         "inspector-us-west-1",
         "inspector-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Interactive Video Service",
@@ -5272,7 +5472,8 @@
         "ivs-eu-west-1",
         "ivs-us-east-1",
         "ivs-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Kendra",
@@ -5289,7 +5490,8 @@
         "kendra-us-east-2",
         "kendra-us-gov-west-1",
         "kendra-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Kendra Intelligent Ranking",
@@ -5304,7 +5506,8 @@
         "kendraranking-us-east-1",
         "kendraranking-us-east-2",
         "kendraranking-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Keyspaces",
@@ -5328,7 +5531,8 @@
         "cassandra-us-east-2",
         "cassandra-us-west-1",
         "cassandra-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Kinesis Data Streams",
@@ -5370,7 +5574,8 @@
         "kinesis-us-gov-west-1",
         "kinesis-us-west-1",
         "kinesis-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Kinesis Video Streams",
@@ -5398,7 +5603,8 @@
         "kinesisvideo-us-gov-east-1",
         "kinesisvideo-us-gov-west-1",
         "kinesisvideo-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Lex",
@@ -5416,7 +5622,8 @@
         "lex-us-east-1",
         "lex-us-gov-west-1",
         "lex-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Lightsail",
@@ -5441,7 +5648,8 @@
         "lightsail-us-east-1",
         "lightsail-us-east-2",
         "lightsail-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Location Service",
@@ -5463,7 +5671,8 @@
         "locationservice-us-east-2",
         "locationservice-us-gov-west-1",
         "locationservice-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Lookout for Equipment",
@@ -5472,7 +5681,8 @@
         "lookoutequipment-ap-northeast-2",
         "lookoutequipment-eu-west-1",
         "lookoutequipment-us-east-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Machine Learning",
@@ -5480,7 +5690,8 @@
       "ids": [
         "aml-eu-west-1",
         "aml-us-east-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Macie",
@@ -5508,7 +5719,8 @@
         "macie-us-east-2",
         "macie-us-west-1",
         "macie-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Managed Blockchain",
@@ -5521,7 +5733,8 @@
         "managedblockchain-eu-west-2",
         "managedblockchain-us-east-1",
         "managedblockchain-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Managed Grafana",
@@ -5539,7 +5752,8 @@
         "grafana-us-gov-east-1",
         "grafana-us-gov-west-1",
         "grafana-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Managed Service for Apache Flink",
@@ -5581,7 +5795,8 @@
         "kinesisanalytics-us-gov-west-1",
         "kinesisanalytics-us-west-1",
         "kinesisanalytics-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Managed Service for Prometheus",
@@ -5598,7 +5813,8 @@
         "aps-us-gov-east-1",
         "aps-us-gov-west-1",
         "aps-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Managed Streaming for Apache Kafka",
@@ -5640,7 +5856,8 @@
         "kafka-us-gov-west-1",
         "kafka-us-west-1",
         "kafka-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Managed Workflows for Apache Airflow",
@@ -5677,7 +5894,8 @@
         "airflow-us-east-2",
         "airflow-us-west-1",
         "airflow-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon MemoryDB for Redis",
@@ -5704,7 +5922,8 @@
         "memorydb-us-gov-west-1",
         "memorydb-us-west-1",
         "memorydb-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Monitron",
@@ -5713,7 +5932,8 @@
         "monitron-ap-southeast-2",
         "monitron-eu-west-1",
         "monitron-us-east-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon MQ",
@@ -5755,7 +5975,8 @@
         "mq-us-gov-west-1",
         "mq-us-west-1",
         "mq-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Neptune",
@@ -5792,14 +6013,16 @@
         "neptune-db-us-gov-west-1",
         "neptune-db-us-west-1",
         "neptune-db-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon One Enterprise",
       "id": "one-us-east-1",
       "ids": [
         "one-us-east-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon OpenSearch Service",
@@ -5841,7 +6064,8 @@
         "elasticsearch-us-gov-west-1",
         "elasticsearch-us-west-1",
         "elasticsearch-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Personalize",
@@ -5858,7 +6082,8 @@
         "personalize-us-east-1",
         "personalize-us-east-2",
         "personalize-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Pinpoint",
@@ -5877,7 +6102,8 @@
         "pinpoint-us-east-2",
         "pinpoint-us-gov-west-1",
         "pinpoint-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Polly",
@@ -5908,7 +6134,8 @@
         "polly-us-gov-west-1",
         "polly-us-west-1",
         "polly-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Q Apps",
@@ -5916,7 +6143,8 @@
       "ids": [
         "qapps-us-east-1",
         "qapps-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Q Business",
@@ -5926,7 +6154,8 @@
         "qbusiness-eu-west-1",
         "qbusiness-us-east-1",
         "qbusiness-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Quick Suite",
@@ -5957,7 +6186,8 @@
         "quicksight-us-gov-east-1",
         "quicksight-us-gov-west-1",
         "quicksight-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Redshift",
@@ -5999,7 +6229,8 @@
         "redshift-us-gov-west-1",
         "redshift-us-west-1",
         "redshift-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Rekognition",
@@ -6024,7 +6255,8 @@
         "rekognition-us-gov-west-1",
         "rekognition-us-west-1",
         "rekognition-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Relational Database Service",
@@ -6066,7 +6298,8 @@
         "rds-us-gov-west-1",
         "rds-us-west-1",
         "rds-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Route 53",
@@ -6075,28 +6308,32 @@
         "route53",
         "route53-us-gov-east-1",
         "route53-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Route 53 Application Recovery Controller",
       "id": "route53apprecoverycontroller",
       "ids": [
         "route53apprecoverycontroller"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Route 53 Domain Registration",
       "id": "route53domainregistration",
       "ids": [
         "route53domainregistration"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Route 53 Global Resolver",
       "id": "route53globalresolver",
       "ids": [
         "route53globalresolver"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Route 53 Private DNS",
@@ -6138,7 +6375,8 @@
         "route53privatedns-us-gov-west-1",
         "route53privatedns-us-west-1",
         "route53privatedns-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Route 53 Resolver",
@@ -6180,7 +6418,8 @@
         "route53resolver-us-gov-west-1",
         "route53resolver-us-west-1",
         "route53resolver-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon S3 Replication Time Control",
@@ -6216,7 +6455,8 @@
         "s3rtc-us-east-2",
         "s3rtc-us-west-1",
         "s3rtc-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon SageMaker",
@@ -6258,7 +6498,8 @@
         "sagemaker-us-gov-west-1",
         "sagemaker-us-west-1",
         "sagemaker-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Security Lake",
@@ -6283,7 +6524,8 @@
         "securitylake-us-gov-west-1",
         "securitylake-us-west-1",
         "securitylake-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Simple Email Service",
@@ -6318,7 +6560,8 @@
         "ses-us-gov-west-1",
         "ses-us-west-1",
         "ses-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Simple Notification Service",
@@ -6360,7 +6603,8 @@
         "sns-us-gov-west-1",
         "sns-us-west-1",
         "sns-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Simple Queue Service",
@@ -6402,7 +6646,8 @@
         "sqs-us-gov-west-1",
         "sqs-us-west-1",
         "sqs-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Simple Storage Service",
@@ -6444,7 +6689,8 @@
         "s3-us-gov-west-1",
         "s3-us-west-1",
         "s3-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Simple Workflow Service",
@@ -6486,7 +6732,8 @@
         "swf-us-gov-west-1",
         "swf-us-west-1",
         "swf-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon SimpleDB",
@@ -6500,7 +6747,8 @@
         "simpledb-us-east-1",
         "simpledb-us-west-1",
         "simpledb-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Textract",
@@ -6522,7 +6770,8 @@
         "textract-us-gov-west-1",
         "textract-us-west-1",
         "textract-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Timestream",
@@ -6539,7 +6788,8 @@
         "timestream-us-east-2",
         "timestream-us-gov-west-1",
         "timestream-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Transcribe",
@@ -6567,7 +6817,8 @@
         "transcribe-us-gov-west-1",
         "transcribe-us-west-1",
         "transcribe-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Translate",
@@ -6590,7 +6841,8 @@
         "translate-us-gov-west-1",
         "translate-us-west-1",
         "translate-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Verified Permissions",
@@ -6632,7 +6884,8 @@
         "verifiedpermissions-us-gov-west-1",
         "verifiedpermissions-us-west-1",
         "verifiedpermissions-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon Virtual Private Cloud",
@@ -6674,7 +6927,8 @@
         "vpc-us-gov-west-1",
         "vpc-us-west-1",
         "vpc-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon VPC IP Address Manager",
@@ -6716,7 +6970,8 @@
         "ipam-us-gov-west-1",
         "ipam-us-west-1",
         "ipam-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon VPC Lattice",
@@ -6752,7 +7007,8 @@
         "vpclattice-us-east-2",
         "vpclattice-us-west-1",
         "vpclattice-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon WorkMail",
@@ -6761,7 +7017,8 @@
         "workmail-eu-west-1",
         "workmail-us-east-1",
         "workmail-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon WorkSpaces",
@@ -6786,7 +7043,8 @@
         "workspaces-us-gov-east-1",
         "workspaces-us-gov-west-1",
         "workspaces-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon WorkSpaces Applications",
@@ -6812,7 +7070,8 @@
         "appstream2-us-gov-east-1",
         "appstream2-us-gov-west-1",
         "appstream2-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon WorkSpaces Secure Browser",
@@ -6828,7 +7087,8 @@
         "workspacesweb-eu-west-2",
         "workspacesweb-us-east-1",
         "workspacesweb-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "Amazon WorkSpaces Thin Client",
@@ -6841,21 +7101,29 @@
         "thinclient-eu-west-2",
         "thinclient-us-east-1",
         "thinclient-us-west-2"
-      ]
+      ],
+      "subservice": true
+    },
+    {
+      "name": "AWS (All)",
+      "id": "_all",
+      "category": true
     },
     {
       "name": "AWS Account Management",
       "id": "account",
       "ids": [
         "account"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Activate Console",
       "id": "activateconsole-us-west-2",
       "ids": [
         "activateconsole-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Amplify",
@@ -6881,7 +7149,8 @@
         "amplify-us-east-2",
         "amplify-us-west-1",
         "amplify-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Amplify Admin",
@@ -6906,7 +7175,8 @@
         "amplifyadmin-us-east-2",
         "amplifyadmin-us-west-1",
         "amplifyadmin-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS App Mesh",
@@ -6937,7 +7207,8 @@
         "appmesh-us-east-2",
         "appmesh-us-west-1",
         "appmesh-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS App Runner",
@@ -6954,7 +7225,8 @@
         "apprunner-us-east-1",
         "apprunner-us-east-2",
         "apprunner-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS App Studio",
@@ -6962,7 +7234,8 @@
       "ids": [
         "appstudio-eu-west-1",
         "appstudio-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS AppConfig",
@@ -7004,7 +7277,8 @@
         "appconfig-us-gov-west-1",
         "appconfig-us-west-1",
         "appconfig-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS AppFabric",
@@ -7013,7 +7287,8 @@
         "appfabric-ap-northeast-1",
         "appfabric-eu-west-1",
         "appfabric-us-east-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Application Discovery Service",
@@ -7026,7 +7301,8 @@
         "applicationdiscoveryservice-eu-west-2",
         "applicationdiscoveryservice-us-east-1",
         "applicationdiscoveryservice-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Application Migration Service",
@@ -7068,7 +7344,8 @@
         "mgn-us-gov-west-1",
         "mgn-us-west-1",
         "mgn-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS AppSync",
@@ -7105,7 +7382,8 @@
         "appsync-us-east-2",
         "appsync-us-west-1",
         "appsync-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Audit Manager",
@@ -7123,7 +7401,8 @@
         "auditmanager-us-east-2",
         "auditmanager-us-west-1",
         "auditmanager-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Auto Scaling",
@@ -7165,7 +7444,8 @@
         "autoscaling-us-gov-west-1",
         "autoscaling-us-west-1",
         "autoscaling-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS B2B Data Interchange",
@@ -7180,7 +7460,8 @@
         "b2bi-us-east-1",
         "b2bi-us-east-2",
         "b2bi-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Backup",
@@ -7222,7 +7503,8 @@
         "backup-us-gov-west-1",
         "backup-us-west-1",
         "backup-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Batch",
@@ -7264,7 +7546,8 @@
         "batch-us-gov-west-1",
         "batch-us-west-1",
         "batch-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Bedrock AgentCore",
@@ -7292,14 +7575,16 @@
         "bedrock-agentcore-us-gov-west-1",
         "bedrock-agentcore-us-west-1",
         "bedrock-agentcore-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Billing Console",
       "id": "billingconsole",
       "ids": [
         "billingconsole"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Certificate Manager",
@@ -7341,14 +7626,16 @@
         "certificatemanager-us-gov-west-1",
         "certificatemanager-us-west-1",
         "certificatemanager-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Chatbot",
       "id": "chatbot",
       "ids": [
         "chatbot"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Clean Rooms",
@@ -7365,7 +7652,8 @@
         "cleanrooms-us-east-1",
         "cleanrooms-us-east-2",
         "cleanrooms-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Client VPN",
@@ -7407,7 +7695,8 @@
         "clientvpn-us-gov-west-1",
         "clientvpn-us-west-1",
         "clientvpn-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Cloud Map",
@@ -7449,7 +7738,8 @@
         "servicediscovery-us-gov-west-1",
         "servicediscovery-us-west-1",
         "servicediscovery-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Cloud WAN",
@@ -7458,7 +7748,8 @@
         "cloudwan",
         "cloudwan-us-gov-east-1",
         "cloudwan-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Cloud9",
@@ -7486,7 +7777,8 @@
         "cloud9-us-east-2",
         "cloud9-us-west-1",
         "cloud9-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS CloudFormation",
@@ -7528,7 +7820,8 @@
         "cloudformation-us-gov-west-1",
         "cloudformation-us-west-1",
         "cloudformation-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS CloudHSM",
@@ -7568,7 +7861,8 @@
         "cloudhsm-us-gov-west-1",
         "cloudhsm-us-west-1",
         "cloudhsm-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS CloudShell",
@@ -7607,7 +7901,8 @@
         "cloudshell-us-gov-west-1",
         "cloudshell-us-west-1",
         "cloudshell-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS CloudTrail",
@@ -7649,7 +7944,8 @@
         "cloudtrail-us-gov-west-1",
         "cloudtrail-us-west-1",
         "cloudtrail-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS CodeArtifact",
@@ -7668,7 +7964,8 @@
         "codeartifact-us-east-1",
         "codeartifact-us-east-2",
         "codeartifact-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS CodeBuild",
@@ -7707,7 +8004,8 @@
         "codebuild-us-gov-west-1",
         "codebuild-us-west-1",
         "codebuild-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS CodeCommit",
@@ -7740,7 +8038,8 @@
         "codecommit-us-gov-west-1",
         "codecommit-us-west-1",
         "codecommit-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS CodeDeploy",
@@ -7782,7 +8081,8 @@
         "codedeploy-us-gov-west-1",
         "codedeploy-us-west-1",
         "codedeploy-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS CodePipeline",
@@ -7820,7 +8120,8 @@
         "codepipeline-us-gov-west-1",
         "codepipeline-us-west-1",
         "codepipeline-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Compute Optimizer",
@@ -7856,7 +8157,8 @@
         "computeoptimizer-us-gov-west-1",
         "computeoptimizer-us-west-1",
         "computeoptimizer-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Config",
@@ -7898,7 +8200,8 @@
         "config-us-gov-west-1",
         "config-us-west-1",
         "config-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Console Mobile App",
@@ -7933,7 +8236,8 @@
         "consolemobileapp-us-east-2",
         "consolemobileapp-us-west-1",
         "consolemobileapp-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Control Catalog",
@@ -7975,7 +8279,8 @@
         "controlcatalog-us-gov-west-1",
         "controlcatalog-us-west-1",
         "controlcatalog-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Control Tower",
@@ -8017,7 +8322,8 @@
         "controltower-us-gov-west-1",
         "controltower-us-west-1",
         "controltower-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Data Exchange",
@@ -8034,7 +8340,8 @@
         "dataexchange-us-east-2",
         "dataexchange-us-west-1",
         "dataexchange-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Data Pipeline",
@@ -8045,7 +8352,8 @@
         "datapipeline-eu-west-1",
         "datapipeline-us-east-1",
         "datapipeline-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Database Migration Service",
@@ -8087,7 +8395,8 @@
         "dms-us-gov-west-1",
         "dms-us-west-1",
         "dms-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS DataSync",
@@ -8129,7 +8438,8 @@
         "datasync-us-gov-west-1",
         "datasync-us-west-1",
         "datasync-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Deadline Cloud",
@@ -8145,21 +8455,24 @@
         "deadline-us-east-1",
         "deadline-us-east-2",
         "deadline-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS DeepRacer",
       "id": "deepracer-us-east-1",
       "ids": [
         "deepracer-us-east-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Device Farm",
       "id": "devicefarm-us-west-2",
       "ids": [
         "devicefarm-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS DevOps Agent",
@@ -8176,7 +8489,8 @@
         "devops-agent-sa-east-1",
         "devops-agent-us-east-1",
         "devops-agent-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Direct Connect",
@@ -8218,7 +8532,8 @@
         "directconnect-us-gov-west-1",
         "directconnect-us-west-1",
         "directconnect-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Directory Service",
@@ -8260,7 +8575,8 @@
         "directoryservice-us-gov-west-1",
         "directoryservice-us-west-1",
         "directoryservice-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS EC2 Image Builder",
@@ -8302,7 +8618,8 @@
         "imagebuilder-us-gov-west-1",
         "imagebuilder-us-west-1",
         "imagebuilder-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS EC2 Serial Console",
@@ -8344,7 +8661,8 @@
         "ec2serialconsole-us-gov-west-1",
         "ec2serialconsole-us-west-1",
         "ec2serialconsole-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Elastic Beanstalk",
@@ -8384,7 +8702,8 @@
         "elasticbeanstalk-us-gov-west-1",
         "elasticbeanstalk-us-west-1",
         "elasticbeanstalk-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Elastic Disaster Recovery",
@@ -8426,7 +8745,8 @@
         "drs-us-gov-west-1",
         "drs-us-west-1",
         "drs-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Elastic VMWare Service",
@@ -8454,7 +8774,8 @@
         "evs-us-east-2",
         "evs-us-west-1",
         "evs-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Elemental",
@@ -8484,7 +8805,8 @@
         "elemental-us-gov-west-1",
         "elemental-us-west-1",
         "elemental-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS End User Messaging",
@@ -8523,7 +8845,8 @@
         "endusermessaging-us-gov-west-1",
         "endusermessaging-us-west-1",
         "endusermessaging-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Entity Resolution",
@@ -8541,7 +8864,8 @@
         "entityresolution-us-east-1",
         "entityresolution-us-east-2",
         "entityresolution-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Fargate",
@@ -8583,7 +8907,8 @@
         "fargate-us-gov-west-1",
         "fargate-us-west-1",
         "fargate-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Fault Injection Service",
@@ -8615,7 +8940,8 @@
         "fis-us-gov-west-1",
         "fis-us-west-1",
         "fis-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Firewall Manager",
@@ -8657,14 +8983,16 @@
         "fms-us-gov-west-1",
         "fms-us-west-1",
         "fms-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Global Accelerator",
       "id": "globalaccelerator",
       "ids": [
         "globalaccelerator"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Glue",
@@ -8706,7 +9034,8 @@
         "glue-us-gov-west-1",
         "glue-us-west-1",
         "glue-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Glue DataBrew",
@@ -8732,7 +9061,8 @@
         "aws-glue-us-gov-west-1",
         "aws-glue-us-west-1",
         "aws-glue-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Ground Station",
@@ -8750,7 +9080,8 @@
         "groundstation-us-east-1",
         "groundstation-us-east-2",
         "groundstation-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Health",
@@ -8759,7 +9090,8 @@
         "health",
         "health-us-gov-east-1",
         "health-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS HealthImaging",
@@ -8770,7 +9102,8 @@
         "healthimaging-eu-west-2",
         "healthimaging-us-east-1",
         "healthimaging-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS HealthLake",
@@ -8784,7 +9117,8 @@
         "healthlake-us-east-1",
         "healthlake-us-east-2",
         "healthlake-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS HealthOmics",
@@ -8800,7 +9134,8 @@
         "omics-us-east-1",
         "omics-us-east-2",
         "omics-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS IAM Identity Center",
@@ -8842,7 +9177,8 @@
         "iamidentitycenter-us-gov-west-1",
         "iamidentitycenter-us-west-1",
         "iamidentitycenter-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Identity and Access Management",
@@ -8851,7 +9187,8 @@
         "iam",
         "iam-us-gov-east-1",
         "iam-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Identity and Access Management Roles Anywhere",
@@ -8893,7 +9230,8 @@
         "iamrolesanywhere-us-gov-west-1",
         "iamrolesanywhere-us-west-1",
         "iamrolesanywhere-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Import/Export",
@@ -8902,7 +9240,8 @@
         "import-export",
         "import-export-us-gov-east-1",
         "import-export-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Infrastructure Performance",
@@ -8935,7 +9274,8 @@
         "infrastructureperformance-us-east-2",
         "infrastructureperformance-us-west-1",
         "infrastructureperformance-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Internet Connectivity",
@@ -8977,7 +9317,8 @@
         "internetconnectivity-us-gov-west-1",
         "internetconnectivity-us-west-1",
         "internetconnectivity-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS IoT Core",
@@ -9008,7 +9349,8 @@
         "awsiot-us-gov-west-1",
         "awsiot-us-west-1",
         "awsiot-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS IoT Device Defender",
@@ -9036,7 +9378,8 @@
         "iotdevicedefender-us-gov-west-1",
         "iotdevicedefender-us-west-1",
         "iotdevicedefender-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS IoT Device Management",
@@ -9063,7 +9406,8 @@
         "awsiotdevicemanagement-us-gov-west-1",
         "awsiotdevicemanagement-us-west-1",
         "awsiotdevicemanagement-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS IoT FleetWise",
@@ -9072,7 +9416,8 @@
         "iotfleetwise-ap-south-1",
         "iotfleetwise-eu-central-1",
         "iotfleetwise-us-east-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS IoT Greengrass",
@@ -9094,7 +9439,8 @@
         "awsgreengrass-us-gov-east-1",
         "awsgreengrass-us-gov-west-1",
         "awsgreengrass-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS IoT SiteWise",
@@ -9112,7 +9458,8 @@
         "iotsitewise-us-east-2",
         "iotsitewise-us-gov-west-1",
         "iotsitewise-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS IoT TwinMaker",
@@ -9128,7 +9475,8 @@
         "iottwinmaker-us-east-1",
         "iottwinmaker-us-gov-west-1",
         "iottwinmaker-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Key Management Service",
@@ -9170,14 +9518,16 @@
         "kms-us-gov-west-1",
         "kms-us-west-1",
         "kms-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Kiro",
       "id": "kiro-us-east-1",
       "ids": [
         "kiro-us-east-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Lake Formation",
@@ -9219,7 +9569,8 @@
         "lakeformation-us-gov-west-1",
         "lakeformation-us-west-1",
         "lakeformation-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Lambda",
@@ -9261,7 +9612,8 @@
         "lambda-us-gov-west-1",
         "lambda-us-west-1",
         "lambda-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Launch Wizard",
@@ -9296,7 +9648,8 @@
         "appwizard-us-gov-west-1",
         "appwizard-us-west-1",
         "appwizard-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS License Manager",
@@ -9338,7 +9691,8 @@
         "licensemanager-us-gov-west-1",
         "licensemanager-us-west-1",
         "licensemanager-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Mainframe Modernization",
@@ -9367,7 +9721,8 @@
         "m2-us-gov-west-1",
         "m2-us-west-1",
         "m2-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Management Console",
@@ -9376,7 +9731,8 @@
         "management-console",
         "management-console-us-gov-east-1",
         "management-console-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Marketplace",
@@ -9385,7 +9741,8 @@
         "marketplace",
         "marketplace-us-gov-east-1",
         "marketplace-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS MCP Server",
@@ -9393,7 +9750,8 @@
       "ids": [
         "aws-mcp-eu-central-1",
         "aws-mcp-us-east-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Migration Hub",
@@ -9406,7 +9764,8 @@
         "migrationhub-eu-west-2",
         "migrationhub-us-east-1",
         "migrationhub-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Migration Hub Journeys",
@@ -9415,7 +9774,8 @@
         "migops-eu-west-3",
         "migops-us-east-1",
         "migops-us-east-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Migration Hub Orchestrator",
@@ -9428,7 +9788,8 @@
         "migrationhuborchestrator-eu-west-2",
         "migrationhuborchestrator-us-east-1",
         "migrationhuborchestrator-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Migration Hub Strategy Recommendations",
@@ -9441,7 +9802,8 @@
         "migrationhubstrategy-eu-west-2",
         "migrationhubstrategy-us-east-1",
         "migrationhubstrategy-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Multiple services",
@@ -9481,7 +9843,8 @@
         "multipleservices-us-east-2",
         "multipleservices-us-west-1",
         "multipleservices-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS NAT Gateway",
@@ -9523,7 +9886,8 @@
         "natgateway-us-gov-west-1",
         "natgateway-us-west-1",
         "natgateway-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Network Access Analyzer",
@@ -9549,7 +9913,8 @@
         "networkaccessanalyzer-us-east-2",
         "networkaccessanalyzer-us-west-1",
         "networkaccessanalyzer-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Network Firewall",
@@ -9591,7 +9956,8 @@
         "networkfirewall-us-gov-west-1",
         "networkfirewall-us-west-1",
         "networkfirewall-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Organizations",
@@ -9600,7 +9966,8 @@
         "organizations",
         "organizations-us-gov-east-1",
         "organizations-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Outposts",
@@ -9634,7 +10001,8 @@
         "outposts-us-gov-west-1",
         "outposts-us-west-1",
         "outposts-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Parallel Computing Service",
@@ -9661,7 +10029,8 @@
         "pcs-us-gov-east-1",
         "pcs-us-gov-west-1",
         "pcs-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Partner Central",
@@ -9670,7 +10039,8 @@
         "aws-partner-central",
         "aws-partner-central-us-gov-east-1",
         "aws-partner-central-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Payment Cryptography",
@@ -9692,7 +10062,8 @@
         "paymentcryptography-us-east-1",
         "paymentcryptography-us-east-2",
         "paymentcryptography-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Price List Service",
@@ -9701,7 +10072,8 @@
         "apipricing-ap-south-1",
         "apipricing-eu-central-1",
         "apipricing-us-east-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Private CA Connector for Active Directory",
@@ -9741,7 +10113,8 @@
         "pcaconnectorad-us-east-2",
         "pcaconnectorad-us-west-1",
         "pcaconnectorad-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Private CA Connector for SCEP",
@@ -9781,7 +10154,8 @@
         "pca-connector-scep-us-east-2",
         "pca-connector-scep-us-west-1",
         "pca-connector-scep-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Private Certificate Authority",
@@ -9823,7 +10197,8 @@
         "acm-pca-us-gov-west-1",
         "acm-pca-us-west-1",
         "acm-pca-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Proton",
@@ -9840,7 +10215,8 @@
         "proton-us-east-1",
         "proton-us-east-2",
         "proton-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS re:Post Private",
@@ -9853,7 +10229,8 @@
         "repostspace-eu-west-1",
         "repostspace-us-east-1",
         "repostspace-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Reachability Analyzer",
@@ -9879,7 +10256,8 @@
         "reachabilityanalyzer-us-east-2",
         "reachabilityanalyzer-us-west-1",
         "reachabilityanalyzer-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Resilience Hub",
@@ -9907,7 +10285,8 @@
         "resiliencehub-us-gov-west-1",
         "resiliencehub-us-west-1",
         "resiliencehub-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Resource Access Manager",
@@ -9949,7 +10328,8 @@
         "ram-us-gov-west-1",
         "ram-us-west-1",
         "ram-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Resource Explorer",
@@ -9991,7 +10371,8 @@
         "resourceexplorer-us-gov-west-1",
         "resourceexplorer-us-west-1",
         "resourceexplorer-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Resource Groups",
@@ -10033,7 +10414,8 @@
         "resourcegroups-us-gov-west-1",
         "resourcegroups-us-west-1",
         "resourcegroups-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Resource Groups Tagging API",
@@ -10075,7 +10457,8 @@
         "resourcegroupstaggingapi-us-gov-west-1",
         "resourcegroupstaggingapi-us-west-1",
         "resourcegroupstaggingapi-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS RTB Fabric",
@@ -10087,7 +10470,8 @@
         "rtbfabric-eu-west-1",
         "rtbfabric-us-east-1",
         "rtbfabric-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS SageMaker Unified Studio",
@@ -10108,7 +10492,8 @@
         "sagemaker-unified-studio-us-east-1",
         "sagemaker-unified-studio-us-east-2",
         "sagemaker-unified-studio-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Secrets Manager",
@@ -10150,7 +10535,8 @@
         "secretsmanager-us-gov-west-1",
         "secretsmanager-us-west-1",
         "secretsmanager-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Security Agent",
@@ -10162,7 +10548,8 @@
         "securityagent-eu-west-1",
         "securityagent-us-east-1",
         "securityagent-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Security Hub",
@@ -10204,7 +10591,8 @@
         "securityhub-us-gov-west-1",
         "securityhub-us-west-1",
         "securityhub-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Security Incident Response",
@@ -10235,7 +10623,8 @@
         "security-ir-us-east-1",
         "security-ir-us-east-2",
         "security-ir-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Security Token Service",
@@ -10277,7 +10666,8 @@
         "sts-us-gov-west-1",
         "sts-us-west-1",
         "sts-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Serverless Application Repository",
@@ -10303,7 +10693,8 @@
         "serverlessrepo-us-gov-west-1",
         "serverlessrepo-us-west-1",
         "serverlessrepo-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Service Catalog",
@@ -10341,7 +10732,8 @@
         "servicecatalog-us-gov-west-1",
         "servicecatalog-us-west-1",
         "servicecatalog-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Service Quotas",
@@ -10383,14 +10775,16 @@
         "servicequotas-us-gov-west-1",
         "servicequotas-us-west-1",
         "servicequotas-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Sign Up",
       "id": "signup",
       "ids": [
         "signup"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Sign-In",
@@ -10432,7 +10826,8 @@
         "signin-us-gov-west-1",
         "signin-us-west-1",
         "signin-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS SimSpace Weaver",
@@ -10448,7 +10843,8 @@
         "simspaceweaver-us-gov-east-1",
         "simspaceweaver-us-gov-west-1",
         "simspaceweaver-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Site-to-Site VPN",
@@ -10490,7 +10886,8 @@
         "vpnvpc-us-gov-west-1",
         "vpnvpc-us-west-1",
         "vpnvpc-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Step Functions",
@@ -10532,7 +10929,8 @@
         "state-us-gov-west-1",
         "state-us-west-1",
         "state-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Storage Gateway",
@@ -10574,7 +10972,8 @@
         "storagegateway-us-gov-west-1",
         "storagegateway-us-west-1",
         "storagegateway-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Support API",
@@ -10583,7 +10982,8 @@
         "supportapi",
         "supportapi-us-gov-east-1",
         "supportapi-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Support Center",
@@ -10591,14 +10991,16 @@
       "ids": [
         "supportcenter",
         "supportcenter-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Sustainability",
       "id": "sustainability",
       "ids": [
         "sustainability"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Systems Manager",
@@ -10640,7 +11042,8 @@
         "ec2systemsmanager-us-gov-west-1",
         "ec2systemsmanager-us-west-1",
         "ec2systemsmanager-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Systems Manager for SAP",
@@ -10674,7 +11077,8 @@
         "ssmsap-us-east-2",
         "ssmsap-us-west-1",
         "ssmsap-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Telco Network Builder",
@@ -10690,7 +11094,8 @@
         "tnb-sa-east-1",
         "tnb-us-east-1",
         "tnb-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Traffic Mirroring",
@@ -10732,7 +11137,8 @@
         "trafficmirroring-us-gov-west-1",
         "trafficmirroring-us-west-1",
         "trafficmirroring-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Transfer Family",
@@ -10774,7 +11180,8 @@
         "transfer-us-gov-west-1",
         "transfer-us-west-1",
         "transfer-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Transform",
@@ -10789,7 +11196,8 @@
         "transform-eu-west-2",
         "transform-sa-east-1",
         "transform-us-east-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Transit Gateway",
@@ -10831,7 +11239,8 @@
         "transitgateway-us-gov-west-1",
         "transitgateway-us-west-1",
         "transitgateway-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Trusted Advisor",
@@ -10840,14 +11249,16 @@
         "trustedadvisor",
         "trustedadvisor-us-gov-east-1",
         "trustedadvisor-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS User Notifications",
       "id": "notifications",
       "ids": [
         "notifications"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Verified Access",
@@ -10873,7 +11284,8 @@
         "verifiedaccess-us-gov-west-1",
         "verifiedaccess-us-west-1",
         "verifiedaccess-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS VM Import/Export",
@@ -10915,7 +11327,8 @@
         "vmimportexport-us-gov-west-1",
         "vmimportexport-us-west-1",
         "vmimportexport-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS VPCE PrivateLink",
@@ -10957,7 +11370,8 @@
         "privatelink-us-gov-west-1",
         "privatelink-us-west-1",
         "privatelink-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS WAF",
@@ -10999,7 +11413,8 @@
         "awswaf-us-gov-west-1",
         "awswaf-us-west-1",
         "awswaf-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Well-Architected Tool",
@@ -11025,7 +11440,8 @@
         "wellarchitected-us-gov-west-1",
         "wellarchitected-us-west-1",
         "wellarchitected-us-west-2"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS Wickr",
@@ -11042,7 +11458,8 @@
         "wickr-eu-west-2",
         "wickr-us-east-1",
         "wickr-us-gov-west-1"
-      ]
+      ],
+      "subservice": true
     },
     {
       "name": "AWS X-Ray",
@@ -11084,7 +11501,8 @@
         "xray-us-gov-west-1",
         "xray-us-west-1",
         "xray-us-west-2"
-      ]
+      ],
+      "subservice": true
     }
   ],
   "_removed": []

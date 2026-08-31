@@ -47,19 +47,31 @@ class AWSRegionServiceDefinition: CodableServiceDefinition, ServiceDefinition {
     enum ExtraKeys: String, CodingKey {
         case id
         case name
+        case isCategory = "category"
         case oldNames = "old_names"
     }
 
     let id: String
     let providerIdentifier = "awsregions"
 
+    // AWS only ever has one category per provider array, so the grouping value is a fixed constant
+    // rather than data read from JSON.
+    var categoryKey: String? { "all" }
+
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: ExtraKeys.self)
         id = try container.decode(String.self, forKey: .id)
         let name = try container.decode(String.self, forKey: .name)
+        let isCategory = try container.decodeIfPresent(Bool.self, forKey: .isCategory) ?? false
         let oldNames = try container.decodeIfPresent(Set<String>.self, forKey: .oldNames)
 
-        super.init(name: name, url: commonAWSURL, isCategory: nil, isSubService: true, oldNames: oldNames)
+        super.init(
+            name: name,
+            url: commonAWSURL,
+            isCategory: isCategory ? true : nil,
+            isSubService: isCategory ? nil : true,
+            oldNames: oldNames
+        )
     }
 
     override func encode(to encoder: Encoder) throws {
@@ -70,7 +82,7 @@ class AWSRegionServiceDefinition: CodableServiceDefinition, ServiceDefinition {
     }
 
     func build() -> BaseService? {
-        AWSRegionGeneric(self)
+        isCategory == true ? AWSRegionCategoryRow(self) : AWSRegionGeneric(self)
     }
 }
 
@@ -90,6 +102,24 @@ final class AWSRegionGeneric: AWSRegionService, SubService {
     }
 }
 
+final class AWSRegionCategoryRow: AWSAllService, ServiceCategory {
+    let categoryName: String
+    let subServiceSuperclass: AnyObject.Type = AWSRegionGeneric.self
+
+    let name: String
+    let url = commonAWSURL
+
+    init(_ definition: AWSRegionServiceDefinition) {
+        categoryName = definition.name
+        name = definition.name
+        super.init()
+    }
+
+    required init() {
+        fatalError("AWSRegionCategoryRow must be initialized with a definition")
+    }
+}
+
 // Named services span multiple regions, each with a different underlying incident-feed id (e.g.
 // "ec2-us-west-2", "ec2-eu-west-1"), so status lookup needs the full `ids` set, not a single id.
 // "id" is still written (every entry needs one, see ServicesJSONUpdater) as a stable representative
@@ -99,19 +129,30 @@ class AWSServicesServiceDefinition: CodableServiceDefinition, ServiceDefinition 
         case id
         case name
         case ids
+        case isCategory = "category"
         case oldNames = "old_names"
     }
 
+    // Empty for the category row — it aggregates the whole feed rather than matching specific ids.
     let ids: Set<String>
     let providerIdentifier = "awsservices"
 
+    var categoryKey: String? { "all" }
+
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: ExtraKeys.self)
-        ids = Set(try container.decode([String].self, forKey: .ids))
+        ids = Set(try container.decodeIfPresent([String].self, forKey: .ids) ?? [])
         let name = try container.decode(String.self, forKey: .name)
+        let isCategory = try container.decodeIfPresent(Bool.self, forKey: .isCategory) ?? false
         let oldNames = try container.decodeIfPresent(Set<String>.self, forKey: .oldNames)
 
-        super.init(name: name, url: commonAWSURL, isCategory: nil, isSubService: true, oldNames: oldNames)
+        super.init(
+            name: name,
+            url: commonAWSURL,
+            isCategory: isCategory ? true : nil,
+            isSubService: isCategory ? nil : true,
+            oldNames: oldNames
+        )
     }
 
     override func encode(to encoder: Encoder) throws {
@@ -119,11 +160,13 @@ class AWSServicesServiceDefinition: CodableServiceDefinition, ServiceDefinition 
 
         var container = encoder.container(keyedBy: ExtraKeys.self)
         try container.encode(ids.sorted().first ?? "", forKey: .id)
-        try container.encode(ids.sorted(), forKey: .ids)
+        if !ids.isEmpty {
+            try container.encode(ids.sorted(), forKey: .ids)
+        }
     }
 
     func build() -> BaseService? {
-        AWSServicesGeneric(self)
+        isCategory == true ? AWSServicesCategoryRow(self) : AWSServicesGeneric(self)
     }
 }
 
@@ -140,5 +183,23 @@ final class AWSServicesGeneric: AWSNamedService, SubService {
 
     required init() {
         fatalError("AWSServicesGeneric must be initialized with a definition")
+    }
+}
+
+final class AWSServicesCategoryRow: AWSAllService, ServiceCategory {
+    let categoryName: String
+    let subServiceSuperclass: AnyObject.Type = AWSServicesGeneric.self
+
+    let name: String
+    let url = commonAWSURL
+
+    init(_ definition: AWSServicesServiceDefinition) {
+        categoryName = definition.name
+        name = definition.name
+        super.init()
+    }
+
+    required init() {
+        fatalError("AWSServicesCategoryRow must be initialized with a definition")
     }
 }

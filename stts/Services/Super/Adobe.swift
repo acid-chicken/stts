@@ -5,21 +5,6 @@
 
 import Foundation
 
-typealias AdobeCreativeCloud = BaseAdobeCreativeCloud & RequiredServiceProperties & AdobeStoreService
-class BaseAdobeCreativeCloud: BaseAdobe {}
-
-class BaseAdobeDocumentCloud: BaseAdobe {}
-typealias AdobeDocumentCloud = BaseAdobeDocumentCloud & RequiredServiceProperties & AdobeStoreService
-
-typealias AdobeExperienceCloud = BaseAdobeExperienceCloud & RequiredServiceProperties & AdobeStoreService
-class BaseAdobeExperienceCloud: BaseAdobe {}
-
-typealias AdobeExperiencePlatform = BaseAdobeExperiencePlatform & RequiredServiceProperties & AdobeStoreService
-class BaseAdobeExperiencePlatform: BaseAdobe {}
-
-typealias AdobeServices = BaseAdobeServices & RequiredServiceProperties & AdobeStoreService
-class BaseAdobeServices: BaseAdobe {}
-
 typealias Adobe = BaseAdobe & RequiredServiceProperties & AdobeStoreService
 class BaseAdobe: BaseIndependentService {
     static var store = AdobeStore()
@@ -48,6 +33,8 @@ class AdobeServiceDefinition: CodableServiceDefinition, ServiceDefinition {
     let cloud: String
     let providerIdentifier = "adobe"
 
+    var categoryKey: String? { cloud }
+
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: ExtraKeys.self)
         id = try container.decode(String.self, forKey: .id)
@@ -73,31 +60,29 @@ class AdobeServiceDefinition: CodableServiceDefinition, ServiceDefinition {
         try container.encode(cloud, forKey: .cloud)
     }
 
-    // One pair of cases per hand-written cloud below. Adobe adding a new cloud is rare; add its
-    // category/subservice classes below and a pair of cases here when it happens.
-    // swiftlint:disable:next cyclomatic_complexity
     func build() -> BaseService? {
-        switch (cloud, isCategory == true) {
-        case ("CreativeCloud", true): return AdobeCreativeCloudAll(self)
-        case ("CreativeCloud", false): return AdobeCreativeCloudGeneric(self)
-        case ("DocumentCloud", true): return AdobeDocumentCloudAll(self)
-        case ("DocumentCloud", false): return AdobeDocumentCloudGeneric(self)
-        case ("ExperienceCloud", true): return AdobeExperienceCloudAll(self)
-        case ("ExperienceCloud", false): return AdobeExperienceCloudGeneric(self)
-        case ("ExperiencePlatform", true): return AdobeExperiencePlatformAll(self)
-        case ("ExperiencePlatform", false): return AdobeExperiencePlatformGeneric(self)
-        case ("Services", true): return AdobeServicesAll(self)
-        case ("Services", false): return AdobeServicesGeneric(self)
-        default:
-            assertionFailure("Unknown Adobe cloud \"\(cloud)\" — add it to Adobe.swift")
-            return nil
-        }
+        isCategory == true ? AdobeCategoryRow(self) : AdobeSubService(self)
     }
 }
 
-final class AdobeCreativeCloudAll: AdobeCreativeCloud, ServiceCategory {
+final class AdobeSubService: Adobe, SubService {
+    let name: String
+    let id: String
+
+    init(_ definition: AdobeServiceDefinition) {
+        name = definition.name
+        id = definition.id
+        super.init()
+    }
+
+    required init() {
+        fatalError("AdobeSubService must be initialized with a definition")
+    }
+}
+
+final class AdobeCategoryRow: Adobe, ServiceCategory {
     let categoryName: String
-    let subServiceSuperclass: AnyObject.Type = BaseAdobeCreativeCloud.self
+    let subServiceSuperclass: AnyObject.Type = AdobeSubService.self
 
     let name: String
     let id: String
@@ -110,157 +95,6 @@ final class AdobeCreativeCloudAll: AdobeCreativeCloud, ServiceCategory {
     }
 
     required init() {
-        fatalError("AdobeCreativeCloudAll must be initialized with a definition")
-    }
-}
-
-final class AdobeCreativeCloudGeneric: AdobeCreativeCloud, SubService {
-    let name: String
-    let id: String
-
-    init(_ definition: AdobeServiceDefinition) {
-        name = definition.name
-        id = definition.id
-        super.init()
-    }
-
-    required init() {
-        fatalError("AdobeCreativeCloudGeneric must be initialized with a definition")
-    }
-}
-
-final class AdobeDocumentCloudAll: AdobeDocumentCloud, ServiceCategory {
-    let categoryName: String
-    let subServiceSuperclass: AnyObject.Type = BaseAdobeDocumentCloud.self
-
-    let name: String
-    let id: String
-
-    init(_ definition: AdobeServiceDefinition) {
-        categoryName = definition.name
-        name = "\(definition.name) (All)"
-        id = definition.id
-        super.init()
-    }
-
-    required init() {
-        fatalError("AdobeDocumentCloudAll must be initialized with a definition")
-    }
-}
-
-final class AdobeDocumentCloudGeneric: AdobeDocumentCloud, SubService {
-    let name: String
-    let id: String
-
-    init(_ definition: AdobeServiceDefinition) {
-        name = definition.name
-        id = definition.id
-        super.init()
-    }
-
-    required init() {
-        fatalError("AdobeDocumentCloudGeneric must be initialized with a definition")
-    }
-}
-
-final class AdobeExperienceCloudAll: AdobeExperienceCloud, ServiceCategory {
-    let categoryName: String
-    let subServiceSuperclass: AnyObject.Type = BaseAdobeExperienceCloud.self
-
-    let name: String
-    let id: String
-
-    init(_ definition: AdobeServiceDefinition) {
-        categoryName = definition.name
-        name = "\(definition.name) (All)"
-        id = definition.id
-        super.init()
-    }
-
-    required init() {
-        fatalError("AdobeExperienceCloudAll must be initialized with a definition")
-    }
-}
-
-final class AdobeExperienceCloudGeneric: AdobeExperienceCloud, SubService {
-    let name: String
-    let id: String
-
-    init(_ definition: AdobeServiceDefinition) {
-        name = definition.name
-        id = definition.id
-        super.init()
-    }
-
-    required init() {
-        fatalError("AdobeExperienceCloudGeneric must be initialized with a definition")
-    }
-}
-
-final class AdobeExperiencePlatformAll: AdobeExperiencePlatform, ServiceCategory {
-    let categoryName: String
-    let subServiceSuperclass: AnyObject.Type = BaseAdobeExperiencePlatform.self
-
-    let name: String
-    let id: String
-
-    init(_ definition: AdobeServiceDefinition) {
-        categoryName = definition.name
-        name = "\(definition.name) (All)"
-        id = definition.id
-        super.init()
-    }
-
-    required init() {
-        fatalError("AdobeExperiencePlatformAll must be initialized with a definition")
-    }
-}
-
-final class AdobeExperiencePlatformGeneric: AdobeExperiencePlatform, SubService {
-    let name: String
-    let id: String
-
-    init(_ definition: AdobeServiceDefinition) {
-        name = definition.name
-        id = definition.id
-        super.init()
-    }
-
-    required init() {
-        fatalError("AdobeExperiencePlatformGeneric must be initialized with a definition")
-    }
-}
-
-final class AdobeServicesAll: AdobeServices, ServiceCategory {
-    let categoryName: String
-    let subServiceSuperclass: AnyObject.Type = BaseAdobeServices.self
-
-    let name: String
-    let id: String
-
-    init(_ definition: AdobeServiceDefinition) {
-        categoryName = definition.name
-        name = "\(definition.name) (All)"
-        id = definition.id
-        super.init()
-    }
-
-    required init() {
-        fatalError("AdobeServicesAll must be initialized with a definition")
-    }
-}
-
-final class AdobeServicesGeneric: AdobeServices, SubService {
-    let name: String
-    let id: String
-
-    init(_ definition: AdobeServiceDefinition) {
-        name = definition.name
-        id = definition.id
-        super.init()
-    }
-
-    required init() {
-        fatalError("AdobeServicesGeneric must be initialized with a definition")
+        fatalError("AdobeCategoryRow must be initialized with a definition")
     }
 }

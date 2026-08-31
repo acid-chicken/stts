@@ -71,7 +71,6 @@
 		B2493F061E2603F300556A83 /* GoogleCloudPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2493F051E2603F300556A83 /* GoogleCloudPlatform.swift */; };
 		B24D19F61DD072840052E539 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D19F51DD072840052E539 /* Preferences.swift */; };
 		B24EE10226C8BFD500F7CE8B /* Salesforce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24EE10126C8BFD500F7CE8B /* Salesforce.swift */; };
-		B24EE10426C8C07100F7CE8B /* SalesforceCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24EE10326C8C07100F7CE8B /* SalesforceCategories.swift */; };
 		B24EE10626C8C08A00F7CE8B /* SalesforceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24EE10526C8C08A00F7CE8B /* SalesforceStore.swift */; };
 		B254098D28FE71990009F956 /* BetterUptimeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B254098C28FE71990009F956 /* BetterUptimeService.swift */; };
 		B2542502293591610093AC83 /* StatusHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2542501293591610093AC83 /* StatusHubService.swift */; };
@@ -92,8 +91,6 @@
 		B277BC9422B4BB6D000B55C3 /* AzureDevOpsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B277BC9322B4BB6D000B55C3 /* AzureDevOpsStore.swift */; };
 		B27F66A62A3609E8008DAF33 /* AWSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F66A52A3609E8008DAF33 /* AWSService.swift */; };
 		B27F66A82A360DFF008DAF33 /* AWSStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F66A72A360DFF008DAF33 /* AWSStore.swift */; };
-		3836DAF5727C1CBB44D6D9C3 /* AWSRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8BAAB302DF3F26F915206A /* AWSRegions.swift */; };
-		9A3D7ECC688762E476E83A2D /* AWSServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAA4A78EBD008448F3CCDF7 /* AWSServices.swift */; };
 		B2841CEB20BA6207004AFDB7 /* SorryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2841CEA20BA6207004AFDB7 /* SorryService.swift */; };
 		B2898FD01DC7441D0005F58F /* StatusIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2898FCF1DC7441D0005F58F /* StatusIndicator.swift */; };
 		CC7E7BFF166F77A31A4F5280 /* AppleAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C5581954DD435BF44B7DB4 /* AppleAll.swift */; };
@@ -247,7 +244,6 @@
 		B2493F051E2603F300556A83 /* GoogleCloudPlatform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleCloudPlatform.swift; sourceTree = "<group>"; };
 		B24D19F51DD072840052E539 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		B24EE10126C8BFD500F7CE8B /* Salesforce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesforce.swift; sourceTree = "<group>"; };
-		B24EE10326C8C07100F7CE8B /* SalesforceCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesforceCategories.swift; sourceTree = "<group>"; };
 		B24EE10526C8C08A00F7CE8B /* SalesforceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesforceStore.swift; sourceTree = "<group>"; };
 		B254098C28FE71990009F956 /* BetterUptimeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterUptimeService.swift; sourceTree = "<group>"; };
 		B2542501293591610093AC83 /* StatusHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusHubService.swift; sourceTree = "<group>"; };
@@ -268,8 +264,6 @@
 		B277BC9322B4BB6D000B55C3 /* AzureDevOpsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzureDevOpsStore.swift; sourceTree = "<group>"; };
 		B27F66A52A3609E8008DAF33 /* AWSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSService.swift; sourceTree = "<group>"; };
 		B27F66A72A360DFF008DAF33 /* AWSStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSStore.swift; sourceTree = "<group>"; };
-		EE8BAAB302DF3F26F915206A /* AWSRegions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSRegions.swift; sourceTree = "<group>"; };
-		FFAA4A78EBD008448F3CCDF7 /* AWSServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSServices.swift; sourceTree = "<group>"; };
 		B2841CEA20BA6207004AFDB7 /* SorryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorryService.swift; sourceTree = "<group>"; };
 		B2898FCF1DC7441D0005F58F /* StatusIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusIndicator.swift; sourceTree = "<group>"; };
 		B28E9129248250F40026BAAA /* AppleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStore.swift; sourceTree = "<group>"; };
@@ -585,8 +579,6 @@
 				B2430806210810D0003F8D07 /* Algolia.swift */,
 				C3C5581954DD435BF44B7DB4 /* AppleAll.swift */,
 				7A7673E177C6F18434B22EB4 /* AppleDeveloperAll.swift */,
-				EE8BAAB302DF3F26F915206A /* AWSRegions.swift */,
-				FFAA4A78EBD008448F3CCDF7 /* AWSServices.swift */,
 				B2A4D7E6247E72B50089EA77 /* AzureAll.swift */,
 				B2A4D7E8247E73BC0089EA77 /* AzureDevOpsAll.swift */,
 				B23038F01E0DF3CC00B29095 /* Beanstalk.swift */,
@@ -640,7 +632,6 @@
 				B22FDE4721089C6200359EC9 /* PayPal.swift */,
 				B2F55EE82408AB1A003D674C /* PlayStationNetwork.swift */,
 				B24EE10126C8BFD500F7CE8B /* Salesforce.swift */,
-				B24EE10326C8C07100F7CE8B /* SalesforceCategories.swift */,
 				B24EE10526C8C08A00F7CE8B /* SalesforceStore.swift */,
 				B22B6B402F6738CD006528EB /* SendbirdService.swift */,
 				B205A9171D49D67700EA178D /* Service.swift */,
@@ -965,7 +956,6 @@
 				B200CA78247FC8B700DB0868 /* AdobeStore.swift in Sources */,
 				B2DCE6902215992E001447D8 /* Apple.swift in Sources */,
 				B28E912C248255A40026BAAA /* AppleDeveloper.swift in Sources */,
-				B24EE10426C8C07100F7CE8B /* SalesforceCategories.swift in Sources */,
 				B2E018FD214E60E700C5F75B /* AppearanceObserver.swift in Sources */,
 				B2228B6226C9623C002F01F0 /* SendbirdAll.swift in Sources */,
 				B2FDC91C1D67062200F0B728 /* StatusPageService.swift in Sources */,
@@ -987,14 +977,11 @@
 				B2F55EEE2408B68F003D674C /* PSNAsia.swift in Sources */,
 				B2253A6F209F42430039F574 /* Firebase.swift in Sources */,
 				B22FDE512108A5C200359EC9 /* PayPalAPIProduction.swift in Sources */,
-				B27F66AA2A3621F7008DAF33 /* AWSServices.swift in Sources */,
 				B225E3E01E44830F008E1D3D /* SwitchableTableViewController.swift in Sources */,
 				B22FDE4F2108A5B700359EC9 /* PayPalProductSandbox.swift in Sources */,
 				B2F55EEC2408B5F1003D674C /* PSNAmerica.swift in Sources */,
 				B2563BBC22CBC3D500532C39 /* DataLoader.swift in Sources */,
 				B28E912A248250F40026BAAA /* AppleStore.swift in Sources */,
-				3836DAF5727C1CBB44D6D9C3 /* AWSRegions.swift in Sources */,
-				9A3D7ECC688762E476E83A2D /* AWSServices.swift in Sources */,
 				B277BC9222B4BB5C000B55C3 /* AzureDevOps.swift in Sources */,
 				B205A9181D49D67700EA178D /* Service.swift in Sources */,
 				B228DC0C2A7F520700D8DC5E /* BetterStackService.swift in Sources */,

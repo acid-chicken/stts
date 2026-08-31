@@ -2,10 +2,9 @@ import Foundation
 
 // Adobe reports category ("cloud") status through the same flat id-keyed store as its products
 // (see stts/Services/Super/AdobeStore.swift) — categories aren't a synthetic "*" aggregate like
-// Azure/Firebase, they're real ids Adobe's API assigns. Only the 5 known clouds get a hand-written
-// pair of Swift classes (category + generic subservice) in Adobe.swift — same "rare manual
-// addition" tradeoff as Salesforce. Keep `knownClouds` in sync with the dispatch switch in
-// AdobeServiceDefinition.build().
+// Azure/Firebase, they're real ids Adobe's API assigns. Categories are fully data-driven
+// (AdobeServiceDefinition.categoryKey/build()), so a new cloud needs no Swift change at all;
+// `knownClouds` is only a heads-up when Adobe adds one, not a required update.
 private let knownClouds: Set<String> = [
     "CreativeCloud", "DocumentCloud", "ExperienceCloud", "ExperiencePlatform", "Services"
 ]

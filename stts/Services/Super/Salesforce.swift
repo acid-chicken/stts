@@ -5,18 +5,7 @@
 
 import Foundation
 
-typealias Salesforce = BaseSalesforce & RequiredServiceProperties & SalesforceStoreService & InheritsSalesforceCategory
-typealias BaseSalesforceCategory = BaseSalesforce & InheritsSalesforceCategory
-
-protocol InheritsSalesforceCategory {
-    static var store: SalesforceStore { get }
-}
-
-extension InheritsSalesforceCategory {
-    var store: SalesforceStore {
-        Self.store
-    }
-}
+typealias Salesforce = BaseSalesforce & RequiredServiceProperties & SalesforceStoreService
 
 class BaseSalesforce: BaseIndependentService {
     override func updateStatus() async throws {
@@ -33,6 +22,7 @@ class SalesforceServiceDefinition: CodableServiceDefinition, ServiceDefinition {
         case id
         case name
         case product
+        case isCategory = "category"
         case oldNames = "old_names"
     }
 
@@ -40,15 +30,24 @@ class SalesforceServiceDefinition: CodableServiceDefinition, ServiceDefinition {
     let product: String
     let providerIdentifier = "salesforce"
 
+    var categoryKey: String? { product }
+
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: ExtraKeys.self)
         id = try container.decode(String.self, forKey: .id)
         product = try container.decode(String.self, forKey: .product)
         let name = try container.decode(String.self, forKey: .name)
+        let isCategory = try container.decodeIfPresent(Bool.self, forKey: .isCategory) ?? false
         let oldNames = try container.decodeIfPresent(Set<String>.self, forKey: .oldNames)
         let url = URL(string: "https://status.salesforce.com/products/\(product)")!
 
-        super.init(name: name, url: url, isCategory: nil, isSubService: true, oldNames: oldNames)
+        super.init(
+            name: name,
+            url: url,
+            isCategory: isCategory ? true : nil,
+            isSubService: isCategory ? nil : true,
+            oldNames: oldNames
+        )
     }
 
     override func encode(to encoder: Encoder) throws {
@@ -59,26 +58,48 @@ class SalesforceServiceDefinition: CodableServiceDefinition, ServiceDefinition {
         try container.encode(product, forKey: .product)
     }
 
-    // One case per hand-written product in SalesforceCategories.swift. Salesforce adding a new
-    // product is rare; add its category classes there and a case here when it happens.
-    // swiftlint:disable:next cyclomatic_complexity
     func build() -> BaseService? {
-        switch product {
-        case "B2C_Commerce_Cloud": return SalesforceB2CCommerceCloudRegion(self)
-        case "Community_Cloud": return SalesforceExperienceCloudRegion(self)
-        case "Datorama": return DatoramaRegion(self)
-        case "Heroku": return HerokuRegion(self)
-        case "MCAccountEngagement": return MCAccountEngagementRegion(self)
-        case "MCPersonalization": return MCPersonalizationRegion(self)
-        case "Marketing_Cloud": return SalesforceMarketingCloudRegion(self)
-        case "Mulesoft": return MulesoftRegion(self)
-        case "Point_of_Sale": return Point_of_SaleRegion(self)
-        case "Salesforce_Services": return SalesforceServicesRegion(self)
-        case "Spiff": return SpiffRegion(self)
-        case "Tableau": return TableauRegion(self)
-        default:
-            assertionFailure("Unknown Salesforce product \"\(product)\" — add it to SalesforceCategories.swift")
-            return nil
-        }
+        isCategory == true ? SalesforceCategoryRow(self) : SalesforceSubService(self)
+    }
+}
+
+final class SalesforceSubService: Salesforce, SubService {
+    let name: String
+    let url: URL
+    let key: String
+    let location: String
+
+    init(_ definition: SalesforceServiceDefinition) {
+        name = definition.name
+        url = definition.url
+        key = definition.product
+        location = definition.id
+        super.init()
+    }
+
+    required init() {
+        fatalError("SalesforceSubService must be initialized with a definition")
+    }
+}
+
+final class SalesforceCategoryRow: Salesforce, ServiceCategory {
+    let categoryName: String
+    let subServiceSuperclass: AnyObject.Type = SalesforceSubService.self
+
+    let name: String
+    let url: URL
+    let key: String
+    let location = "*"
+
+    init(_ definition: SalesforceServiceDefinition) {
+        categoryName = definition.name
+        name = "\(definition.name) (All Regions)"
+        url = definition.url
+        key = definition.product
+        super.init()
+    }
+
+    required init() {
+        fatalError("SalesforceCategoryRow must be initialized with a definition")
     }
 }

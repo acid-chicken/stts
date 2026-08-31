@@ -25,6 +25,14 @@ let providersWithOptionalURL: Set<String> = [
     "googlecloudplatform", "awsregions", "awsservices"
 ]
 
+// Providers with data-driven categories (see ServiceDefinition.categoryKey): the JSON field that
+// carries the shared grouping value between a "category": true row and its "subservice": true
+// children. Keep in sync with each provider's *ServiceDefinition.categoryKey in stts/Services/Super/.
+let categoryKeyFieldByProvider: [String: String] = [
+    "salesforce": "product",
+    "adobe": "cloud"
+]
+
 func envVariable(forKey key: String) -> String {
     guard let variable = ProcessInfo.processInfo.environment[key] else {
         print("error: Environment variable '\(key)' not set")
@@ -98,6 +106,34 @@ func warnAboutTrailingCommas(in text: String) {
     }
 }
 
+func lintCategoryKeys(provider: String, entries: [Any]) {
+    guard let field = categoryKeyFieldByProvider[provider] else { return }
+
+    var categoryKeys = Set<String>()
+    var duplicateCategoryKeys = Set<String>()
+    var subServiceKeys = Set<String>()
+
+    for entry in entries {
+        guard let entry = entry as? [String: Any], let key = entry[field] as? String else { continue }
+
+        if entry["category"] as? Bool == true {
+            if !categoryKeys.insert(key).inserted {
+                duplicateCategoryKeys.insert(key)
+            }
+        } else if entry["subservice"] as? Bool == true {
+            subServiceKeys.insert(key)
+        }
+    }
+
+    for key in duplicateCategoryKeys.sorted() {
+        fail("\(provider) has more than one \"category\": true entry with \"\(field)\" == \"\(key)\"")
+    }
+
+    for key in subServiceKeys.subtracting(categoryKeys).sorted() {
+        fail("\(provider) has a \"subservice\": true entry with \"\(field)\" == \"\(key)\" but no matching \"category\": true entry")
+    }
+}
+
 func lintRemovedServices(_ value: Any) {
     guard let identifiers = value as? [Any] else {
         fail("\"\(removedServicesKey)\" must be an array")
@@ -158,6 +194,8 @@ func main() {
         for (index, entry) in entries.enumerated() {
             lintEntry(provider: key, entry: entry, index: index, seenIdentifiers: &seenIdentifiers)
         }
+
+        lintCategoryKeys(provider: key, entries: entries)
     }
 
     if !errors.isEmpty {

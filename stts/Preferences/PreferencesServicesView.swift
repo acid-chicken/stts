@@ -81,25 +81,36 @@ final class PreferencesServicesView: NSView {
                 return
             }
 
-            // Find the sub services
-            var subServices = serviceLoader.allServices.filter { serviceDefinition in
-                guard
-                    serviceDefinition.isSubService == true,
-                    let service = serviceDefinition.build()
-                else { return false }
+            // Find the sub services. Providers with a data-driven categoryKey (Salesforce, Adobe,
+            // AWS) group by that value directly; everything else falls back to matching the built
+            // service's Swift type against subServiceSuperclass (a single fixed category per provider).
+            var subServices: [ServiceDefinition]
+            if let categoryKey = categoryDefinition.categoryKey {
+                subServices = serviceLoader.allServices.filter { serviceDefinition in
+                    serviceDefinition.isSubService == true &&
+                    serviceDefinition.providerIdentifier == categoryDefinition.providerIdentifier &&
+                    serviceDefinition.categoryKey == categoryKey
+                }
+            } else {
+                subServices = serviceLoader.allServices.filter { serviceDefinition in
+                    guard
+                        serviceDefinition.isSubService == true,
+                        let service = serviceDefinition.build()
+                    else { return false }
 
-                let mirror = Mirror(reflecting: service)
+                    let mirror = Mirror(reflecting: service)
 
-                // TODO: Check ServiceDefinition type instead
-                let hasExpectedClass =
-                    mirror.subjectType == serviceCategory.subServiceSuperclass ||
-                    mirror.superclassMirror?.subjectType == serviceCategory.subServiceSuperclass
+                    let hasExpectedClass =
+                        mirror.subjectType == serviceCategory.subServiceSuperclass ||
+                        mirror.superclassMirror?.subjectType == serviceCategory.subServiceSuperclass
 
-                // Exclude the category so that we can add it at the top
-                let isTheCategory = service is ServiceCategory
+                    // Exclude the category so that we can add it at the top
+                    let isTheCategory = service is ServiceCategory
 
-                return hasExpectedClass && !isTheCategory
-            }.sorted(by: ServiceDefinitionSortByName)
+                    return hasExpectedClass && !isTheCategory
+                }
+            }
+            subServices.sort(by: ServiceDefinitionSortByName)
 
             // Add the category as the top item
             subServices.insert(categoryDefinition, at: 0)

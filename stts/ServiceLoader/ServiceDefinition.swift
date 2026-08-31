@@ -19,9 +19,17 @@ protocol ServiceDefinition: CodableServiceDefinition {
 
     /// Builds the service object from the definition.
     func build() -> BaseService?
+
+    /// Shared grouping value between a category row (`isCategory == true`) and its subservices
+    /// (`isSubService == true`) within the same provider, so Preferences can group them by data
+    /// instead of Swift type. nil for providers still using `ServiceCategory.subServiceSuperclass`
+    /// (a single fixed category per provider, which never needs a second data-driven group).
+    var categoryKey: String? { get }
 }
 
 extension ServiceDefinition {
+    var categoryKey: String? { nil }
+
     var globalIdentifier: String { "\(providerIdentifier).\(alphanumericName)" }
 
     func eq(_ other: ServiceDefinition) -> Bool {
