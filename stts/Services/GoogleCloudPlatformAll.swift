@@ -10,4 +10,5 @@ class GoogleCloudPlatformAll: GoogleCloudPlatform, ServiceCategory {
     let subServiceSuperclass: AnyObject.Type = BaseGoogleCloudPlatform.self
 
     let name = "Google Cloud Platform (All)"
+    let url = GoogleCloudPlatformServiceDefinition.commonURL
 }

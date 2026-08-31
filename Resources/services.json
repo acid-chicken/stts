@@ -2793,5 +2793,703 @@
       "id": "Xcode Cloud"
     }
   ],
+  "googlecloudplatform": [
+    {
+      "name": "Google Access Approval",
+      "id": "Access Approval"
+    },
+    {
+      "name": "Google Access Context Manager",
+      "id": "Access Context Manager"
+    },
+    {
+      "name": "Google Access Transparency",
+      "id": "Access Transparency"
+    },
+    {
+      "name": "Google Agent Assist",
+      "id": "Agent Assist"
+    },
+    {
+      "name": "Google Agent Gateway",
+      "id": "Agent Gateway"
+    },
+    {
+      "name": "Google Agent Platform Batch Inference",
+      "id": "Agent Platform Batch Inference"
+    },
+    {
+      "name": "Google Agent Platform Feature Store",
+      "id": "Agent Platform Feature Store"
+    },
+    {
+      "name": "Google Agent Platform Managed Training",
+      "id": "Agent Platform Managed Training"
+    },
+    {
+      "name": "Google Agent Platform ML Metadata",
+      "id": "Agent Platform ML Metadata"
+    },
+    {
+      "name": "Google Agent Platform Online Inference",
+      "id": "Agent Platform Online Inference"
+    },
+    {
+      "name": "Google Agent Platform Pipelines",
+      "id": "Agent Platform Pipelines"
+    },
+    {
+      "name": "Google Agent Platform Tensor Board",
+      "id": "Agent Platform Tensor Board"
+    },
+    {
+      "name": "Google Agent Platform Workbench Instances",
+      "id": "Agent Platform Workbench Instances"
+    },
+    {
+      "name": "Google Agent Search on Agent Platform",
+      "id": "Agent Search on Agent Platform"
+    },
+    {
+      "name": "Google AI Commerce Search",
+      "id": "AI Commerce Search"
+    },
+    {
+      "name": "Google AlloyDB for PostgreSQL",
+      "id": "AlloyDB for PostgreSQL"
+    },
+    {
+      "name": "Google Anthos Service Mesh",
+      "id": "Anthos Service Mesh"
+    },
+    {
+      "name": "Google API Gateway",
+      "id": "API Gateway"
+    },
+    {
+      "name": "Google Apigee",
+      "id": "Apigee"
+    },
+    {
+      "name": "Google Apigee Edge Private Cloud",
+      "id": "Apigee Edge Private Cloud"
+    },
+    {
+      "name": "Google Apigee Edge Public Cloud",
+      "id": "Apigee Edge Public Cloud"
+    },
+    {
+      "name": "Google Apigee Hybrid",
+      "id": "Apigee Hybrid"
+    },
+    {
+      "name": "Google App Engine",
+      "id": "Google App Engine"
+    },
+    {
+      "name": "Google Application Integration",
+      "id": "Application Integration"
+    },
+    {
+      "name": "Google Artifact Analysis",
+      "id": "Artifact Analysis"
+    },
+    {
+      "name": "Google Artifact Registry",
+      "id": "Artifact Registry"
+    },
+    {
+      "name": "Google Assured Workloads",
+      "id": "Assured Workloads"
+    },
+    {
+      "name": "Google Audit Manager",
+      "id": "Audit Manager"
+    },
+    {
+      "name": "Google Backup and DR",
+      "id": "Backup and DR"
+    },
+    {
+      "name": "Google Backup for GKE",
+      "id": "Backup for GKE"
+    },
+    {
+      "name": "Google Bare Metal Solution",
+      "id": "Bare Metal Solution"
+    },
+    {
+      "name": "Google Batch",
+      "id": "Batch"
+    },
+    {
+      "name": "Google BeyondCorp Enterprise",
+      "id": "BeyondCorp Enterprise"
+    },
+    {
+      "name": "Google BigQuery",
+      "id": "Google BigQuery"
+    },
+    {
+      "name": "Google BigQuery Data Transfer Service",
+      "id": "BigQuery Data Transfer Service"
+    },
+    {
+      "name": "Google Binary Authorization",
+      "id": "Binary Authorization"
+    },
+    {
+      "name": "Google Certificate Authority Service",
+      "id": "Certificate Authority Service"
+    },
+    {
+      "name": "Google Certificate Manager",
+      "id": "Certificate Manager"
+    },
+    {
+      "name": "Google Cloud Android App",
+      "id": "Google Cloud Android App"
+    },
+    {
+      "name": "Google Cloud Armor",
+      "id": "Cloud Armor"
+    },
+    {
+      "name": "Google Cloud Asset Inventory",
+      "id": "Cloud Asset Inventory"
+    },
+    {
+      "name": "Google Cloud Bigtable",
+      "id": "Google Cloud Bigtable"
+    },
+    {
+      "name": "Google Cloud Billing",
+      "id": "Cloud Billing"
+    },
+    {
+      "name": "Google Cloud Build",
+      "id": "Cloud Build"
+    },
+    {
+      "name": "Google Cloud CDN",
+      "id": "Cloud CDN"
+    },
+    {
+      "name": "Google Cloud Composer",
+      "id": "Google Cloud Composer"
+    },
+    {
+      "name": "Google Cloud Console",
+      "id": "Google Cloud Console"
+    },
+    {
+      "name": "Google Cloud Data Fusion",
+      "id": "Cloud Data Fusion"
+    },
+    {
+      "name": "Google Cloud Data Loss Prevention",
+      "id": "Cloud Data Loss Prevention"
+    },
+    {
+      "name": "Google Cloud Dataflow",
+      "id": "Google Cloud Dataflow"
+    },
+    {
+      "name": "Google Cloud Dataproc",
+      "id": "Google Cloud Dataproc"
+    },
+    {
+      "name": "Google Cloud Datastore",
+      "id": "Google Cloud Datastore"
+    },
+    {
+      "name": "Google Cloud Deploy",
+      "id": "Google Cloud Deploy"
+    },
+    {
+      "name": "Google Cloud DNS",
+      "id": "Google Cloud DNS"
+    },
+    {
+      "name": "Google Cloud Domains",
+      "id": "Cloud Domains"
+    },
+    {
+      "name": "Google Cloud Endpoints",
+      "id": "Cloud Endpoints"
+    },
+    {
+      "name": "Google Cloud External Key Manager",
+      "id": "Cloud External Key Manager"
+    },
+    {
+      "name": "Google Cloud Filestore",
+      "id": "Cloud Filestore"
+    },
+    {
+      "name": "Google Cloud Firestore",
+      "id": "Cloud Firestore"
+    },
+    {
+      "name": "Google Cloud Functions",
+      "id": "Google Cloud Functions"
+    },
+    {
+      "name": "Google Cloud Healthcare",
+      "id": "Cloud Healthcare"
+    },
+    {
+      "name": "Google Cloud HSM",
+      "id": "Cloud HSM"
+    },
+    {
+      "name": "Google Cloud Identity-Aware Proxy",
+      "id": "Google Cloud Identity-Aware Proxy"
+    },
+    {
+      "name": "Google Cloud IDS",
+      "id": "Cloud IDS"
+    },
+    {
+      "name": "Google Cloud iOS App",
+      "id": "Google Cloud iOS App"
+    },
+    {
+      "name": "Google Cloud Key Management Service",
+      "id": "Cloud Key Management Service"
+    },
+    {
+      "name": "Google Cloud Load Balancing",
+      "id": "Cloud Load Balancing"
+    },
+    {
+      "name": "Google Cloud Logging",
+      "id": "Cloud Logging"
+    },
+    {
+      "name": "Google Cloud Marketplace",
+      "id": "Google Cloud Marketplace"
+    },
+    {
+      "name": "Google Cloud Memorystore",
+      "id": "Cloud Memorystore"
+    },
+    {
+      "name": "Google Cloud Migration Center",
+      "id": "Google Cloud Migration Center"
+    },
+    {
+      "name": "Google Cloud Monitoring",
+      "id": "Cloud Monitoring"
+    },
+    {
+      "name": "Google Cloud NAT",
+      "id": "Cloud NAT"
+    },
+    {
+      "name": "Google Cloud Natural Language API",
+      "id": "Cloud Natural Language API"
+    },
+    {
+      "name": "Google Cloud NetApp Volumes",
+      "id": "Google Cloud NetApp Volumes"
+    },
+    {
+      "name": "Google Cloud Network Insights",
+      "id": "Cloud Network Insights"
+    },
+    {
+      "name": "Google Cloud Profiler",
+      "id": "Cloud Profiler"
+    },
+    {
+      "name": "Google Cloud Pub/Sub",
+      "id": "Google Cloud Pub/Sub"
+    },
+    {
+      "name": "Google Cloud Run",
+      "id": "Cloud Run"
+    },
+    {
+      "name": "Google Cloud Scheduler",
+      "id": "Google Cloud Scheduler"
+    },
+    {
+      "name": "Google Cloud Security Command Center",
+      "id": "Cloud Security Command Center"
+    },
+    {
+      "name": "Google Cloud Shell",
+      "id": "Cloud Shell"
+    },
+    {
+      "name": "Google Cloud Source Repositories",
+      "id": "Cloud Source Repositories"
+    },
+    {
+      "name": "Google Cloud Spanner",
+      "id": "Cloud Spanner"
+    },
+    {
+      "name": "Google Cloud SQL",
+      "id": "Google Cloud SQL"
+    },
+    {
+      "name": "Google Cloud Storage",
+      "id": "Google Cloud Storage"
+    },
+    {
+      "name": "Google Cloud Storage for Firebase",
+      "id": "Cloud Storage for Firebase"
+    },
+    {
+      "name": "Google Cloud Support",
+      "id": "Google Cloud Support"
+    },
+    {
+      "name": "Google Cloud Talent Solution - Job Search",
+      "id": "Cloud Talent Solution - Job Search"
+    },
+    {
+      "name": "Google Cloud Tasks",
+      "id": "Google Cloud Tasks"
+    },
+    {
+      "name": "Google Cloud Trace",
+      "id": "Cloud Trace"
+    },
+    {
+      "name": "Google Cloud Translation",
+      "id": "Cloud Translation"
+    },
+    {
+      "name": "Google Cloud Vision",
+      "id": "Cloud Vision"
+    },
+    {
+      "name": "Google Cloud Workflows",
+      "id": "Cloud Workflows"
+    },
+    {
+      "name": "Google Cloud Workstations",
+      "id": "Cloud Workstations"
+    },
+    {
+      "name": "Google Colab Enterprise",
+      "id": "Colab Enterprise"
+    },
+    {
+      "name": "Google Compute Engine",
+      "id": "Google Compute Engine"
+    },
+    {
+      "name": "Google Contact Center AI Platform",
+      "id": "Contact Center AI Platform"
+    },
+    {
+      "name": "Google Contact Center Insights",
+      "id": "Contact Center Insights"
+    },
+    {
+      "name": "Google Customer Experience Agent Studio",
+      "id": "Customer Experience Agent Studio"
+    },
+    {
+      "name": "Google Data Catalog",
+      "id": "Data Catalog"
+    },
+    {
+      "name": "Google Database Center",
+      "id": "Database Center"
+    },
+    {
+      "name": "Google Database Migration Service",
+      "id": "Database Migration Service"
+    },
+    {
+      "name": "Google Dataform",
+      "id": "Dataform"
+    },
+    {
+      "name": "Google Dataplex",
+      "id": "Dataplex"
+    },
+    {
+      "name": "Google Dataproc Metastore",
+      "id": "Dataproc Metastore"
+    },
+    {
+      "name": "Google Datastream",
+      "id": "Datastream"
+    },
+    {
+      "name": "Google Developer Connect",
+      "id": "Developer Connect"
+    },
+    {
+      "name": "Google Dialogflow CX",
+      "id": "Dialogflow CX"
+    },
+    {
+      "name": "Google Dialogflow ES",
+      "id": "Dialogflow ES"
+    },
+    {
+      "name": "Google Distributed Cloud Edge",
+      "id": "Google Distributed Cloud Edge"
+    },
+    {
+      "name": "Google Document AI",
+      "id": "Document AI"
+    },
+    {
+      "name": "Google Eventarc",
+      "id": "Eventarc"
+    },
+    {
+      "name": "Google Gemini Code Assist",
+      "id": "Gemini Code Assist"
+    },
+    {
+      "name": "Google Gemini Enterprise",
+      "id": "Gemini Enterprise"
+    },
+    {
+      "name": "Google Gemini on Agent Platform",
+      "id": "Gemini on Agent Platform"
+    },
+    {
+      "name": "Google GKE fleet management",
+      "id": "GKE fleet management"
+    },
+    {
+      "name": "Google Hybrid Connectivity",
+      "id": "Hybrid Connectivity"
+    },
+    {
+      "name": "Google Identity and Access Management",
+      "id": "Identity and Access Management"
+    },
+    {
+      "name": "Google Identity Platform",
+      "id": "Identity Platform"
+    },
+    {
+      "name": "Google Imagen on Agent Platform",
+      "id": "Imagen on Agent Platform"
+    },
+    {
+      "name": "Google Infrastructure Manager",
+      "id": "Infrastructure Manager"
+    },
+    {
+      "name": "Google Integration Connectors",
+      "id": "Integration Connectors"
+    },
+    {
+      "name": "Google Key Access Justifications",
+      "id": "Key Access Justifications"
+    },
+    {
+      "name": "Google Kubernetes Engine",
+      "id": "Google Kubernetes Engine"
+    },
+    {
+      "name": "Google Looker (Google Cloud core)",
+      "id": "Looker (Google Cloud core)"
+    },
+    {
+      "name": "Google Looker Studio",
+      "id": "Looker Studio"
+    },
+    {
+      "name": "Google Managed Lustre",
+      "id": "Managed Lustre"
+    },
+    {
+      "name": "Google Managed Service for Apache Kafka",
+      "id": "Managed Service for Apache Kafka"
+    },
+    {
+      "name": "Google Managed Service for Microsoft Active Directory (AD)",
+      "id": "Managed Service for Microsoft Active Directory (AD)"
+    },
+    {
+      "name": "Google Media CDN",
+      "id": "Media CDN"
+    },
+    {
+      "name": "Google Memorystore for Memcached",
+      "id": "Memorystore for Memcached"
+    },
+    {
+      "name": "Google Memorystore for Redis",
+      "id": "Memorystore for Redis"
+    },
+    {
+      "name": "Google Memorystore for Redis Cluster",
+      "id": "Memorystore for Redis Cluster"
+    },
+    {
+      "name": "Google Memorystore for Valkey",
+      "id": "Memorystore for Valkey"
+    },
+    {
+      "name": "Google Migrate to Virtual Machines",
+      "id": "Migrate to Virtual Machines"
+    },
+    {
+      "name": "Google Model Armor",
+      "id": "Model Armor"
+    },
+    {
+      "name": "Google Model Monitoring on Agent Platform",
+      "id": "Model Monitoring on Agent Platform"
+    },
+    {
+      "name": "Google Model Registry on Agent Platform",
+      "id": "Model Registry on Agent Platform"
+    },
+    {
+      "name": "Google Network Connectivity Center",
+      "id": "Network Connectivity Center"
+    },
+    {
+      "name": "Google Network Intelligence Center",
+      "id": "Network Intelligence Center"
+    },
+    {
+      "name": "Google Network Security Integration",
+      "id": "Network Security Integration"
+    },
+    {
+      "name": "Google Parallelstore",
+      "id": "Parallelstore"
+    },
+    {
+      "name": "Google Partner Cross-Cloud Interconnect",
+      "id": "Partner Cross-Cloud Interconnect"
+    },
+    {
+      "name": "Google Persistent Disk",
+      "id": "Persistent Disk"
+    },
+    {
+      "name": "Google Personalized Service Health",
+      "id": "Personalized Service Health"
+    },
+    {
+      "name": "Google Private Service Connect",
+      "id": "Private Service Connect"
+    },
+    {
+      "name": "Google Provisioned Throughput",
+      "id": "Provisioned Throughput"
+    },
+    {
+      "name": "Google Pub/Sub Lite",
+      "id": "Pub/Sub Lite"
+    },
+    {
+      "name": "Google reCAPTCHA Enterprise",
+      "id": "reCAPTCHA Enterprise"
+    },
+    {
+      "name": "Google Recommendation AI",
+      "id": "Recommendation AI"
+    },
+    {
+      "name": "Google Recommender",
+      "id": "Recommender"
+    },
+    {
+      "name": "Google Resource Manager API",
+      "id": "Resource Manager API"
+    },
+    {
+      "name": "Google Secret Manager",
+      "id": "Secret Manager"
+    },
+    {
+      "name": "Google Secure Source Manager",
+      "id": "Secure Source Manager"
+    },
+    {
+      "name": "Google Secure Web Proxy",
+      "id": "Secure Web Proxy"
+    },
+    {
+      "name": "Google Service Directory",
+      "id": "Service Directory"
+    },
+    {
+      "name": "Google Service Extensions",
+      "id": "Service Extensions"
+    },
+    {
+      "name": "Google Spectrum Access System",
+      "id": "Spectrum Access System"
+    },
+    {
+      "name": "Google Speech-to-Text",
+      "id": "Speech-to-Text"
+    },
+    {
+      "name": "Google Storage Transfer Service",
+      "id": "Storage Transfer Service"
+    },
+    {
+      "name": "Google Text-to-Speech",
+      "id": "Text-to-Speech"
+    },
+    {
+      "name": "Google Traffic Director",
+      "id": "Traffic Director"
+    },
+    {
+      "name": "Google Transcoder API",
+      "id": "Transcoder API"
+    },
+    {
+      "name": "Google Unified Maintenance",
+      "id": "Unified Maintenance"
+    },
+    {
+      "name": "Google Veo on Agent Platform",
+      "id": "Veo on Agent Platform"
+    },
+    {
+      "name": "Google Vertex AI AutoML Image",
+      "id": "Vertex AI AutoML Image"
+    },
+    {
+      "name": "Google Vertex AI AutoML Tabular",
+      "id": "Vertex AI AutoML Tabular"
+    },
+    {
+      "name": "Google Vertex AI Matching Engine",
+      "id": "Vertex AI Matching Engine"
+    },
+    {
+      "name": "Google Video Intelligence API",
+      "id": "Video Intelligence API"
+    },
+    {
+      "name": "Google Virtual Private Cloud (VPC)",
+      "id": "Virtual Private Cloud (VPC)"
+    },
+    {
+      "name": "Google VMWare engine",
+      "id": "VMWare engine"
+    },
+    {
+      "name": "Google VPC Service Controls",
+      "id": "VPC Service Controls"
+    },
+    {
+      "name": "Google Web Risk",
+      "id": "Web Risk"
+    }
+  ],
   "_removed": []
 }

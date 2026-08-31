@@ -33,6 +33,7 @@ struct ServicesStructure: Codable {
         case adobeServices = "adobe"
         case appleServices = "apple"
         case appleDeveloperServices = "appledeveloper"
+        case googleCloudPlatformServices = "googlecloudplatform"
         case removedServices = "_removed"
     }
 
@@ -62,6 +63,7 @@ struct ServicesStructure: Codable {
     let adobeServices: [AdobeServiceDefinition]?
     let appleServices: [AppleServiceDefinition]?
     let appleDeveloperServices: [AppleDeveloperServiceDefinition]?
+    let googleCloudPlatformServices: [GoogleCloudPlatformServiceDefinition]?
 
     /// Identifiers of services confirmed gone for good (company shut down/bankrupt, product
     /// discontinued) — not services that are merely renamed (see `old_names`) or just currently
@@ -98,7 +100,8 @@ struct ServicesStructure: Codable {
             salesforceServices,
             adobeServices,
             appleServices,
-            appleDeveloperServices
+            appleDeveloperServices,
+            googleCloudPlatformServices
         ]
 
         return sections.compactMap { $0 }.flatMap { $0 }

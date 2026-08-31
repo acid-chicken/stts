@@ -7,12 +7,8 @@ import Foundation
 
 typealias GoogleCloudPlatform = BaseGoogleCloudPlatform & RequiredServiceProperties & GoogleStatusDashboardStoreService
 
-private let gcpDashboardURL = URL(string: "https://status.cloud.google.com")!
-
 class BaseGoogleCloudPlatform: BaseIndependentService {
-    private static var store = GoogleStatusDashboardStore(url: gcpDashboardURL)
-
-    let url = gcpDashboardURL
+    private static var store = GoogleStatusDashboardStore(url: GoogleCloudPlatformServiceDefinition.commonURL)
 
     override func updateStatus() async throws {
         guard let realSelf = self as? GoogleCloudPlatform else {
@@ -20,5 +16,54 @@ class BaseGoogleCloudPlatform: BaseIndependentService {
         }
 
         statusDescription = try await BaseGoogleCloudPlatform.store.updatedStatus(for: realSelf)
+    }
+}
+
+class GoogleCloudPlatformServiceDefinition: CodableServiceDefinition, ServiceDefinition {
+    static let commonURL = URL(string: "https://status.cloud.google.com")!
+
+    enum ExtraKeys: String, CodingKey {
+        case id
+        case name
+        case oldNames = "old_names"
+    }
+
+    let id: String
+    let providerIdentifier = "googlecloudplatform"
+
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: ExtraKeys.self)
+        id = try container.decode(String.self, forKey: .id)
+        let name = try container.decode(String.self, forKey: .name)
+        let oldNames = try container.decodeIfPresent(Set<String>.self, forKey: .oldNames)
+
+        super.init(name: name, url: Self.commonURL, isCategory: nil, isSubService: true, oldNames: oldNames)
+    }
+
+    override func encode(to encoder: Encoder) throws {
+        try super.encode(to: encoder)
+
+        var container = encoder.container(keyedBy: ExtraKeys.self)
+        try container.encode(id, forKey: .id)
+    }
+
+    func build() -> BaseService? {
+        GoogleCloudPlatformSubService(self)
+    }
+}
+
+final class GoogleCloudPlatformSubService: GoogleCloudPlatform, SubService {
+    let name: String
+    let url = GoogleCloudPlatformServiceDefinition.commonURL
+    let dashboardName: String
+
+    init(_ definition: GoogleCloudPlatformServiceDefinition) {
+        name = definition.name
+        dashboardName = definition.id
+        super.init()
+    }
+
+    required init() {
+        fatalError("GoogleCloudPlatformSubService must be initialized with a definition")
     }
 }
