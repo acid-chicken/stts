@@ -45,14 +45,31 @@ struct AWSIncident: Codable {
         case status
         case serviceID = "service"
         case serviceName = "service_name"
+        case summary
         case impactedServices = "impacted_services"
     }
 
-    let regionName: String
+    let regionName: String?
     let status: String
     let serviceID: String
-    let serviceName: String
+    let serviceName: String?
+    let summary: String
     let impactedServices: [String: ImpactedService]
+
+    // The status page shows an incident as "<summary> - <service_name> (<region_name>)", omitting
+    // whichever of service_name/region_name isn't present.
+    var description: String {
+        switch (serviceName, regionName) {
+        case let (serviceName?, regionName?):
+            return "\(summary) - \(serviceName) (\(regionName))"
+        case let (serviceName?, nil):
+            return "\(summary) - \(serviceName)"
+        case let (nil, regionName?):
+            return "\(summary) (\(regionName))"
+        case (nil, nil):
+            return summary
+        }
+    }
 
     func impactedServices(for service: AWSNamedService) -> Set<String> {
         var result = Set<String>()
@@ -89,14 +106,15 @@ struct AWSIncident: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        regionName = try container.decode(String.self, forKey: .regionName)
+        regionName = try container.decodeIfPresent(String.self, forKey: .regionName)
         if let statusString = try? container.decode(String.self, forKey: .status) {
             status = statusString
         } else {
             status = String(try container.decode(Int.self, forKey: .status))
         }
         serviceID = try container.decode(String.self, forKey: .serviceID)
-        serviceName = try container.decode(String.self, forKey: .serviceName)
+        serviceName = try container.decodeIfPresent(String.self, forKey: .serviceName)
+        summary = try container.decode(String.self, forKey: .summary)
         impactedServices = try container.decode([String: ImpactedService].self, forKey: .impactedServices)
     }
 }
@@ -114,88 +132,39 @@ class AWSStore: ServiceStore<[AWSIncident]> {
 
     func updatedStatus(for aws: AWSAllService) async throws -> ServiceStatusDescription {
         let updatedState = try await updatedState()
-
-        var status: ServiceStatus = .good
-        var impactedServiceNames = Set<String>()
-
-        for incident in updatedState {
-            guard incident.status != "0" else { continue }
-
-            status = .minor
-
-            impactedServiceNames.insert(incident.serviceName)
-            for (_, impactedService) in incident.impactedServices {
-                impactedServiceNames.insert(impactedService.name)
-            }
-        }
+        let activeIncidents = updatedState.filter { $0.status != "0" }
 
         return ServiceStatusDescription(
-            status: status,
-            message: message(for: status, impactedServiceNames: impactedServiceNames)
+            status: activeIncidents.isEmpty ? .good : .minor,
+            message: message(for: activeIncidents)
         )
     }
 
     func updatedStatus(for region: AWSRegionService) async throws -> ServiceStatusDescription {
         let updatedState = try await updatedState()
-
-        var status: ServiceStatus = .good
-        var impactedServiceNames = Set<String>()
-
-        for incident in updatedState {
-            guard incident.status != "0" else { continue }
-
-            if incident.affectsRegion(region) {
-                status = .minor
-
-                impactedServiceNames.insert(incident.serviceName)
-                for (_, impactedService) in incident.impactedServices {
-                    impactedServiceNames.insert(impactedService.name)
-                }
-            }
-        }
+        let activeIncidents = updatedState.filter { $0.status != "0" && $0.affectsRegion(region) }
 
         return ServiceStatusDescription(
-            status: status,
-            message: message(for: status, impactedServiceNames: impactedServiceNames)
+            status: activeIncidents.isEmpty ? .good : .minor,
+            message: message(for: activeIncidents)
         )
     }
 
     func updatedStatus(for namedService: AWSNamedService) async throws -> ServiceStatusDescription {
         let updatedState = try await updatedState()
-
-        var status: ServiceStatus = .good
-
-        for incident in updatedState {
-            guard incident.status != "0" else { continue }
-
-            let impactedServiceIDs = incident.impactedServices(for: namedService)
-            if !impactedServiceIDs.isEmpty {
-                status = .minor
-                break
-            }
+        let activeIncidents = updatedState.filter {
+            $0.status != "0" && !$0.impactedServices(for: namedService).isEmpty
         }
 
         return ServiceStatusDescription(
-            status: status,
-            message: message(for: status, impactedServiceNames: nil)
+            status: activeIncidents.isEmpty ? .good : .minor,
+            message: message(for: activeIncidents)
         )
     }
 
-    private func message(for status: ServiceStatus, impactedServiceNames: Set<String>?) -> String {
-        let serviceNames = impactedServiceNames ?? []
+    private func message(for activeIncidents: [AWSIncident]) -> String {
+        guard !activeIncidents.isEmpty else { return "No recent issues" }
 
-        let message: String
-        if serviceNames.isEmpty {
-            switch status {
-            case .good:
-                message = "No recent issues"
-            default:
-                message = "Impacted"
-            }
-        } else {
-            message = "Impacted services:\n" + serviceNames.joined(separator: "\n")
-        }
-
-        return message
+        return activeIncidents.map(\.description).joined(separator: "\n")
     }
 }
