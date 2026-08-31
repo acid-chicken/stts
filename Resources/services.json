@@ -1527,5 +1527,107 @@
       "id": "Test Plans"
     }
   ],
+  "firebase": [
+    {
+      "name": "Firebase A/B Testing (Beta)",
+      "id": "A/B Testing (Beta)"
+    },
+    {
+      "name": "Firebase AI Logic",
+      "id": "AI Logic"
+    },
+    {
+      "name": "Firebase App Check",
+      "id": "App Check"
+    },
+    {
+      "name": "Firebase App Distribution",
+      "id": "App Distribution"
+    },
+    {
+      "name": "Firebase App Hosting",
+      "id": "App Hosting"
+    },
+    {
+      "name": "Firebase App Indexing",
+      "id": "App Indexing"
+    },
+    {
+      "name": "Firebase Authentication",
+      "id": "Authentication"
+    },
+    {
+      "name": "Firebase Cloud Messaging",
+      "id": "Cloud Messaging"
+    },
+    {
+      "name": "Firebase Cloud Storage",
+      "id": "Cloud Storage"
+    },
+    {
+      "name": "Firebase Console",
+      "id": "Console"
+    },
+    {
+      "name": "Firebase Crashlytics",
+      "id": "Crashlytics"
+    },
+    {
+      "name": "Firebase Dynamic Links",
+      "id": "Dynamic Links"
+    },
+    {
+      "name": "Firebase Extensions",
+      "id": "Extensions"
+    },
+    {
+      "name": "Firebase Gemini in Firebase",
+      "id": "Gemini in Firebase"
+    },
+    {
+      "name": "Firebase Genkit",
+      "id": "Genkit"
+    },
+    {
+      "name": "Firebase Hosting",
+      "id": "Hosting"
+    },
+    {
+      "name": "Firebase In-App Messaging (Beta)",
+      "id": "In-App Messaging (Beta)"
+    },
+    {
+      "name": "Firebase Machine Learning (Beta)",
+      "id": "Machine Learning (Beta)"
+    },
+    {
+      "name": "Firebase Performance Monitoring",
+      "id": "Performance Monitoring"
+    },
+    {
+      "name": "Firebase Phone Number Verification",
+      "id": "Phone Number Verification"
+    },
+    {
+      "name": "Firebase Realtime Database",
+      "id": "Realtime Database"
+    },
+    {
+      "name": "Firebase Remote Config",
+      "id": "Remote Config"
+    },
+    {
+      "name": "Firebase SQL Connect",
+      "id": "SQL Connect"
+    },
+    {
+      "name": "Firebase Studio (Preview)",
+      "id": "Studio (Preview)"
+    },
+    {
+      "name": "Firebase Test Lab",
+      "id": "Test Lab"
+    }
+  ],
   "_removed": []
 }

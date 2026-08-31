@@ -10,4 +10,5 @@ class Firebase: FirebaseService, ServiceCategory {
     let subServiceSuperclass: AnyObject.Type = BaseFirebaseService.self
 
     let name = "Firebase (All)"
+    let url = FirebaseServiceDefinition.commonURL
 }

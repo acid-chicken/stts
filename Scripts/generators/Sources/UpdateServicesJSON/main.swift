@@ -19,7 +19,8 @@ func repoRoot() -> String {
 
 let generators: [ServiceGenerator] = [
     AzureGenerator(),
-    AzureDevOpsGenerator()
+    AzureDevOpsGenerator(),
+    FirebaseGenerator()
 ]
 
 let servicesPath = "\(repoRoot())/Resources/services.json"

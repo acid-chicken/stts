@@ -24,12 +24,8 @@ extension RequiredFirebaseProperties {
     }
 }
 
-private let firebaseDashboardURL = URL(string: "https://status.firebase.google.com")!
-
 class BaseFirebaseService: BaseIndependentService {
-    private static var store = FirebaseStatusDashboardStore(url: firebaseDashboardURL)
-
-    let url = firebaseDashboardURL
+    private static var store = FirebaseStatusDashboardStore(url: FirebaseServiceDefinition.commonURL)
 
     override func updateStatus() async throws {
         guard let realSelf = self as? FirebaseService else {
@@ -37,5 +33,57 @@ class BaseFirebaseService: BaseIndependentService {
         }
 
         statusDescription = try await BaseFirebaseService.store.updatedStatus(for: realSelf)
+    }
+}
+
+class FirebaseServiceDefinition: CodableServiceDefinition, ServiceDefinition {
+    static let commonURL = URL(string: "https://status.firebase.google.com")!
+
+    enum ExtraKeys: String, CodingKey {
+        case id
+        case name
+        case url
+        case oldNames = "old_names"
+    }
+
+    let id: String
+    let providerIdentifier = "firebase"
+
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: ExtraKeys.self)
+        id = try container.decode(String.self, forKey: .id)
+        let name = try container.decode(String.self, forKey: .name)
+        let url = try container.decodeIfPresent(URL.self, forKey: .url) ?? Self.commonURL
+        let oldNames = try container.decodeIfPresent(Set<String>.self, forKey: .oldNames)
+
+        super.init(name: name, url: url, isCategory: nil, isSubService: true, oldNames: oldNames)
+    }
+
+    override func encode(to encoder: Encoder) throws {
+        try super.encode(to: encoder)
+
+        var container = encoder.container(keyedBy: ExtraKeys.self)
+        try container.encode(id, forKey: .id)
+    }
+
+    func build() -> BaseService? {
+        FirebaseSubService(self)
+    }
+}
+
+final class FirebaseSubService: FirebaseService, SubService {
+    let name: String
+    let url: URL
+    let dashboardName: String
+
+    init(_ definition: FirebaseServiceDefinition) {
+        name = definition.name
+        url = definition.url
+        dashboardName = definition.id
+        super.init()
+    }
+
+    required init() {
+        fatalError("FirebaseSubService must be initialized with a definition")
     }
 }

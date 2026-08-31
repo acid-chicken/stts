@@ -141,7 +141,6 @@
 		B2E5DB362F6FBE7800D71269 /* NSAppearance+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5DB352F6FBE7800D71269 /* NSAppearance+Extensions.swift */; };
 		B2E70FD822B069BA000BCAD2 /* GoogleCloudPlatformServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E70FD722B069BA000BCAD2 /* GoogleCloudPlatformServices.swift */; };
 		B2E70FDB22B07DBC000BCAD2 /* GoogleCloudPlatformAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E70FDA22B07DBC000BCAD2 /* GoogleCloudPlatformAll.swift */; };
-		B2E70FDD22B07FB0000BCAD2 /* FirebaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E70FDC22B07FB0000BCAD2 /* FirebaseServices.swift */; };
 		B2E832EC29DE4F5E000FA1BE /* AdobeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E832EB29DE4F5E000FA1BE /* AdobeTests.swift */; };
 		B2E832EE29DE5104000FA1BE /* adobe-analytics-minor.json in Resources */ = {isa = PBXBuildFile; fileRef = B2E832ED29DE5104000FA1BE /* adobe-analytics-minor.json */; };
 		B2E8C0232A7A9203000239F0 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8C0222A7A9203000239F0 /* Atomic.swift */; };
@@ -325,7 +324,6 @@
 		B2E70FD622B066EC000BCAD2 /* generate_google_services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generate_google_services.swift; sourceTree = "<group>"; };
 		B2E70FD722B069BA000BCAD2 /* GoogleCloudPlatformServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCloudPlatformServices.swift; sourceTree = "<group>"; };
 		B2E70FDA22B07DBC000BCAD2 /* GoogleCloudPlatformAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleCloudPlatformAll.swift; sourceTree = "<group>"; };
-		B2E70FDC22B07FB0000BCAD2 /* FirebaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseServices.swift; sourceTree = "<group>"; };
 		B2E832EB29DE4F5E000FA1BE /* AdobeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdobeTests.swift; sourceTree = "<group>"; };
 		B2E832ED29DE5104000FA1BE /* adobe-analytics-minor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "adobe-analytics-minor.json"; sourceTree = "<group>"; };
 		B2E8C0222A7A9203000239F0 /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
@@ -575,7 +573,6 @@
 				B27F66A92A3621F7008DAF33 /* AWSServices.swift */,
 				B200CA73247FC5AE00DB0868 /* AdobeServices.swift */,
 				B28E9127248250220026BAAA /* AppleServices.swift */,
-				B2E70FDC22B07FB0000BCAD2 /* FirebaseServices.swift */,
 				B2E70FD722B069BA000BCAD2 /* GoogleCloudPlatformServices.swift */,
 				B24EE0FF26C8BF9500F7CE8B /* SalesforceProducts.swift */,
 			);
@@ -971,7 +968,6 @@
 				B24EE10226C8BFD500F7CE8B /* Salesforce.swift in Sources */,
 				B2A4D7E7247E72B50089EA77 /* AzureAll.swift in Sources */,
 				B2253A6B209F3C410039F574 /* GoogleStatusDashboardStore.swift in Sources */,
-				B2E70FDD22B07FB0000BCAD2 /* FirebaseServices.swift in Sources */,
 				B22602B327D88FA1001190F1 /* Zendesk.swift in Sources */,
 				B28E9128248250220026BAAA /* AppleServices.swift in Sources */,
 				B25FBFFD1DCAF2CE0099A388 /* CustomScrollView.swift in Sources */,
