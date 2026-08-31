@@ -2273,5 +2273,525 @@
       "subservice": true
     }
   ],
+  "apple": [
+    {
+      "name": "Apple Account",
+      "id": "Apple Account"
+    },
+    {
+      "name": "Apple Account Card",
+      "id": "Apple Account Card"
+    },
+    {
+      "name": "Apple App Store",
+      "id": "App Store"
+    },
+    {
+      "name": "Apple Arcade",
+      "id": "Apple Arcade"
+    },
+    {
+      "name": "Apple Audiobooks",
+      "id": "Audiobooks"
+    },
+    {
+      "name": "Apple Books",
+      "id": "Apple Books"
+    },
+    {
+      "name": "Apple Business",
+      "id": "Apple Business"
+    },
+    {
+      "name": "Apple Card",
+      "id": "Apple Card"
+    },
+    {
+      "name": "Apple Cash",
+      "id": "Apple Cash"
+    },
+    {
+      "name": "Apple Creator Studio Content Hub",
+      "id": "Apple Creator Studio Content Hub"
+    },
+    {
+      "name": "Apple Dictation",
+      "id": "Dictation"
+    },
+    {
+      "name": "Apple FaceTime",
+      "id": "FaceTime"
+    },
+    {
+      "name": "Apple Find My",
+      "id": "Find My"
+    },
+    {
+      "name": "Apple Fitness+",
+      "id": "Apple Fitness+"
+    },
+    {
+      "name": "Apple Game Center",
+      "id": "Game Center"
+    },
+    {
+      "name": "Apple Global Service Exchange",
+      "id": "Global Service Exchange"
+    },
+    {
+      "name": "Apple Health sharing with provider",
+      "id": "Health sharing with provider"
+    },
+    {
+      "name": "Apple HomeKit",
+      "id": "HomeKit"
+    },
+    {
+      "name": "Apple HomeKit Secure Video",
+      "id": "HomeKit Secure Video"
+    },
+    {
+      "name": "Apple iCloud Account & Sign In",
+      "id": "iCloud Account & Sign In"
+    },
+    {
+      "name": "Apple iCloud Backup",
+      "id": "iCloud Backup"
+    },
+    {
+      "name": "Apple iCloud Bookmarks & Tabs",
+      "id": "iCloud Bookmarks & Tabs"
+    },
+    {
+      "name": "Apple iCloud Calendar",
+      "id": "iCloud Calendar"
+    },
+    {
+      "name": "Apple iCloud Contacts",
+      "id": "iCloud Contacts"
+    },
+    {
+      "name": "Apple iCloud Drive",
+      "id": "iCloud Drive"
+    },
+    {
+      "name": "Apple iCloud Keychain",
+      "id": "iCloud Keychain"
+    },
+    {
+      "name": "Apple iCloud Mail",
+      "id": "iCloud Mail"
+    },
+    {
+      "name": "Apple iCloud Notes",
+      "id": "iCloud Notes"
+    },
+    {
+      "name": "Apple iCloud Private Relay",
+      "id": "iCloud Private Relay"
+    },
+    {
+      "name": "Apple iCloud Reminders",
+      "id": "iCloud Reminders"
+    },
+    {
+      "name": "Apple iCloud Storage Upgrades",
+      "id": "iCloud Storage Upgrades"
+    },
+    {
+      "name": "Apple iCloud Web Apps (iCloud.com)",
+      "id": "iCloud Web Apps (iCloud.com)"
+    },
+    {
+      "name": "Apple Identity - Drivers License or ID",
+      "id": "Identity - Drivers License or ID"
+    },
+    {
+      "name": "Apple iMessage",
+      "id": "iMessage"
+    },
+    {
+      "name": "Apple Invites",
+      "id": "Apple Invites"
+    },
+    {
+      "name": "Apple iOS Device Activation",
+      "id": "iOS Device Activation"
+    },
+    {
+      "name": "Apple iTunes Match",
+      "id": "iTunes Match"
+    },
+    {
+      "name": "Apple iTunes Store",
+      "id": "iTunes Store"
+    },
+    {
+      "name": "Apple iWork Collaboration",
+      "id": "iWork Collaboration"
+    },
+    {
+      "name": "Apple iWork for iCloud",
+      "id": "iWork for iCloud"
+    },
+    {
+      "name": "Apple Mac App Store",
+      "id": "Mac App Store"
+    },
+    {
+      "name": "Apple macOS Software Update",
+      "id": "macOS Software Update"
+    },
+    {
+      "name": "Apple Mail Drop",
+      "id": "Mail Drop"
+    },
+    {
+      "name": "Apple Maps Display",
+      "id": "Maps Display"
+    },
+    {
+      "name": "Apple Maps Routing & Navigation",
+      "id": "Maps Routing & Navigation"
+    },
+    {
+      "name": "Apple Maps Search",
+      "id": "Maps Search"
+    },
+    {
+      "name": "Apple Maps Traffic",
+      "id": "Maps Traffic"
+    },
+    {
+      "name": "Apple Messages for Business",
+      "id": "Apple Messages for Business"
+    },
+    {
+      "name": "Apple Music",
+      "id": "Apple Music"
+    },
+    {
+      "name": "Apple Music Classical",
+      "id": "Apple Music Classical"
+    },
+    {
+      "name": "Apple Music radio",
+      "id": "Apple Music radio"
+    },
+    {
+      "name": "Apple Music Subscriptions",
+      "id": "Apple Music Subscriptions"
+    },
+    {
+      "name": "Apple News",
+      "id": "News"
+    },
+    {
+      "name": "Apple Online Store",
+      "id": "Apple Online Store"
+    },
+    {
+      "name": "Apple Pay",
+      "id": "Apple Pay"
+    },
+    {
+      "name": "Apple Photos",
+      "id": "Photos"
+    },
+    {
+      "name": "Apple Podcasts",
+      "id": "Podcasts"
+    },
+    {
+      "name": "Apple Private Cloud Compute",
+      "id": "Private Cloud Compute"
+    },
+    {
+      "name": "Apple Radio",
+      "id": "Radio"
+    },
+    {
+      "name": "Apple School Manager",
+      "id": "Apple School Manager"
+    },
+    {
+      "name": "Apple Schooltime",
+      "id": "Schooltime"
+    },
+    {
+      "name": "Apple Schoolwork",
+      "id": "Schoolwork"
+    },
+    {
+      "name": "Apple Screen Time",
+      "id": "Screen Time"
+    },
+    {
+      "name": "Apple Sign in with Apple",
+      "id": "Sign in with Apple"
+    },
+    {
+      "name": "Apple Siri",
+      "id": "Siri"
+    },
+    {
+      "name": "Apple Sports",
+      "id": "Apple Sports"
+    },
+    {
+      "name": "Apple Spotlight suggestions",
+      "id": "Spotlight suggestions"
+    },
+    {
+      "name": "Apple Stocks",
+      "id": "Stocks"
+    },
+    {
+      "name": "Apple Subscription Purchase",
+      "id": "Subscription Purchase"
+    },
+    {
+      "name": "Apple TV",
+      "id": "Apple TV"
+    },
+    {
+      "name": "Apple TV Channels",
+      "id": "Apple TV Channels"
+    },
+    {
+      "name": "Apple TV Provider",
+      "id": "TV Provider"
+    },
+    {
+      "name": "Apple visionOS App Store",
+      "id": "visionOS App Store"
+    },
+    {
+      "name": "Apple Volume Purchase Program",
+      "id": "Volume Purchase Program"
+    },
+    {
+      "name": "Apple Walkie-Talkie",
+      "id": "Walkie-Talkie"
+    },
+    {
+      "name": "Apple Wallet",
+      "id": "Wallet"
+    },
+    {
+      "name": "Apple Weather",
+      "id": "Weather"
+    },
+    {
+      "name": "AppleCare on Device",
+      "id": "AppleCare on Device"
+    }
+  ],
+  "appledeveloper": [
+    {
+      "name": "Apple Account (Developer)",
+      "id": "Account"
+    },
+    {
+      "name": "Apple APNS",
+      "id": "APNS"
+    },
+    {
+      "name": "Apple APNS Sandbox",
+      "id": "APNS Sandbox"
+    },
+    {
+      "name": "Apple App Attest",
+      "id": "App Attest"
+    },
+    {
+      "name": "Apple App Store - Advanced Commerce API",
+      "id": "App Store - Advanced Commerce API"
+    },
+    {
+      "name": "Apple App Store - In-App Purchases",
+      "id": "App Store - In-App Purchases"
+    },
+    {
+      "name": "Apple App Store - Receipt Verification",
+      "id": "App Store - Receipt Verification"
+    },
+    {
+      "name": "Apple App Store - Sandbox",
+      "id": "App Store - Sandbox"
+    },
+    {
+      "name": "Apple App Store - Server APIs",
+      "id": "App Store - Server APIs"
+    },
+    {
+      "name": "Apple App Store - Server Notifications",
+      "id": "App Store - Server Notifications"
+    },
+    {
+      "name": "Apple App Store Automatic App Updates",
+      "id": "App Store Automatic App Updates"
+    },
+    {
+      "name": "Apple App Store Connect",
+      "id": "App Store Connect"
+    },
+    {
+      "name": "Apple App Store Connect - Analytics",
+      "id": "App Store Connect - Analytics"
+    },
+    {
+      "name": "Apple App Store Connect - App Processing ",
+      "id": "App Store Connect - App Processing "
+    },
+    {
+      "name": "Apple App Store Connect - App Upload",
+      "id": "App Store Connect - App Upload"
+    },
+    {
+      "name": "Apple App Store Connect - Sales and Trends",
+      "id": "App Store Connect - Sales and Trends"
+    },
+    {
+      "name": "Apple App Store Connect - TestFlight",
+      "id": "App Store Connect - TestFlight"
+    },
+    {
+      "name": "Apple App Store Connect API",
+      "id": "App Store Connect API"
+    },
+    {
+      "name": "Apple Certificates, Identifiers & Profiles",
+      "id": "Certificates, Identifiers & Profiles"
+    },
+    {
+      "name": "Apple CloudKit Console",
+      "id": "CloudKit Console"
+    },
+    {
+      "name": "Apple CloudKit Database",
+      "id": "CloudKit Database"
+    },
+    {
+      "name": "Apple Code-level Support",
+      "id": "Code-level Support"
+    },
+    {
+      "name": "Apple Contact Us",
+      "id": "Contact Us"
+    },
+    {
+      "name": "Apple Developer Documentation",
+      "id": "Developer Documentation"
+    },
+    {
+      "name": "Apple Developer Forums",
+      "id": "Apple Developer Forums"
+    },
+    {
+      "name": "Apple Developer ID Notary Service",
+      "id": "Developer ID Notary Service"
+    },
+    {
+      "name": "Apple Device Check",
+      "id": "Device Check"
+    },
+    {
+      "name": "Apple Device Enrollment Program",
+      "id": "Device Enrollment Program"
+    },
+    {
+      "name": "Apple Feedback Assistant",
+      "id": "Feedback Assistant"
+    },
+    {
+      "name": "Apple MapKit JS Dashboard",
+      "id": "MapKit JS Dashboard"
+    },
+    {
+      "name": "Apple Maps API",
+      "id": "Apple Maps API"
+    },
+    {
+      "name": "Apple MFi Portal",
+      "id": "MFi Portal"
+    },
+    {
+      "name": "Apple Music API",
+      "id": "Apple Music API"
+    },
+    {
+      "name": "Apple Music Connect",
+      "id": "Apple Music Connect"
+    },
+    {
+      "name": "Apple Music for Artists",
+      "id": "Apple Music for Artists"
+    },
+    {
+      "name": "Apple News API",
+      "id": "Apple News API"
+    },
+    {
+      "name": "Apple News Publisher",
+      "id": "News Publisher"
+    },
+    {
+      "name": "Apple NFC & SE Platform",
+      "id": "NFC & SE Platform"
+    },
+    {
+      "name": "Apple Pay Developer | Apple Pay Demo",
+      "id": "Apple Pay Developer | Apple Pay Demo"
+    },
+    {
+      "name": "Apple Pay Production Instance",
+      "id": "Apple Pay Production Instance"
+    },
+    {
+      "name": "Apple Pay Sandbox Instance",
+      "id": "Apple Pay Sandbox Instance"
+    },
+    {
+      "name": "Apple Podcasts Connect",
+      "id": "Apple Podcasts Connect"
+    },
+    {
+      "name": "Apple Program Enrollment and Renewals",
+      "id": "Program Enrollment and Renewals"
+    },
+    {
+      "name": "Apple Provisioning Profile Service",
+      "id": "Provisioning Profile Service"
+    },
+    {
+      "name": "Apple SKAdNetwork",
+      "id": "SKAdNetwork"
+    },
+    {
+      "name": "Apple Software Downloads",
+      "id": "Software Downloads"
+    },
+    {
+      "name": "Apple Tap to Pay on iPhone",
+      "id": "Tap to Pay on iPhone"
+    },
+    {
+      "name": "Apple Videos",
+      "id": "Videos"
+    },
+    {
+      "name": "Apple WeatherKit",
+      "id": "WeatherKit"
+    },
+    {
+      "name": "Apple Xcode Automatic Configuration",
+      "id": "Xcode Automatic Configuration"
+    },
+    {
+      "name": "Apple Xcode Cloud",
+      "id": "Xcode Cloud"
+    }
+  ],
   "_removed": []
 }

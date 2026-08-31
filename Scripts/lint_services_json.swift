@@ -7,7 +7,7 @@ let knownProviders: Set<String> = [
     "independent", "cachet", "lamb", "sorry", "statuscake", "statuspage", "instatus",
     "statuscast", "incidentio", "statusiov1", "statuspal", "site24x7", "cstate",
     "statushub", "betteruptime", "betterstack", "sendbird", "miro", "pagerduty",
-    "azure", "azuredevops", "firebase", "salesforce", "adobe"
+    "azure", "azuredevops", "firebase", "salesforce", "adobe", "apple", "appledeveloper"
 ]
 
 // Not a provider: a flat array of identifier strings for services confirmed gone for good (company
@@ -19,7 +19,9 @@ let removedServicesKey = "_removed"
 // Providers that don't require "url" per entry — either a fixed commonURL with an optional
 // per-entry override (Azure, Azure DevOps, Firebase), or a url computed from other fields and
 // never stored at all (Salesforce, from "product"). See each provider's *ServiceDefinition.
-let providersWithOptionalURL: Set<String> = ["azure", "azuredevops", "firebase", "salesforce", "adobe"]
+let providersWithOptionalURL: Set<String> = [
+    "azure", "azuredevops", "firebase", "salesforce", "adobe", "apple", "appledeveloper"
+]
 
 func envVariable(forKey key: String) -> String {
     guard let variable = ProcessInfo.processInfo.environment[key] else {

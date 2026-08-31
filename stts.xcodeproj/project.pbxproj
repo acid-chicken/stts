@@ -95,7 +95,8 @@
 		B27F66AA2A3621F7008DAF33 /* AWSServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F66A92A3621F7008DAF33 /* AWSServices.swift */; };
 		B2841CEB20BA6207004AFDB7 /* SorryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2841CEA20BA6207004AFDB7 /* SorryService.swift */; };
 		B2898FD01DC7441D0005F58F /* StatusIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2898FCF1DC7441D0005F58F /* StatusIndicator.swift */; };
-		B28E9128248250220026BAAA /* AppleServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E9127248250220026BAAA /* AppleServices.swift */; };
+		CC7E7BFF166F77A31A4F5280 /* AppleAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C5581954DD435BF44B7DB4 /* AppleAll.swift */; };
+		4A6ABAB1ED43ADDA067BDEEB /* AppleDeveloperAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7673E177C6F18434B22EB4 /* AppleDeveloperAll.swift */; };
 		B28E912A248250F40026BAAA /* AppleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E9129248250F40026BAAA /* AppleStore.swift */; };
 		B28E912C248255A40026BAAA /* AppleDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E912B248255A40026BAAA /* AppleDeveloper.swift */; };
 		B2A0635E1E1341C900EEA762 /* StatusioV1Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A0635D1E1341C900EEA762 /* StatusioV1Service.swift */; };
@@ -271,10 +272,10 @@
 		B27F66A92A3621F7008DAF33 /* AWSServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSServices.swift; sourceTree = "<group>"; };
 		B2841CEA20BA6207004AFDB7 /* SorryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SorryService.swift; sourceTree = "<group>"; };
 		B2898FCF1DC7441D0005F58F /* StatusIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusIndicator.swift; sourceTree = "<group>"; };
-		B28E912524824C3A0026BAAA /* generate_apple_services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = generate_apple_services.swift; sourceTree = "<group>"; };
-		B28E9127248250220026BAAA /* AppleServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleServices.swift; sourceTree = "<group>"; };
 		B28E9129248250F40026BAAA /* AppleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleStore.swift; sourceTree = "<group>"; };
 		B28E912B248255A40026BAAA /* AppleDeveloper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleDeveloper.swift; sourceTree = "<group>"; };
+		C3C5581954DD435BF44B7DB4 /* AppleAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAll.swift; sourceTree = "<group>"; };
+		7A7673E177C6F18434B22EB4 /* AppleDeveloperAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleDeveloperAll.swift; sourceTree = "<group>"; };
 		B2A0635D1E1341C900EEA762 /* StatusioV1Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusioV1Service.swift; sourceTree = "<group>"; };
 		B2A23E331DD192CD0051E913 /* EditorTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorTableCell.swift; sourceTree = "<group>"; };
 		B2A4A8151DC82CE300037E99 /* BottomBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
@@ -551,7 +552,6 @@
 		B2E70FD222B0650A000BCAD2 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
-				B28E912524824C3A0026BAAA /* generate_apple_services.swift */,
 				B27F66A42A35EBAA008DAF33 /* generate_aws_services.swift */,
 				B2E70FD622B066EC000BCAD2 /* generate_google_services.swift */,
 				B2E70FD322B0657F000BCAD2 /* generate_services_plist.sh */,
@@ -563,7 +563,6 @@
 			isa = PBXGroup;
 			children = (
 				B27F66A92A3621F7008DAF33 /* AWSServices.swift */,
-				B28E9127248250220026BAAA /* AppleServices.swift */,
 				B2E70FD722B069BA000BCAD2 /* GoogleCloudPlatformServices.swift */,
 			);
 			path = Generated;
@@ -598,6 +597,8 @@
 				B2FDC9201D67071500F0B728 /* Super */,
 				B22A9FFE2C0E142F0065CD30 /* UptimeDotCom */,
 				B2430806210810D0003F8D07 /* Algolia.swift */,
+				C3C5581954DD435BF44B7DB4 /* AppleAll.swift */,
+				7A7673E177C6F18434B22EB4 /* AppleDeveloperAll.swift */,
 				B2A4D7E6247E72B50089EA77 /* AzureAll.swift */,
 				B2A4D7E8247E73BC0089EA77 /* AzureDevOpsAll.swift */,
 				B23038F01E0DF3CC00B29095 /* Beanstalk.swift */,
@@ -860,7 +861,6 @@
 			shellScript = (
 				"chmod +x $SRCROOT/Scripts/*.swift",
 				"",
-				"$SRCROOT/Scripts/generate_apple_services.swift &",
 				"$SRCROOT/Scripts/generate_aws_services.swift &",
 				"$SRCROOT/Scripts/generate_google_services.swift",
 				"wait",
@@ -957,7 +957,8 @@
 				B2A4D7E7247E72B50089EA77 /* AzureAll.swift in Sources */,
 				B2253A6B209F3C410039F574 /* GoogleStatusDashboardStore.swift in Sources */,
 				B22602B327D88FA1001190F1 /* Zendesk.swift in Sources */,
-				B28E9128248250220026BAAA /* AppleServices.swift in Sources */,
+				CC7E7BFF166F77A31A4F5280 /* AppleAll.swift in Sources */,
+				4A6ABAB1ED43ADDA067BDEEB /* AppleDeveloperAll.swift in Sources */,
 				B25FBFFD1DCAF2CE0099A388 /* CustomScrollView.swift in Sources */,
 				B2A7EFED2A14537B0013C7AE /* CStateService.swift in Sources */,
 				B24D19F61DD072840052E539 /* Preferences.swift in Sources */,
