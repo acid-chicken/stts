@@ -64,6 +64,20 @@ struct AWSIncident: Codable {
         return result.union(service.ids.intersection(Set<String>(impactedServices.keys)))
     }
 
+    // Every id in this feed (e.g. "ec2-me-central-1", "multipleservices-me-central-1") is a
+    // "<service>-<region id>" slug, so a region is affected iff it's the suffix of any of them.
+    // `regionName` (e.g. "UAE") is the human-readable name shown on the status page and can't be
+    // compared against a region's own display name (e.g. "AWS (UAE)"), so it's not used for matching.
+    func affectsRegion(_ region: AWSRegionService) -> Bool {
+        let suffix = "-\(region.id)"
+
+        if serviceID.hasSuffix(suffix) {
+            return true
+        }
+
+        return impactedServices.keys.contains { $0.hasSuffix(suffix) }
+    }
+
     struct ImpactedService: Codable {
         let name: String
 
@@ -130,7 +144,7 @@ class AWSStore: ServiceStore<[AWSIncident]> {
         for incident in updatedState {
             guard incident.status != "0" else { continue }
 
-            if incident.regionName == region.name {
+            if incident.affectsRegion(region) {
                 status = .minor
 
                 impactedServiceNames.insert(incident.serviceName)
