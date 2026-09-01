@@ -708,7 +708,7 @@
     },
     {
       "name": "Elastic Cloud",
-      "url": "https://cloud-status.elastic.co",
+      "url": "https://status.elastic.co",
       "id": "8wpbdv4sl8gv",
       "old_names": [
         "ElasticCloud"
