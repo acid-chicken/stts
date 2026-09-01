@@ -5,6 +5,7 @@
 
 import Cocoa
 
+@MainActor
 protocol SwitchableTableViewController: AnyObject {
     var hidden: Bool { get set }
 

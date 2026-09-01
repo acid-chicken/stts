@@ -10,6 +10,7 @@ import XCTest
 // it has raw JSON entries. Catches two mistakes that Codable alone won't: a new provider key added
 // to services.json but never wired into ServicesStructure (silently parses to zero, no error), and
 // entries that individually decode fine but get lost/duplicated somewhere in the loading pipeline.
+@MainActor
 final class ServiceCountValidationTests: XCTestCase {
     func testParsedCountsMatchRawJSONCounts() throws {
         let jsonPath = try XCTUnwrap(

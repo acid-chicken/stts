@@ -10,6 +10,7 @@ import Reachability
 import UserNotifications
 
 @NSApplicationMain
+@MainActor
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     private var shouldAutomaticallyCheckServices: Bool {
         // We don't want to start the updating timer when unit testing because:

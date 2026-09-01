@@ -7,6 +7,7 @@ import Cocoa
 import MBPopup
 import PreferencesWindow
 
+@MainActor
 class ServiceTableViewController: NSObject, SwitchableTableViewController {
     let contentView = NSStackView(frame: CGRect(x: 0, y: 0, width: 280, height: 400))
     let scrollView = CustomScrollView()
@@ -250,7 +251,6 @@ class ServiceTableViewController: NSObject, SwitchableTableViewController {
         }
     }
 
-    @MainActor
     private func updatedStatus(for service: BaseService) async {
         servicesBeingUpdated.remove(service)
 

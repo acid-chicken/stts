@@ -25,7 +25,7 @@ class SttsTests: XCTestCase {
             serviceDefinitionProviders.append(userDefinedServiceDefinitionsProvider)
         }
 
-        var serviceDefinitions = ServiceLoader(providers: serviceDefinitionProviders).allServices
+        var serviceDefinitions = await ServiceLoader(providers: serviceDefinitionProviders).allServices
         if let providerIdentifiers {
             serviceDefinitions = serviceDefinitions.filter { providerIdentifiers.contains($0.providerIdentifier) }
         }

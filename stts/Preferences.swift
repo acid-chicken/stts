@@ -5,6 +5,7 @@
 
 import Foundation
 
+@MainActor
 class Preferences {
     private let serviceLoader: ServiceLoader
 

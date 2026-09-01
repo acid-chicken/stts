@@ -5,6 +5,7 @@
 
 import Foundation
 
+@MainActor
 final class ServiceLoader {
     private let providers: [ServiceDefinitionProvider]
 

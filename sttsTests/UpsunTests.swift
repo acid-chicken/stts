@@ -6,6 +6,7 @@
 import XCTest
 @testable import stts
 
+@MainActor
 final class UpsunTests: XCTestCase {
     private let incidentsURL = URL(string: "https://status.upsun.com/data/incidents.json")!
 
