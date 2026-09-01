@@ -24,7 +24,7 @@
     },
     {
       "name": "Unraid",
-      "url": "https://status.unraid.net"
+      "url": "https://status.unraid.net/en"
     }
   ],
   "betteruptime": [
@@ -71,21 +71,21 @@
     },
     {
       "name": "Intercom - AU Hosting",
-      "url": "https://www.intercomstatus.com/au-hosting",
+      "url": "https://www.finstatus.com/au-hosting",
       "old_names": [
         "IntercomAU"
       ]
     },
     {
       "name": "Intercom - EU Hosting",
-      "url": "https://www.intercomstatus.com/eu-hosting",
+      "url": "https://www.finstatus.com/eu-hosting",
       "old_names": [
         "IntercomEU"
       ]
     },
     {
       "name": "Intercom - US Hosting",
-      "url": "https://www.intercomstatus.com/us-hosting",
+      "url": "https://www.finstatus.com/us-hosting",
       "old_names": [
         "IntercomUS",
         "Intercom"
@@ -253,7 +253,7 @@
     },
     {
       "name": "Docker",
-      "url": "https://status.docker.com",
+      "url": "https://www.dockerstatus.com/",
       "id": "533c6539221ae15e3f000031"
     },
     {
@@ -357,6 +357,15 @@
       ]
     },
     {
+      "name": "37signals",
+      "url": "https://www.37status.com/",
+      "id": "thc30769z1m9",
+      "old_names": [
+        "Basecamp",
+        "statuspage.Basecamp"
+      ]
+    },
+    {
       "name": "Acoustic",
       "url": "https://status.goacoustic.com",
       "id": "rx9084q34820"
@@ -380,11 +389,6 @@
       ]
     },
     {
-      "name": "Anthropic",
-      "url": "https://status.anthropic.com",
-      "id": "tymt9n04zgry"
-    },
-    {
       "name": "Aptible",
       "url": "https://status.aptible.com",
       "id": "fmwgqnbnbc4r"
@@ -395,19 +399,20 @@
       "id": "w58858w0sjxx"
     },
     {
-      "name": "Atlassian Access",
-      "url": "https://access.status.atlassian.com",
-      "id": "5qmgwsxwsz78",
-      "old_names": [
-        "AtlassianAccess"
-      ]
-    },
-    {
       "name": "Atlassian Developer",
       "url": "https://developer.status.atlassian.com",
       "id": "n8766lc3ybbs",
       "old_names": [
         "AtlassianDeveloper"
+      ]
+    },
+    {
+      "name": "Atlassian Guard",
+      "url": "https://guard.status.atlassian.com/",
+      "id": "5qmgwsxwsz78",
+      "old_names": [
+        "AtlassianAccess",
+        "statuspage.AtlassianAccess"
       ]
     },
     {
@@ -460,14 +465,18 @@
       "id": "m10fpsk86bhy"
     },
     {
-      "name": "Basecamp",
-      "url": "https://www.basecampstatus.com",
-      "id": "thc30769z1m9"
-    },
-    {
       "name": "BigCommerce",
       "url": "https://status.bigcommerce.com",
       "id": "qbn4dyd29jby"
+    },
+    {
+      "name": "Bird",
+      "url": "https://status.bird.com/",
+      "id": "xf8120tyqx8n",
+      "old_names": [
+        "MessageBird",
+        "statuspage.MessageBird"
+      ]
     },
     {
       "name": "Bitbucket",
@@ -504,7 +513,7 @@
     },
     {
       "name": "Bugsnag",
-      "url": "https://status.bugsnag.com",
+      "url": "https://bugsnag.status.smartbear.com/",
       "id": "6xl1gdp6yn0x"
     },
     {
@@ -533,6 +542,15 @@
       "id": "6w4r0ttlx5ft"
     },
     {
+      "name": "Claude",
+      "url": "https://status.claude.com/",
+      "id": "tymt9n04zgry",
+      "old_names": [
+        "Anthropic",
+        "statuspage.Anthropic"
+      ]
+    },
+    {
       "name": "Click",
       "url": "https://status.clicksoftware.com",
       "id": "57wtfpyjb9p3"
@@ -548,11 +566,6 @@
       "id": "2126xm8ctzlk"
     },
     {
-      "name": "CloudApp",
-      "url": "https://status.getcloudapp.com",
-      "id": "jv7lgzmdfxr1"
-    },
-    {
       "name": "Cloudflare",
       "url": "https://www.cloudflarestatus.com",
       "id": "yh6f0r4529hb"
@@ -563,18 +576,13 @@
       "id": "d8rszhl2bj7r"
     },
     {
-      "name": "Clubhouse",
-      "url": "https://status.clubhouse.io",
-      "id": "27fcn0qntr9w"
-    },
-    {
       "name": "CocoaPods",
       "url": "https://status.cocoapods.org",
       "id": "7k11xygtyyyg"
     },
     {
       "name": "Codecov",
-      "url": "https://status.codecov.io",
+      "url": "https://status.codecov.com/",
       "id": "wdzsn5dlywj9"
     },
     {
@@ -673,7 +681,7 @@
     },
     {
       "name": "Discord",
-      "url": "https://status.discordapp.com",
+      "url": "https://discordstatus.com/",
       "id": "srhpyqt94yxb"
     },
     {
@@ -785,6 +793,11 @@
       "name": "GitHub",
       "url": "https://www.githubstatus.com",
       "id": "kctbh9vrtdwd"
+    },
+    {
+      "name": "Harness",
+      "url": "https://status.harness.io/",
+      "id": "zmnt6tkys0q0"
     },
     {
       "name": "HelloSign / HelloFax",
@@ -954,13 +967,8 @@
       "id": "n1pskh7dw1c1"
     },
     {
-      "name": "MessageBird",
-      "url": "https://status.messagebird.com",
-      "id": "xf8120tyqx8n"
-    },
-    {
       "name": "Mixpanel",
-      "url": "https://status.mixpanel.com",
+      "url": "https://www.mixpanelstatus.com/",
       "id": "x4m91ldrf511"
     },
     {
@@ -973,7 +981,7 @@
     },
     {
       "name": "MongoDB Cloud",
-      "url": "https://status.cloud.mongodb.com",
+      "url": "https://status.mongodb.com/",
       "id": "smhnl3lt74kc",
       "old_names": [
         "MongoDBCloud"
@@ -1031,7 +1039,7 @@
     },
     {
       "name": "Pardot",
-      "url": "https://trust.pardot.com",
+      "url": "https://status.salesforce.com/products/MCAccountEngagement",
       "id": "j0hnsfnqtllz"
     },
     {
@@ -1097,7 +1105,7 @@
     },
     {
       "name": "Recruiterbox",
-      "url": "https://status.recruiterbox.com",
+      "url": "https://status.hire.trakstar.com/",
       "id": "mnlrk0049tgf"
     },
     {
@@ -1158,13 +1166,8 @@
     },
     {
       "name": "Semaphore",
-      "url": "https://status.semaphoreci.com",
+      "url": "https://status.semaphore.io/",
       "id": "zq6qk8cct5d8"
-    },
-    {
-      "name": "SendGrid",
-      "url": "https://status.sendgrid.com",
-      "id": "3tgl2vf85cht"
     },
     {
       "name": "Sentry",
@@ -1175,6 +1178,15 @@
       "name": "Shopify",
       "url": "https://www.shopifystatus.com",
       "id": "d33g96wd23dd"
+    },
+    {
+      "name": "Shortcut",
+      "url": "https://status.shortcut.com/",
+      "id": "27fcn0qntr9w",
+      "old_names": [
+        "Clubhouse",
+        "statuspage.Clubhouse"
+      ]
     },
     {
       "name": "Smarty",
@@ -1235,11 +1247,15 @@
     {
       "name": "Twilio",
       "url": "https://status.twilio.com",
-      "id": "gpkpyklzq55q"
+      "id": "gpkpyklzq55q",
+      "old_names": [
+        "SendGrid",
+        "statuspage.SendGrid"
+      ]
     },
     {
       "name": "Twitch",
-      "url": "https://status.twitch.tv",
+      "url": "https://status.twitch.com/",
       "id": "yfj40zdsk34s"
     },
     {
@@ -1319,8 +1335,17 @@
       "id": "z7jb4dcjs0nl"
     },
     {
+      "name": "Zight",
+      "url": "https://status.zight.com/",
+      "id": "jv7lgzmdfxr1",
+      "old_names": [
+        "CloudApp",
+        "statuspage.CloudApp"
+      ]
+    },
+    {
       "name": "Zoom",
-      "url": "https://status.zoom.us",
+      "url": "https://www.zoomstatus.com/",
       "id": "14qjgk812kgk"
     },
     {
