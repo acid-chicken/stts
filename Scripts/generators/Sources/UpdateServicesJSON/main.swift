@@ -32,3 +32,4 @@ let generators: [ServiceGenerator] = [
 
 let servicesPath = "\(repoRoot())/Resources/services.json"
 await ServicesJSONUpdater(servicesPath: servicesPath).run(generators: generators)
+await URLHealthChecker().run(servicesPath: servicesPath)
