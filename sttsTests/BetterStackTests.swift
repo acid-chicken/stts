@@ -12,8 +12,8 @@ final class BetterStackTests: XCTestCase {
             BetterStackServiceDefinition.self,
             from: Data("""
             {
-                "url": "https://status.buildjet.com",
-                "name": "BuildJet"
+                "url": "https://status.keygen.sh",
+                "name": "Keygen"
             }
             """.utf8)
         )
@@ -22,34 +22,34 @@ final class BetterStackTests: XCTestCase {
     }
 
     func testNormalStatus() async throws {
-        let buildJet = try createService()
+        let keygen = try createService()
 
         DataLoader.shared = DataLoader(session: ResponseOverridingURLSession(overrides: [
             .init(
-                url: buildJet.url,
+                url: keygen.url,
                 response: try Data(
-                    contentsOf: Bundle.test.url(forResource: "buildjet-good", withExtension: "html")!
+                    contentsOf: Bundle.test.url(forResource: "keygen-good", withExtension: "html")!
                 )
             )
         ]))
 
-        try await buildJet.updateStatus()
-        XCTAssertEqual(buildJet.status, .good)
+        try await keygen.updateStatus()
+        XCTAssertEqual(keygen.status, .good)
     }
 
     func testMajorStatus() async throws {
-        let buildJet = try createService()
+        let keygen = try createService()
 
         DataLoader.shared = DataLoader(session: ResponseOverridingURLSession(overrides: [
             .init(
-                url: buildJet.url,
+                url: keygen.url,
                 response: try Data(
                     contentsOf: Bundle.test.url(forResource: "eyloo-major", withExtension: "html")!
                 )
             )
         ]))
 
-        try await buildJet.updateStatus()
-        XCTAssertEqual(buildJet.status, .major)
+        try await keygen.updateStatus()
+        XCTAssertEqual(keygen.status, .major)
     }
 }

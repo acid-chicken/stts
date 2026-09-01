@@ -42,7 +42,7 @@
 		B22651292B2EEA52002F1CE2 /* PagerDutyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22651282B2EEA52002F1CE2 /* PagerDutyTests.swift */; };
 		B228DC0C2A7F520700D8DC5E /* BetterStackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B228DC0B2A7F520700D8DC5E /* BetterStackService.swift */; };
 		B228DC132A7F86F900D8DC5E /* eyloo-major.html in Resources */ = {isa = PBXBuildFile; fileRef = B228DC112A7F86F900D8DC5E /* eyloo-major.html */; };
-		B228DC142A7F86F900D8DC5E /* buildjet-good.html in Resources */ = {isa = PBXBuildFile; fileRef = B228DC122A7F86F900D8DC5E /* buildjet-good.html */; };
+		B228DC142A7F86F900D8DC5E /* keygen-good.html in Resources */ = {isa = PBXBuildFile; fileRef = B228DC122A7F86F900D8DC5E /* keygen-good.html */; };
 		B228DC162A7F872800D8DC5E /* BetterStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B228DC152A7F872800D8DC5E /* BetterStackTests.swift */; };
 		B22B6B302F673895006528EB /* BundleServiceDefinitionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B6B292F673895006528EB /* BundleServiceDefinitionProvider.swift */; };
 		B22B6B312F673895006528EB /* ServiceDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B6B2A2F673895006528EB /* ServiceDefinition.swift */; };
@@ -218,7 +218,7 @@
 		B22651282B2EEA52002F1CE2 /* PagerDutyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerDutyTests.swift; sourceTree = "<group>"; };
 		B228DC0B2A7F520700D8DC5E /* BetterStackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterStackService.swift; sourceTree = "<group>"; };
 		B228DC112A7F86F900D8DC5E /* eyloo-major.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "eyloo-major.html"; sourceTree = "<group>"; };
-		B228DC122A7F86F900D8DC5E /* buildjet-good.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "buildjet-good.html"; sourceTree = "<group>"; };
+		B228DC122A7F86F900D8DC5E /* keygen-good.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "keygen-good.html"; sourceTree = "<group>"; };
 		B228DC152A7F872800D8DC5E /* BetterStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterStackTests.swift; sourceTree = "<group>"; };
 		B22B6B282F673895006528EB /* AppDefinedServiceDefinitionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefinedServiceDefinitionProvider.swift; sourceTree = "<group>"; };
 		B22B6B292F673895006528EB /* BundleServiceDefinitionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleServiceDefinitionProvider.swift; sourceTree = "<group>"; };
@@ -429,7 +429,7 @@
 			children = (
 				B2E832ED29DE5104000FA1BE /* adobe-analytics-minor.json */,
 				B26EC10E2F69101800DDD0B9 /* aiven-minor.html */,
-				B228DC122A7F86F900D8DC5E /* buildjet-good.html */,
+				B228DC122A7F86F900D8DC5E /* keygen-good.html */,
 				B228DC112A7F86F900D8DC5E /* eyloo-major.html */,
 				B26EC10F2F69101800DDD0B9 /* linear-good.html */,
 				B22B6B4C2F69040A006528EB /* mastodonsocial-major.html */,
@@ -817,7 +817,7 @@
 				B2C670472F69BDA90043DC7A /* miro-good.html in Resources */,
 				B2C670482F69BDA90043DC7A /* miro-issue.html in Resources */,
 				B2C6703E2F69B6BE0043DC7A /* rollbar-good.html in Resources */,
-				B228DC142A7F86F900D8DC5E /* buildjet-good.html in Resources */,
+				B228DC142A7F86F900D8DC5E /* keygen-good.html in Resources */,
 			);
 		};
 		B2B2D0FD1D49D5080014D780 /* Resources */ = {

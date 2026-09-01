@@ -8,10 +8,6 @@
       ]
     },
     {
-      "name": "BuildJet",
-      "url": "https://status.buildjet.com"
-    },
-    {
       "name": "Keygen",
       "url": "https://status.keygen.sh"
     },
@@ -11550,5 +11546,7 @@
       "subservice": true
     }
   ],
-  "_removed": []
+  "_removed": [
+    "betterstack.BuildJet"
+  ]
 }

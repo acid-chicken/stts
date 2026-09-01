@@ -78,7 +78,6 @@ final class FaviconDownloader {
         // changes, so every single BetterStack/BetterUptime-hosted entry needs an override, not
         // just the ones that happened to look like duplicates:
         "betterstack.BetterStack": URL(string: "https://www.betterstack.com")!,
-        "betterstack.BuildJet": URL(string: "https://buildjet.com")!,
         "betterstack.Keygen": URL(string: "https://keygen.sh")!,
         "betterstack.RunwayAppStoreConnect": URL(string: "https://www.runway.team")!,
         "betterstack.Unraid": URL(string: "https://unraid.net")!,
