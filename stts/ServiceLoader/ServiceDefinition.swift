@@ -27,10 +27,57 @@ protocol ServiceDefinition: CodableServiceDefinition {
     var categoryKey: String? { get }
 }
 
+// Repo this app ships from — used only as a last-resort favicon source below, hardcoded since
+// there's no other way for the app to know its own repo.
+private let faviconRepoRawBaseURL = "https://cdn.jsdelivr.net/gh/inket/stts@master/Resources/Favicons"
+
 extension ServiceDefinition {
     var categoryKey: String? { nil }
 
     var globalIdentifier: String { "\(providerIdentifier).\(alphanumericName)" }
+
+    /// The service's favicon. Checks the app bundle first — see `Scripts/generators/Sources/
+    /// UpdateServicesJSON/FaviconDownloader.swift` for how `Resources/Favicons/*.png` gets
+    /// populated — falling back to fetching the same filename from this repo on GitHub (via
+    /// jsdelivr) as a last resort, in case a favicon was added/fixed there after this copy of the
+    /// app was built. That fallback is a *URL construction only* — it's never verified to resolve,
+    /// so the caller must handle a load failure the same as it would a missing local icon.
+    /// `nil` only for a service with no `services.json` entry at all (a hand-written `independent`
+    /// class) — every JSON-defined service gets at least the remote-fallback candidate.
+    var faviconURL: URL? {
+        if let url = bundledFaviconURL(filename: "\(providerIdentifier).\(alphanumericName)") {
+            return url
+        }
+        // A rename or a provider reassignment (e.g. a remote services.json update moving a service
+        // from one provider to another) makes the current filename stale until the next app
+        // update ships the correspondingly-renamed bundled file — try the identifiers this service
+        // used to be known under too, the same data `old_names` already exists to carry.
+        for legacyIdentifier in legacyIdentifiers {
+            if let url = bundledFaviconURL(filename: legacyIdentifier) {
+                return url
+            }
+        }
+        // A handful of products within a shared-page provider (e.g. Salesforce's Heroku/Tableau/
+        // Mulesoft) have their own distinct real-world branding, so they get their own shared icon
+        // instead of the provider's generic one — see FaviconDownloader.officialWebsiteByProduct.
+        if let categoryKey {
+            let sanitized = String(categoryKey.unicodeScalars.filter(CharacterSet.alphanumerics.contains))
+            if let url = bundledFaviconURL(filename: "\(providerIdentifier).\(sanitized)") {
+                return url
+            }
+        }
+        // Providers whose entries all share one status page (Azure, AWS, Adobe, ...) get a single
+        // shared icon at "<providerIdentifier>.png" instead of a byte-identical copy per entry.
+        if let url = bundledFaviconURL(filename: providerIdentifier) {
+            return url
+        }
+
+        return URL(string: "\(faviconRepoRawBaseURL)/\(providerIdentifier).\(alphanumericName).png")
+    }
+
+    private func bundledFaviconURL(filename: String) -> URL? {
+        Bundle.main.url(forResource: filename, withExtension: "png", subdirectory: "Favicons")
+    }
 
     func eq(_ other: ServiceDefinition) -> Bool {
         globalIdentifier == other.globalIdentifier

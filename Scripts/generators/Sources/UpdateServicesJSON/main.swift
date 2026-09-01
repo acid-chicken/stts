@@ -33,3 +33,7 @@ let generators: [ServiceGenerator] = [
 let servicesPath = "\(repoRoot())/Resources/services.json"
 await ServicesJSONUpdater(servicesPath: servicesPath).run(generators: generators)
 await URLHealthChecker().run(servicesPath: servicesPath)
+
+let faviconsDir = "\(repoRoot())/Resources/Favicons"
+let forceRefreshFavicons = CommandLine.arguments.contains("--refresh-favicons")
+await FaviconDownloader(servicesPath: servicesPath, faviconsDir: faviconsDir).run(forceRefresh: forceRefreshFavicons)
