@@ -19,6 +19,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
 
     private var timer: Timer?
+    private var remoteServicesTimer: Timer?
+    private let remoteServicesUpdater: RemoteServicesUpdater?
 
     private let reachability = try! Reachability() // swiftlint:disable:this force_try
     private var initialReachabilityChange: Bool = true
@@ -34,7 +36,19 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         var serviceDefinitionProviders: [ServiceDefinitionProvider] = []
 
         // swiftlint:disable:next force_try
-        serviceDefinitionProviders.append(try! AppDefinedServiceDefinitionProvider())
+        let appDefinedProvider = try! AppDefinedServiceDefinitionProvider()
+        if let remoteProvider = try? RemoteServiceDefinitionProvider() {
+            // Wholesale swap, not a per-identifier merge: once the remote copy has any data, it
+            // fully replaces the bundled one rather than being unioned with it, so a service the
+            // remote copy drops doesn't linger just because the (older) bundled copy still has it.
+            // Falls back to the bundled copy entirely when remote hasn't fetched anything successfully
+            // yet.
+            serviceDefinitionProviders.append(
+                FallbackServiceDefinitionProvider(primary: remoteProvider, fallback: appDefinedProvider)
+            )
+        } else {
+            serviceDefinitionProviders.append(appDefinedProvider)
+        }
         // swiftlint:disable:next force_try
         serviceDefinitionProviders.append(try! BundleServiceDefinitionProvider())
         if let userDefinedProvider = try? UserDefinedServiceDefinitionProvider() {
@@ -44,6 +58,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         SendbirdAll.sendbirdServices = serviceLoader.allServices
             .compactMap { $0 as? SendbirdServiceDefinition }
             .compactMap { $0.build() as? SendbirdService }
+
+        remoteServicesUpdater = (try? RemoteServiceDefinitionProvider.cachedServicesJSONURL())
+            .map { RemoteServicesUpdater(destinationURL: $0) }
 
         preferences = Preferences(serviceLoader: serviceLoader)
         preferencesWindow = PreferencesWindow(serviceLoader: serviceLoader, preferences: preferences)
@@ -98,7 +115,37 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
         if shouldAutomaticallyCheckServices {
             restartTimer()
+            restartRemoteServicesTimer()
         }
+    }
+
+    private static let remoteServicesRefreshInterval: TimeInterval = 3 * 60 * 60
+
+    private func restartRemoteServicesTimer() {
+        remoteServicesTimer?.invalidate()
+        remoteServicesTimer = Timer.scheduledTimer(
+            withTimeInterval: Self.remoteServicesRefreshInterval,
+            repeats: true
+        ) { [weak self] _ in
+            Task { await self?.refreshRemoteServices() }
+        }
+        remoteServicesTimer?.fire()
+    }
+
+    private func refreshRemoteServices() async {
+        guard let remoteServicesUpdater, await remoteServicesUpdater.update() else { return }
+
+        serviceLoader.reload()
+        SendbirdAll.sendbirdServices = serviceLoader.allServices
+            .compactMap { $0 as? SendbirdServiceDefinition }
+            .compactMap { $0.build() as? SendbirdService }
+
+        // reloadServicesList() rebuilds `services` with fresh BaseService instances (always starting
+        // at .undetermined/"Loading"), which orphans whatever the in-flight updateServices() fetch
+        // (e.g. from app launch) was updating and leaves the new instances stuck showing "Loading"
+        // until the next scheduled update. Re-running updateServices() here fetches them right away.
+        serviceTableViewController.reloadServicesList()
+        updateServices()
     }
 
     @objc

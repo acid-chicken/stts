@@ -10,13 +10,30 @@ final class ServiceLoader {
 
     init(providers: [ServiceDefinitionProvider]) {
         self.providers = providers
+        allServices = Self.buildAllServices(providers: providers)
+        allServicesWithoutSubServices = allServices.filter { !($0.isSubService == true) }
+        removedIdentifiers = providers.reduce(into: Set<String>()) { $0.formUnion($1.removedIdentifiers) }
     }
 
-    private(set) lazy var allServices: [ServiceDefinition] = {
+    private(set) var allServices: [ServiceDefinition]
+    private(set) var allServicesWithoutSubServices: [ServiceDefinition]
+    private(set) var removedIdentifiers: Set<String>
+
+    /// Re-reads every provider's backing data and recomputes the cached properties above. Used
+    /// after a remote services.json re-fetch (see `RemoteServiceDefinitionProvider`) so the app can
+    /// pick up changes without a relaunch.
+    func reload() {
+        providers.forEach { $0.reload() }
+        allServices = Self.buildAllServices(providers: providers)
+        allServicesWithoutSubServices = allServices.filter { !($0.isSubService == true) }
+        removedIdentifiers = providers.reduce(into: Set<String>()) { $0.formUnion($1.removedIdentifiers) }
+    }
+
+    private static func buildAllServices(providers: [ServiceDefinitionProvider]) -> [ServiceDefinition] {
         var uniqueServiceIdentifiers = Set<String>()
         var serviceDefinitions = [ServiceDefinition]()
 
-        var uniqueAppend: ([ServiceDefinition]) -> Void = { definitions in
+        let uniqueAppend: ([ServiceDefinition]) -> Void = { definitions in
             definitions.forEach { definition in
                 guard !uniqueServiceIdentifiers.contains(definition.globalIdentifier) else { return }
 
@@ -33,15 +50,7 @@ final class ServiceLoader {
         }
 
         return serviceDefinitions.sorted(by: ServiceDefinitionSortByName)
-    }()
-
-    private(set) lazy var allServicesWithoutSubServices: [ServiceDefinition] = {
-        allServices.filter { !($0.isSubService == true) }
-    }()
-
-    private(set) lazy var removedIdentifiers: Set<String> = {
-        providers.reduce(into: Set<String>()) { $0.formUnion($1.removedIdentifiers) }
-    }()
+    }
 
     func services(for definitions: [ServiceDefinition]) -> [BaseService] {
         definitions.compactMap { $0.build() }

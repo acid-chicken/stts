@@ -51,6 +51,9 @@
 		B22B6B342F673895006528EB /* ServicesStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B6B2D2F673895006528EB /* ServicesStructure.swift */; };
 		B22B6B352F673895006528EB /* ServiceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B6B2C2F673895006528EB /* ServiceLoader.swift */; };
 		B22B6B362F673895006528EB /* ServiceDefinitionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B6B2B2F673895006528EB /* ServiceDefinitionProvider.swift */; };
+		E77F88AD70FFC5CCABC5927F /* RemoteServiceDefinitionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0F48F87446D91868D15266 /* RemoteServiceDefinitionProvider.swift */; };
+		490075BB528DBBB285F590F3 /* RemoteServicesUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2F88B6456EB46B9FBACFD5 /* RemoteServicesUpdater.swift */; };
+		0719B269386087E4620ED043 /* FallbackServiceDefinitionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F223E3BE35E98A3B652DB7C /* FallbackServiceDefinitionProvider.swift */; };
 		B22B6B382F6738A1006528EB /* TaskExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B6B372F6738A1006528EB /* TaskExtensions.swift */; };
 		B22B6B3E2F6738B1006528EB /* Fastly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B6B392F6738B1006528EB /* Fastly.swift */; };
 		B22B6B422F6738CD006528EB /* SendbirdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B6B402F6738CD006528EB /* SendbirdService.swift */; };
@@ -227,6 +230,9 @@
 		B22B6B2C2F673895006528EB /* ServiceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLoader.swift; sourceTree = "<group>"; };
 		B22B6B2D2F673895006528EB /* ServicesStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesStructure.swift; sourceTree = "<group>"; };
 		B22B6B2E2F673895006528EB /* UserDefinedServiceDefinitionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefinedServiceDefinitionProvider.swift; sourceTree = "<group>"; };
+		5C0F48F87446D91868D15266 /* RemoteServiceDefinitionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteServiceDefinitionProvider.swift; sourceTree = "<group>"; };
+		CA2F88B6456EB46B9FBACFD5 /* RemoteServicesUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteServicesUpdater.swift; sourceTree = "<group>"; };
+		7F223E3BE35E98A3B652DB7C /* FallbackServiceDefinitionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallbackServiceDefinitionProvider.swift; sourceTree = "<group>"; };
 		B22B6B372F6738A1006528EB /* TaskExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskExtensions.swift; sourceTree = "<group>"; };
 		B22B6B392F6738B1006528EB /* Fastly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fastly.swift; sourceTree = "<group>"; };
 		B22B6B3F2F6738CD006528EB /* IndependentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndependentService.swift; sourceTree = "<group>"; };
@@ -409,6 +415,9 @@
 				B22B6B2C2F673895006528EB /* ServiceLoader.swift */,
 				B22B6B2D2F673895006528EB /* ServicesStructure.swift */,
 				B22B6B2E2F673895006528EB /* UserDefinedServiceDefinitionProvider.swift */,
+				5C0F48F87446D91868D15266 /* RemoteServiceDefinitionProvider.swift */,
+				CA2F88B6456EB46B9FBACFD5 /* RemoteServicesUpdater.swift */,
+				7F223E3BE35E98A3B652DB7C /* FallbackServiceDefinitionProvider.swift */,
 			);
 			path = ServiceLoader;
 			sourceTree = "<group>";
@@ -982,6 +991,9 @@
 				B22B6B342F673895006528EB /* ServicesStructure.swift in Sources */,
 				B22B6B352F673895006528EB /* ServiceLoader.swift in Sources */,
 				B22B6B362F673895006528EB /* ServiceDefinitionProvider.swift in Sources */,
+				E77F88AD70FFC5CCABC5927F /* RemoteServiceDefinitionProvider.swift in Sources */,
+				490075BB528DBBB285F590F3 /* RemoteServicesUpdater.swift in Sources */,
+				0719B269386087E4620ED043 /* FallbackServiceDefinitionProvider.swift in Sources */,
 				B2F55EEE2408B68F003D674C /* PSNAsia.swift in Sources */,
 				B2253A6F209F42430039F574 /* Firebase.swift in Sources */,
 				B22FDE512108A5C200359EC9 /* PayPalAPIProduction.swift in Sources */,

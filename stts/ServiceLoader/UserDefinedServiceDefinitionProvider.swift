@@ -29,8 +29,7 @@ class UserDefinedServiceDefinitionProvider: JSONBasedServiceDefinitionProvider {
             attributes: nil
         )
 
-        let servicesJSONPath = sttsAppSupportURL.appendingPathComponent("services.json").path
-
-        super.init(path: servicesJSONPath, required: false)
+        let servicesJSONURL = sttsAppSupportURL.appendingPathComponent("user_services.json")
+        super.init(path: servicesJSONURL.path, required: false)
     }
 }
