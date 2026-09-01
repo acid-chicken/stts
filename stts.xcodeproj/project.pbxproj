@@ -58,6 +58,7 @@
 		B22B6B442F6738CD006528EB /* ServiceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B6B412F6738CD006528EB /* ServiceStore.swift */; };
 		B22B6B492F673BDF006528EB /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = B22B6B482F673BDF006528EB /* SFSafeSymbols */; };
 		B22B6B4B2F673C39006528EB /* services.json in Resources */ = {isa = PBXBuildFile; fileRef = B22B6B4A2F673C39006528EB /* services.json */; };
+		A11F020519C63AB103EAE178 /* Favicons in Resources */ = {isa = PBXBuildFile; fileRef = 6A16FDD8E4A26EB66B03C7E0 /* Favicons */; };
 		B22B6B4D2F69040A006528EB /* mastodonsocial-major.html in Resources */ = {isa = PBXBuildFile; fileRef = B22B6B4C2F69040A006528EB /* mastodonsocial-major.html */; };
 		B22B6B4F2F69047D006528EB /* whereby-good.html in Resources */ = {isa = PBXBuildFile; fileRef = B22B6B4E2F69047D006528EB /* whereby-good.html */; };
 		B22FDE4821089C6200359EC9 /* PayPal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22FDE4721089C6200359EC9 /* PayPal.swift */; };
@@ -232,6 +233,7 @@
 		B22B6B402F6738CD006528EB /* SendbirdService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendbirdService.swift; sourceTree = "<group>"; };
 		B22B6B412F6738CD006528EB /* ServiceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceStore.swift; sourceTree = "<group>"; };
 		B22B6B4A2F673C39006528EB /* services.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = services.json; sourceTree = "<group>"; };
+		6A16FDD8E4A26EB66B03C7E0 /* Favicons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Favicons; sourceTree = "<group>"; };
 		B22B6B4C2F69040A006528EB /* mastodonsocial-major.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "mastodonsocial-major.html"; sourceTree = "<group>"; };
 		B22B6B4E2F69047D006528EB /* whereby-good.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "whereby-good.html"; sourceTree = "<group>"; };
 		B22FDE4721089C6200359EC9 /* PayPal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPal.swift; sourceTree = "<group>"; };
@@ -660,6 +662,7 @@
 				B2B2D1091D49D5080014D780 /* Info.plist */,
 				B2B2D1061D49D5080014D780 /* MainMenu.xib */,
 				B22B6B4A2F673C39006528EB /* services.json */,
+				6A16FDD8E4A26EB66B03C7E0 /* Favicons */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -824,6 +827,7 @@
 				B22B6B4B2F673C39006528EB /* services.json in Resources */,
 				B2B2D1081D49D5080014D780 /* MainMenu.xib in Resources */,
 				B214B6062E7BC13A006B3B77 /* AppIcon.icon in Resources */,
+				A11F020519C63AB103EAE178 /* Favicons in Resources */,
 			);
 		};
 		B2D006612A875AB5008B3A13 /* Resources */ = {
