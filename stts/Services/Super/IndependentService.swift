@@ -27,26 +27,6 @@ class IndependentServiceDefinition: CodableServiceDefinition, ServiceDefinition 
         try container.encode(className, forKey: .className)
     }
 
-    init?(fromClassName className: String) {
-        let globalTypeName = "stts.\(className)"
-        let klass = NSClassFromString(globalTypeName) as? BaseIndependentService.Type
-
-        guard let service = klass?.init() as? Service else {
-            assertionFailure("Failed to initialize service definition from class name")
-            return nil
-        }
-
-        self.className = className
-
-        super.init(
-            name: service.name,
-            url: service.url,
-            isCategory: service is ServiceCategory,
-            isSubService: service is SubService,
-            oldNames: klass?.oldNames
-        )
-    }
-
     private lazy var overriddenLegacyIdentifiers: Set<String> = {
         var set = oldNames ?? .init()
         if let className {
@@ -60,16 +40,21 @@ class IndependentServiceDefinition: CodableServiceDefinition, ServiceDefinition 
         overriddenLegacyIdentifiers
     }
 
+    /// The class this definition names, or nil if this build doesn't have it. Resolving the class
+    /// is cheap (no instance is created), unlike `build()`.
+    var serviceClass: BaseIndependentService.Type? {
+        NSClassFromString("stts.\(className ?? alphanumericName)") as? BaseIndependentService.Type
+    }
+
+    /// An `independent` entry only supplies a service's *identity* — its behaviour is compiled in.
+    /// A services.json fetched from a newer master can therefore name a class this build doesn't
+    /// have, which isn't an error: the service is simply skipped until the app updates. Anything
+    /// else would either crash on a perfectly ordinary remote update or leave a dead row in the
+    /// list that can never report a status.
+    var isSupported: Bool { serviceClass != nil }
+
     func build() -> BaseService? {
-        let typeName = className ?? alphanumericName
-        let globalTypeName = "stts.\(typeName)"
-
-        guard let service = (NSClassFromString(globalTypeName) as? BaseIndependentService.Type)?.init() else {
-            assertionFailure("Failed to initialize service from class name")
-            return nil
-        }
-
-        return service
+        serviceClass?.init()
     }
 }
 
@@ -77,8 +62,4 @@ typealias IndependentService = BaseIndependentService & RequiredServicePropertie
 
 class BaseIndependentService: BaseService {
     public required override init() {}
-
-    /// Names this service was previously known by (e.g. before a rebrand or a provider change),
-    /// used to carry over the user's enabled/disabled preference. Analogous to `old_names` in JSON definitions.
-    class var oldNames: Set<String>? { nil }
 }

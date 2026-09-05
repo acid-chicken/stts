@@ -19,8 +19,6 @@ class SttsTests: XCTestCase {
         var serviceDefinitionProviders: [ServiceDefinitionProvider] = []
         // swiftlint:disable:next force_try
         serviceDefinitionProviders.append(try! AppDefinedServiceDefinitionProvider())
-        // swiftlint:disable:next force_try
-        serviceDefinitionProviders.append(try! BundleServiceDefinitionProvider())
         if let userDefinedServiceDefinitionsProvider = try? UserDefinedServiceDefinitionProvider() {
             serviceDefinitionProviders.append(userDefinedServiceDefinitionsProvider)
         }

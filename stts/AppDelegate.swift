@@ -50,8 +50,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         } else {
             serviceDefinitionProviders.append(appDefinedProvider)
         }
-        // swiftlint:disable:next force_try
-        serviceDefinitionProviders.append(try! BundleServiceDefinitionProvider())
         if let userDefinedProvider = try? UserDefinedServiceDefinitionProvider() {
             serviceDefinitionProviders.append(userDefinedProvider)
         }

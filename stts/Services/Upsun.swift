@@ -6,8 +6,6 @@
 import Foundation
 
 final class Upsun: IndependentService {
-    override static var oldNames: Set<String>? { ["Platform.sh", "PlatformSH"] }
-
     let name = "Upsun"
     let url = URL(string: "https://status.upsun.com")!
 

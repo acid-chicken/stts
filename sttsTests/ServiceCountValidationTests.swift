@@ -52,10 +52,7 @@ final class ServiceCountValidationTests: XCTestCase {
     // old_names so already-stored preferences keep resolving. This locks that in.
     func testSendbirdAndMiroResolveFromLegacyProviderPrefix() throws {
         // swiftlint:disable:next force_try
-        let appDefined = try! AppDefinedServiceDefinitionProvider()
-        // swiftlint:disable:next force_try
-        let bundled = try! BundleServiceDefinitionProvider()
-        let loader = ServiceLoader(providers: [appDefined, bundled])
+        let loader = ServiceLoader(providers: [try! AppDefinedServiceDefinitionProvider()])
 
         for legacyIdentifier in ["statuspage.SendbirdCanada", "statuspage.SendbirdTokyo"] {
             let definition = try XCTUnwrap(

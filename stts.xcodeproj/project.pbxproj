@@ -45,7 +45,6 @@
 		B228DC132A7F86F900D8DC5E /* eyloo-major.html in Resources */ = {isa = PBXBuildFile; fileRef = B228DC112A7F86F900D8DC5E /* eyloo-major.html */; };
 		B228DC142A7F86F900D8DC5E /* keygen-good.html in Resources */ = {isa = PBXBuildFile; fileRef = B228DC122A7F86F900D8DC5E /* keygen-good.html */; };
 		B228DC162A7F872800D8DC5E /* BetterStackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B228DC152A7F872800D8DC5E /* BetterStackTests.swift */; };
-		B22B6B302F673895006528EB /* BundleServiceDefinitionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B6B292F673895006528EB /* BundleServiceDefinitionProvider.swift */; };
 		B22B6B312F673895006528EB /* ServiceDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B6B2A2F673895006528EB /* ServiceDefinition.swift */; };
 		B22B6B322F673895006528EB /* UserDefinedServiceDefinitionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B6B2E2F673895006528EB /* UserDefinedServiceDefinitionProvider.swift */; };
 		B22B6B332F673895006528EB /* AppDefinedServiceDefinitionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B6B282F673895006528EB /* AppDefinedServiceDefinitionProvider.swift */; };
@@ -144,6 +143,7 @@
 		B2E70FDB22B07DBC000BCAD2 /* GoogleCloudPlatformAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E70FDA22B07DBC000BCAD2 /* GoogleCloudPlatformAll.swift */; };
 		B2E832EC29DE4F5E000FA1BE /* AdobeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E832EB29DE4F5E000FA1BE /* AdobeTests.swift */; };
 		D8149B20742AF98583F20157 /* ServiceCountValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB5DDC22A5BA509AC1AFBC /* ServiceCountValidationTests.swift */; };
+		A1F0C3D24E7B21908C55D312 /* IndependentServicesJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F0C3D14E7B21908C55D311 /* IndependentServicesJSONTests.swift */; };
 		B2E832EE29DE5104000FA1BE /* adobe-analytics-minor.json in Resources */ = {isa = PBXBuildFile; fileRef = B2E832ED29DE5104000FA1BE /* adobe-analytics-minor.json */; };
 		B2E8C0232A7A9203000239F0 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E8C0222A7A9203000239F0 /* Atomic.swift */; };
 		B2EB51CE1E7004A3001D6F78 /* ExanaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EB51CD1E7004A3001D6F78 /* ExanaService.swift */; };
@@ -226,7 +226,6 @@
 		B228DC122A7F86F900D8DC5E /* keygen-good.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "keygen-good.html"; sourceTree = "<group>"; };
 		B228DC152A7F872800D8DC5E /* BetterStackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterStackTests.swift; sourceTree = "<group>"; };
 		B22B6B282F673895006528EB /* AppDefinedServiceDefinitionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefinedServiceDefinitionProvider.swift; sourceTree = "<group>"; };
-		B22B6B292F673895006528EB /* BundleServiceDefinitionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleServiceDefinitionProvider.swift; sourceTree = "<group>"; };
 		B22B6B2A2F673895006528EB /* ServiceDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDefinition.swift; sourceTree = "<group>"; };
 		B22B6B2B2F673895006528EB /* ServiceDefinitionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDefinitionProvider.swift; sourceTree = "<group>"; };
 		B22B6B2C2F673895006528EB /* ServiceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLoader.swift; sourceTree = "<group>"; };
@@ -320,10 +319,10 @@
 		B2DEE0BD1E696D64006B198E /* Slack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slack.swift; sourceTree = "<group>"; };
 		B2E018FC214E60E700C5F75B /* AppearanceObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceObserver.swift; sourceTree = "<group>"; };
 		B2E5DB352F6FBE7800D71269 /* NSAppearance+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAppearance+Extensions.swift"; sourceTree = "<group>"; };
-		B2E70FD322B0657F000BCAD2 /* generate_services_plist.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = generate_services_plist.sh; sourceTree = "<group>"; };
 		B2E70FDA22B07DBC000BCAD2 /* GoogleCloudPlatformAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleCloudPlatformAll.swift; sourceTree = "<group>"; };
 		B2E832EB29DE4F5E000FA1BE /* AdobeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdobeTests.swift; sourceTree = "<group>"; };
 		6CCB5DDC22A5BA509AC1AFBC /* ServiceCountValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCountValidationTests.swift; sourceTree = "<group>"; };
+		A1F0C3D14E7B21908C55D311 /* IndependentServicesJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndependentServicesJSONTests.swift; sourceTree = "<group>"; };
 		B2E832ED29DE5104000FA1BE /* adobe-analytics-minor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "adobe-analytics-minor.json"; sourceTree = "<group>"; };
 		B2E8C0222A7A9203000239F0 /* Atomic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atomic.swift; sourceTree = "<group>"; };
 		B2EB51CD1E7004A3001D6F78 /* ExanaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExanaService.swift; sourceTree = "<group>"; };
@@ -383,6 +382,7 @@
 				B2552EFC29954AE0003FF9EC /* Resources */,
 				B2E832EB29DE4F5E000FA1BE /* AdobeTests.swift */,
 				6CCB5DDC22A5BA509AC1AFBC /* ServiceCountValidationTests.swift */,
+				A1F0C3D14E7B21908C55D311 /* IndependentServicesJSONTests.swift */,
 				B228DC152A7F872800D8DC5E /* BetterStackTests.swift */,
 				B26EC1122F69101D00DDD0B9 /* IncidentIOTests.swift */,
 				B2163AF920BA4E7500B14A85 /* Info.plist */,
@@ -412,7 +412,6 @@
 			isa = PBXGroup;
 			children = (
 				B22B6B282F673895006528EB /* AppDefinedServiceDefinitionProvider.swift */,
-				B22B6B292F673895006528EB /* BundleServiceDefinitionProvider.swift */,
 				B22B6B2A2F673895006528EB /* ServiceDefinition.swift */,
 				B22B6B2B2F673895006528EB /* ServiceDefinitionProvider.swift */,
 				B22B6B2C2F673895006528EB /* ServiceLoader.swift */,
@@ -561,7 +560,6 @@
 		B2E70FD222B0650A000BCAD2 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
-				B2E70FD322B0657F000BCAD2 /* generate_services_plist.sh */,
 			);
 			path = Scripts;
 			sourceTree = "<group>";
@@ -717,7 +715,6 @@
 				B2B2D0FC1D49D5080014D780 /* Frameworks */,
 				B2B2D0FD1D49D5080014D780 /* Resources */,
 				B22EC6891D80111900ED7917 /* CopyFiles */,
-				B28F83321E24BDC100F2070F /* Generate Services plist file */,
 				B2B2DC631DCC1FA600BF397D /* SwiftLint */,
 				B2A264A21DF906C900009BE1 /* StartAtLogin */,
 			);
@@ -850,17 +847,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B28F83321E24BDC100F2070F /* Generate Services plist file */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			name = "Generate Services plist file";
-			shellPath = /bin/sh;
-			shellScript = (
-				"chmod +x $SRCROOT/Scripts/generate_services_plist.sh",
-				"$SRCROOT/Scripts/generate_services_plist.sh",
-				"",
-			);
-		};
 		B2A264A21DF906C900009BE1 /* StartAtLogin */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -919,6 +905,7 @@
 				91B0A21428197857007D8E8F /* StringExtensionsTests.swift in Sources */,
 				B2E832EC29DE4F5E000FA1BE /* AdobeTests.swift in Sources */,
 				D8149B20742AF98583F20157 /* ServiceCountValidationTests.swift in Sources */,
+				A1F0C3D24E7B21908C55D312 /* IndependentServicesJSONTests.swift in Sources */,
 				B2563BBE22CBC65A00532C39 /* ResponseSizeTrackingURLSession.swift in Sources */,
 				B2552F082995516B003FF9EC /* TestBundle.swift in Sources */,
 				B2C670442F69BDA20043DC7A /* MiroTests.swift in Sources */,
@@ -988,7 +975,6 @@
 				B254098D28FE71990009F956 /* BetterUptimeService.swift in Sources */,
 				B2C670422F69BB070043DC7A /* MiroService.swift in Sources */,
 				B2430807210810D0003F8D07 /* Algolia.swift in Sources */,
-				B22B6B302F673895006528EB /* BundleServiceDefinitionProvider.swift in Sources */,
 				B22B6B312F673895006528EB /* ServiceDefinition.swift in Sources */,
 				B22B6B322F673895006528EB /* UserDefinedServiceDefinitionProvider.swift in Sources */,
 				B22B6B332F673895006528EB /* AppDefinedServiceDefinitionProvider.swift in Sources */,

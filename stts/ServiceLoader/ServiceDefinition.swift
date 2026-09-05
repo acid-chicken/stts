@@ -20,6 +20,11 @@ protocol ServiceDefinition: CodableServiceDefinition {
     /// Builds the service object from the definition.
     func build() -> BaseService?
 
+    /// Whether this build can actually run this service. False only for a definition whose
+    /// behaviour isn't compiled into this app — see `IndependentServiceDefinition.isSupported`.
+    /// Unsupported definitions are dropped by `ServiceLoader`, so nothing downstream sees them.
+    var isSupported: Bool { get }
+
     /// Shared grouping value between a category row (`isCategory == true`) and its subservices
     /// (`isSubService == true`) within the same provider, so Preferences can group them by data
     /// instead of Swift type. nil for providers still using `ServiceCategory.subServiceSuperclass`
@@ -33,6 +38,8 @@ private let faviconRepoRawBaseURL = "https://cdn.jsdelivr.net/gh/inket/stts@mast
 
 extension ServiceDefinition {
     var categoryKey: String? { nil }
+
+    var isSupported: Bool { true }
 
     var globalIdentifier: String { "\(providerIdentifier).\(alphanumericName)" }
 

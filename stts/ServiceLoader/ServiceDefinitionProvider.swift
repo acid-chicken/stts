@@ -17,7 +17,7 @@ protocol ServiceDefinitionProvider {
     /// Re-reads whatever backs this provider, so a subsequent call to `definedServices()` reflects
     /// changes made since this provider was created (e.g. a remote services.json re-fetched after
     /// launch — see `RemoteServiceDefinitionProvider`/`ServiceLoader.reload()`). A no-op for
-    /// providers whose data can't change at runtime (e.g. `ClassBasedServiceDefinitionProvider`).
+    /// providers whose data can't change at runtime.
     func reload()
 }
 
@@ -62,20 +62,6 @@ class JSONBasedServiceDefinitionProvider: ServiceDefinitionProvider {
             } else {
                 return []
             }
-        }
-    }
-}
-
-class ClassBasedServiceDefinitionProvider: ServiceDefinitionProvider {
-    private let classNames: [String]
-
-    init(classNames: [String]) {
-        self.classNames = classNames
-    }
-
-    func definedServices() throws -> [ServiceDefinition]? {
-        classNames.compactMap {
-            IndependentServiceDefinition(fromClassName: $0)
         }
     }
 }

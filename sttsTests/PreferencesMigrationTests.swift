@@ -37,10 +37,7 @@ final class PreferencesMigrationTests: XCTestCase {
         UserDefaults.standard.setValue(Array(oldIdentifierToExpectedName.keys), forKey: "selectedServices")
 
         // swiftlint:disable:next force_try
-        let appDefined = try! AppDefinedServiceDefinitionProvider()
-        // swiftlint:disable:next force_try
-        let bundled = try! BundleServiceDefinitionProvider()
-        let serviceLoader = ServiceLoader(providers: [appDefined, bundled])
+        let serviceLoader = ServiceLoader(providers: [try! AppDefinedServiceDefinitionProvider()])
         let preferences = Preferences(serviceLoader: serviceLoader)
 
         let resolvedNames = Set(preferences.selectedServices.map(\.name))
@@ -70,9 +67,7 @@ final class PreferencesMigrationTests: XCTestCase {
 
         // swiftlint:disable:next force_try
         let appDefined = try! AppDefinedServiceDefinitionProvider()
-        // swiftlint:disable:next force_try
-        let bundled = try! BundleServiceDefinitionProvider()
-        let serviceLoader = ServiceLoader(providers: [appDefined, bundled, FakeRemovedServiceProvider()])
+        let serviceLoader = ServiceLoader(providers: [appDefined, FakeRemovedServiceProvider()])
         let preferences = Preferences(serviceLoader: serviceLoader)
 
         let resolvedNames = Set(preferences.selectedServices.map(\.name))

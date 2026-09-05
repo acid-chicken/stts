@@ -36,6 +36,7 @@ final class ServiceLoader {
 
         let uniqueAppend: ([ServiceDefinition]) -> Void = { definitions in
             definitions.forEach { definition in
+                guard definition.isSupported else { return }
                 guard !uniqueServiceIdentifiers.contains(definition.globalIdentifier) else { return }
 
                 uniqueServiceIdentifiers.insert(definition.globalIdentifier)

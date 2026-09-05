@@ -1,4 +1,163 @@
 {
+  "independent": [
+    {
+      "name": "Algolia",
+      "url": "https://status.algolia.com",
+      "class_name": "Algolia"
+    },
+    {
+      "name": "Apple (All)",
+      "url": "https://www.apple.com/support/systemstatus/",
+      "class_name": "AppleAll",
+      "category": true
+    },
+    {
+      "name": "Apple Developer (All)",
+      "url": "https://developer.apple.com/system-status/",
+      "class_name": "AppleDeveloperAll",
+      "category": true
+    },
+    {
+      "name": "Azure (All Regions)",
+      "url": "https://status.azure.com/en-us/status",
+      "class_name": "AzureAll",
+      "category": true
+    },
+    {
+      "name": "Azure DevOps (All)",
+      "url": "https://status.dev.azure.com",
+      "class_name": "AzureDevOpsAll",
+      "category": true
+    },
+    {
+      "name": "Beanstalk",
+      "url": "https://status.beanstalkapp.com",
+      "class_name": "Beanstalk"
+    },
+    {
+      "name": "Broadcom",
+      "url": "https://status.broadcom.com",
+      "class_name": "Broadcom"
+    },
+    {
+      "name": "Fastly",
+      "url": "https://www.fastlystatus.com",
+      "class_name": "Fastly"
+    },
+    {
+      "name": "Firebase (All)",
+      "url": "https://status.firebase.google.com",
+      "class_name": "Firebase",
+      "category": true
+    },
+    {
+      "name": "Fivetran",
+      "url": "https://status.fivetran.com",
+      "class_name": "Fivetran"
+    },
+    {
+      "name": "Google Cloud Platform (All)",
+      "url": "https://status.cloud.google.com",
+      "class_name": "GoogleCloudPlatformAll",
+      "category": true
+    },
+    {
+      "name": "jsDelivr",
+      "url": "https://status.jsdelivr.com",
+      "class_name": "JSDelivr"
+    },
+    {
+      "name": "Miro (All Regions)",
+      "url": "https://status.miro.com/",
+      "class_name": "MiroAll",
+      "category": true
+    },
+    {
+      "name": "Okta",
+      "url": "https://status.okta.com",
+      "class_name": "Okta"
+    },
+    {
+      "name": "Oracle NetSuite",
+      "url": "https://status.netsuite.com",
+      "class_name": "OracleNetSuite"
+    },
+    {
+      "name": "PayPal API",
+      "url": "https://www.paypal-status.com/api/production",
+      "class_name": "PayPalAPIProduction"
+    },
+    {
+      "name": "PayPal API (Sandbox)",
+      "url": "https://www.paypal-status.com/api/sandbox",
+      "class_name": "PayPalAPISandbox"
+    },
+    {
+      "name": "PayPal Product",
+      "url": "https://www.paypal-status.com/product/production",
+      "class_name": "PayPalProductProduction"
+    },
+    {
+      "name": "PayPal Product (Sandbox)",
+      "url": "https://www.paypal-status.com/product/sandbox",
+      "class_name": "PayPalProductSandbox"
+    },
+    {
+      "name": "PlayStation Network (America)",
+      "url": "https://status.playstation.com",
+      "class_name": "PSNAmerica"
+    },
+    {
+      "name": "PlayStation Network (Asia)",
+      "url": "https://status.playstation.com",
+      "class_name": "PSNAsia"
+    },
+    {
+      "name": "PlayStation Network (Europe)",
+      "url": "https://status.playstation.com",
+      "class_name": "PSNEurope"
+    },
+    {
+      "name": "Railway",
+      "url": "https://status.railway.com",
+      "class_name": "Railway"
+    },
+    {
+      "name": "Sendbird (All)",
+      "url": "https://sendbird.com/status",
+      "class_name": "SendbirdAll",
+      "category": true
+    },
+    {
+      "name": "Slack",
+      "url": "https://status.slack.com",
+      "class_name": "Slack"
+    },
+    {
+      "name": "Stripe",
+      "url": "https://status.stripe.com",
+      "class_name": "Stripe"
+    },
+    {
+      "name": "Upsun",
+      "url": "https://status.upsun.com",
+      "class_name": "Upsun",
+      "old_names": [
+        "Platform.sh",
+        "PlatformSH"
+      ]
+    },
+    {
+      "name": "Uptime.com",
+      "url": "https://status.uptime.com",
+      "class_name": "UptimeDotCom"
+    },
+    {
+      "name": "Zendesk",
+      "url": "https://status.zendesk.com",
+      "class_name": "Zendesk"
+    }
+  ],
   "betterstack": [
     {
       "name": "Better Stack",

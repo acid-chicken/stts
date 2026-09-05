@@ -12,10 +12,7 @@ final class UpsunTests: XCTestCase {
 
     func testResolvesFromLegacyIdentifiers() throws {
         // swiftlint:disable:next force_try
-        let appDefined = try! AppDefinedServiceDefinitionProvider()
-        // swiftlint:disable:next force_try
-        let bundled = try! BundleServiceDefinitionProvider()
-        let loader = ServiceLoader(providers: [appDefined, bundled])
+        let loader = ServiceLoader(providers: [try! AppDefinedServiceDefinitionProvider()])
 
         for legacyIdentifier in ["Platform.sh", "PlatformSH"] {
             let definition = try XCTUnwrap(
