@@ -30,7 +30,7 @@ class Slack: IndependentService {
         }
     }
 
-    let url = URL(string: "https://status.slack.com")!
+    let url = URL(string: "https://slack-status.com/")!
 
     override func updateStatus() async throws {
         let doc = try await html(from: url)

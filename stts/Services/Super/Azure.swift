@@ -21,7 +21,7 @@ class BaseAzure: BaseIndependentService {
 
 class AzureServiceDefinition: CodableServiceDefinition, ServiceDefinition {
     // Default url for entries that don't override it; every entry is always a subservice of AzureAll.
-    static let commonURL = URL(string: "https://status.azure.com/en-us/status")!
+    static let commonURL = URL(string: "https://azure.status.microsoft/en-us/status")!
 
     enum ExtraKeys: String, CodingKey {
         case id

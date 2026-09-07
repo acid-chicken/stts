@@ -5,7 +5,7 @@ struct AzureGenerator: ServiceGenerator {
 
     func discover() async -> [DiscoveredEntry] {
         guard
-            let data = await HTTPClient.get(URL(string: "https://status.azure.com/en-us/status")!),
+            let data = await HTTPClient.get(URL(string: "https://azure.status.microsoft/en-us/status")!),
             var body = String(data: data, encoding: .utf8)
         else {
             print("warning: could not retrieve list of Azure zones")

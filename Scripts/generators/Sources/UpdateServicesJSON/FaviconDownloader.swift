@@ -20,7 +20,7 @@ final class FaviconDownloader {
     // byte-identical SPA shell serving one shared favicon.ico regardless of product — there's no
     // real per-product branding to lose by treating it the same as AWS/Adobe/Azure here.
     private let commonURLByProvider: [String: URL] = [
-        "azure": URL(string: "https://status.azure.com/en-us/status")!,
+        "azure": URL(string: "https://azure.status.microsoft/en-us/status")!,
         "azuredevops": URL(string: "https://status.dev.azure.com")!,
         "firebase": URL(string: "https://status.firebase.google.com")!,
         "googlecloudplatform": URL(string: "https://status.cloud.google.com")!,

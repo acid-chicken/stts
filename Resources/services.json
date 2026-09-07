@@ -19,7 +19,7 @@
     },
     {
       "name": "Azure (All Regions)",
-      "url": "https://status.azure.com/en-us/status",
+      "url": "https://azure.status.microsoft/en-us/status",
       "class_name": "AzureAll",
       "category": true
     },
@@ -130,7 +130,7 @@
     },
     {
       "name": "Slack",
-      "url": "https://status.slack.com",
+      "url": "https://slack-status.com/",
       "class_name": "Slack"
     },
     {
@@ -1486,7 +1486,7 @@
     },
     {
       "name": "Xandr",
-      "url": "https://status.xandr.com",
+      "url": "https://status.ads.microsoft.com/",
       "id": "z7jb4dcjs0nl"
     },
     {
@@ -7252,12 +7252,15 @@
       "ids": [
         "appstream2-ap-northeast-1",
         "appstream2-ap-northeast-2",
+        "appstream2-ap-northeast-3",
         "appstream2-ap-south-1",
         "appstream2-ap-southeast-1",
         "appstream2-ap-southeast-2",
         "appstream2-ap-southeast-5",
         "appstream2-ca-central-1",
+        "appstream2-ca-west-1",
         "appstream2-eu-central-1",
+        "appstream2-eu-central-2",
         "appstream2-eu-south-1",
         "appstream2-eu-south-2",
         "appstream2-eu-west-1",
@@ -7322,6 +7325,18 @@
       "id": "activateconsole-us-west-2",
       "ids": [
         "activateconsole-us-west-2"
+      ],
+      "subservice": true
+    },
+    {
+      "name": "AWS Agent Registry",
+      "id": "agent-registry-ap-northeast-1",
+      "ids": [
+        "agent-registry-ap-northeast-1",
+        "agent-registry-ap-southeast-2",
+        "agent-registry-eu-west-1",
+        "agent-registry-us-east-1",
+        "agent-registry-us-west-2"
       ],
       "subservice": true
     },

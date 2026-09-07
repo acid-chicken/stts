@@ -12,7 +12,7 @@ protocol AzureStoreService {
 }
 
 class AzureStore: ServiceStore<[String: ServiceStatus]> {
-    private let url = URL(string: "https://status.azure.com/en-us/status")!
+    private let url = URL(string: "https://azure.status.microsoft/en-us/status")!
 
     override func retrieveUpdatedState() async throws -> [String: ServiceStatus] {
         let doc = try await html(from: url)
