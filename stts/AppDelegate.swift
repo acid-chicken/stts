@@ -38,6 +38,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
 
         // swiftlint:disable:next force_try
         let appDefinedProvider = try! AppDefinedServiceDefinitionProvider()
+        #if DEBUG
+        // Debug builds read only the bundled Resources/services.json, so what a developer is
+        // actually editing is what the app shows. In release the remote copy wholesale-replaces the
+        // bundled one (see below), which means an unpushed local edit is invisible — worse, a local
+        // addition that master doesn't have yet is actively deleted by the copy fetched from master.
+        // That's correct for shipped builds and useless while working on the file.
+        serviceDefinitionProviders.append(appDefinedProvider)
+        #else
         if let remoteProvider = try? RemoteServiceDefinitionProvider() {
             // Wholesale swap, not a per-identifier merge: once the remote copy has any data, it
             // fully replaces the bundled one rather than being unioned with it, so a service the
@@ -50,6 +58,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         } else {
             serviceDefinitionProviders.append(appDefinedProvider)
         }
+        #endif
         if let userDefinedProvider = try? UserDefinedServiceDefinitionProvider() {
             serviceDefinitionProviders.append(userDefinedProvider)
         }
