@@ -32,6 +32,20 @@ final class FaviconDownloader {
         "salesforce": URL(string: "https://status.salesforce.com")!
     ]
 
+    // Providers whose entries are all regional deployments of one product: unlike the group above,
+    // each has its own "url" in JSON, so they'd otherwise take the per-entry path below and write
+    // one byte-identical file per region — 11 of them for Sendbird. Worse, those copies drift:
+    // every Sendbird region is a separate Atlassian Statuspage account uploading its own favicon,
+    // and Canada's and Tokyo's were still serving the pre-rebrand purple mark while the other nine
+    // had the current one. Fetch once from the company's real site instead — same reasoning as
+    // faviconSourceOverride below, that the company's own site is the canonical current branding
+    // rather than whatever a given status page happens to have uploaded — and write it to
+    // "<providerKey>.png", which ServiceDefinition.faviconURL already falls back to when no
+    // per-entry file exists.
+    private let singleBrandProviderURL: [String: URL] = [
+        "sendbird": URL(string: "https://sendbird.com")!
+    ]
+
     // Unlike the other 8 Salesforce products, these are separately-branded companies with their
     // own real public website distinct from status.salesforce.com's shared shell — verified live,
     // so their entries get that product's own favicon instead of the generic Salesforce one.
@@ -58,6 +72,10 @@ final class FaviconDownloader {
     // company site instead.
     private let faviconSourceOverride: [String: URL] = [
         "statuscake.MailChimp": URL(string: "https://mailchimp.com")!,
+        // status.beanstalkapp.com declares <link rel="shortcut icon"> pointing at
+        // beanstalkapp.com/images/favicon.ico, which 404s — the real site moved its icon to a
+        // content-hashed path, so scrape the site itself and let the finder pick that up.
+        "independent.Beanstalk": URL(string: "https://beanstalkapp.com")!,
         // Atlassian Statuspage default icon was being scraped instead of the real site's:
         "statuspage.CloudAMQP": URL(string: "https://www.cloudamqp.com")!,
         "statuspage.CocoaPods": URL(string: "https://cocoapods.org")!,
@@ -183,6 +201,19 @@ final class FaviconDownloader {
         var jobs: [Job] = []
         var expected = Set<String>()
         var usesSharedFavicon = false
+
+        // Short-circuits the per-entry loop entirely: one icon for the whole provider, however
+        // many regions it lists. Safe to skip the product branch below too — a single-brand
+        // provider has no separately-branded products to lose.
+        if let sharedURL = singleBrandProviderURL[providerKey] {
+            let filename = "\(providerKey).png"
+            appendJobIfNeeded(
+                &jobs, providerKey: providerKey, filename: filename,
+                pageURL: sharedURL, forceRefresh: forceRefresh
+            )
+            expected.insert(filename)
+            return (jobs, expected)
+        }
 
         for entry in entries {
             guard
